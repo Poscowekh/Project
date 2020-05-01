@@ -1,0 +1,3 @@
+/home/alexey/Рабочий стол/C++/Project/Project/OrcWars/proj.cmake/Model-build/CMakeFiles/edit_cache.dir
+/home/alexey/Рабочий стол/C++/Project/Project/OrcWars/proj.cmake/Model-build/CMakeFiles/rebuild_cache.dir
+/home/alexey/Рабочий стол/C++/Project/Project/OrcWars/proj.cmake/Model-build/CMakeFiles/Matrix.dir

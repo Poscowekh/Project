@@ -1,0 +1,1021 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+   <FileVersion major="1" minor="6" />
+   <Project>
+      <Option title="Snake" />
+      <Option makefile_is_custom="1" />
+      <Option compiler="gcc" />
+      <Option virtualFolders="CMake Files\;CMake Files\Model\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\oxygine-framework\;" />
+      <Build>
+      <Target title="all">
+         <Option working_dir="/home/alexey/Рабочий стол/C++/Project/Project/OrcWars/proj.cmake" />
+         <Option type="4" />
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/alexey/Рабочий\ стол/C++/Project/Project/OrcWars/proj.cmake/Makefile&quot;  VERBOSE=1 all" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/alexey/Рабочий\ стол/C++/Project/Project/OrcWars/proj.cmake/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/alexey/Рабочий\ стол/C++/Project/Project/OrcWars/proj.cmake/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/alexey/Рабочий\ стол/C++/Project/Project/OrcWars/proj.cmake/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="install">
+         <Option working_dir="/home/alexey/Рабочий стол/C++/Project/Project/OrcWars/proj.cmake" />
+         <Option type="4" />
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/alexey/Рабочий\ стол/C++/Project/Project/OrcWars/proj.cmake/Makefile&quot;  VERBOSE=1 install" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/alexey/Рабочий\ стол/C++/Project/Project/OrcWars/proj.cmake/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/alexey/Рабочий\ стол/C++/Project/Project/OrcWars/proj.cmake/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/alexey/Рабочий\ стол/C++/Project/Project/OrcWars/proj.cmake/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="list_install_components">
+         <Option working_dir="/home/alexey/Рабочий стол/C++/Project/Project/OrcWars/proj.cmake" />
+         <Option type="4" />
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/alexey/Рабочий\ стол/C++/Project/Project/OrcWars/proj.cmake/Makefile&quot;  VERBOSE=1 list_install_components" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/alexey/Рабочий\ стол/C++/Project/Project/OrcWars/proj.cmake/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/alexey/Рабочий\ стол/C++/Project/Project/OrcWars/proj.cmake/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/alexey/Рабочий\ стол/C++/Project/Project/OrcWars/proj.cmake/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="rebuild_cache">
+         <Option working_dir="/home/alexey/Рабочий стол/C++/Project/Project/OrcWars/proj.cmake" />
+         <Option type="4" />
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/alexey/Рабочий\ стол/C++/Project/Project/OrcWars/proj.cmake/Makefile&quot;  VERBOSE=1 rebuild_cache" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/alexey/Рабочий\ стол/C++/Project/Project/OrcWars/proj.cmake/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/alexey/Рабочий\ стол/C++/Project/Project/OrcWars/proj.cmake/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/alexey/Рабочий\ стол/C++/Project/Project/OrcWars/proj.cmake/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="EmptyOxygine">
+         <Option output="/home/alexey/Рабочий стол/C++/Project/Project/OrcWars/proj.cmake/EmptyOxygine" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/alexey/Рабочий стол/C++/Project/Project/OrcWars/proj.cmake" />
+         <Option object_output="./" />
+         <Option type="1" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add option="-DOX_NO_HTTP" />
+            <Add option="-DOX_HAVE_LIBPNG" />
+            <Add option="-DOX_HAVE_LIBJPEG" />
+            <Add directory="/home/alexey/Рабочий стол/C++/Project/Project/OrcWars/proj.cmake/../data" />
+            <Add directory="/home/alexey/Рабочий стол/C++/Project/Project/OrcWars/proj.cmake/data" />
+            <Add directory="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src" />
+            <Add directory="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/third_party/linux/pthreads/include" />
+            <Add directory="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/third_party/linux/zlib" />
+            <Add directory="/usr/include" />
+            <Add directory="/usr/include/SDL2" />
+            <Add directory="/usr/include/c++/5" />
+            <Add directory="/usr/include/c++/5/backward" />
+            <Add directory="/usr/include/x86_64-linux-gnu" />
+            <Add directory="/usr/include/x86_64-linux-gnu/c++/5" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed" />
+            <Add directory="/usr/local/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/alexey/Рабочий\ стол/C++/Project/Project/OrcWars/proj.cmake/Makefile&quot;  VERBOSE=1 EmptyOxygine" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/alexey/Рабочий\ стол/C++/Project/Project/OrcWars/proj.cmake/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/alexey/Рабочий\ стол/C++/Project/Project/OrcWars/proj.cmake/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/alexey/Рабочий\ стол/C++/Project/Project/OrcWars/proj.cmake/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="EmptyOxygine/fast">
+         <Option output="/home/alexey/Рабочий стол/C++/Project/Project/OrcWars/proj.cmake/EmptyOxygine" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/alexey/Рабочий стол/C++/Project/Project/OrcWars/proj.cmake" />
+         <Option object_output="./" />
+         <Option type="1" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add option="-DOX_NO_HTTP" />
+            <Add option="-DOX_HAVE_LIBPNG" />
+            <Add option="-DOX_HAVE_LIBJPEG" />
+            <Add directory="/home/alexey/Рабочий стол/C++/Project/Project/OrcWars/proj.cmake/../data" />
+            <Add directory="/home/alexey/Рабочий стол/C++/Project/Project/OrcWars/proj.cmake/data" />
+            <Add directory="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src" />
+            <Add directory="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/third_party/linux/pthreads/include" />
+            <Add directory="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/third_party/linux/zlib" />
+            <Add directory="/usr/include" />
+            <Add directory="/usr/include/SDL2" />
+            <Add directory="/usr/include/c++/5" />
+            <Add directory="/usr/include/c++/5/backward" />
+            <Add directory="/usr/include/x86_64-linux-gnu" />
+            <Add directory="/usr/include/x86_64-linux-gnu/c++/5" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed" />
+            <Add directory="/usr/local/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/alexey/Рабочий\ стол/C++/Project/Project/OrcWars/proj.cmake/Makefile&quot;  VERBOSE=1 EmptyOxygine/fast" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/alexey/Рабочий\ стол/C++/Project/Project/OrcWars/proj.cmake/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/alexey/Рабочий\ стол/C++/Project/Project/OrcWars/proj.cmake/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/alexey/Рабочий\ стол/C++/Project/Project/OrcWars/proj.cmake/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="install/strip">
+         <Option working_dir="/home/alexey/Рабочий стол/C++/Project/Project/OrcWars/proj.cmake" />
+         <Option type="4" />
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/alexey/Рабочий\ стол/C++/Project/Project/OrcWars/proj.cmake/Makefile&quot;  VERBOSE=1 install/strip" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/alexey/Рабочий\ стол/C++/Project/Project/OrcWars/proj.cmake/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/alexey/Рабочий\ стол/C++/Project/Project/OrcWars/proj.cmake/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/alexey/Рабочий\ стол/C++/Project/Project/OrcWars/proj.cmake/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="install/local">
+         <Option working_dir="/home/alexey/Рабочий стол/C++/Project/Project/OrcWars/proj.cmake" />
+         <Option type="4" />
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/alexey/Рабочий\ стол/C++/Project/Project/OrcWars/proj.cmake/Makefile&quot;  VERBOSE=1 install/local" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/alexey/Рабочий\ стол/C++/Project/Project/OrcWars/proj.cmake/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/alexey/Рабочий\ стол/C++/Project/Project/OrcWars/proj.cmake/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/alexey/Рабочий\ стол/C++/Project/Project/OrcWars/proj.cmake/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="edit_cache">
+         <Option working_dir="/home/alexey/Рабочий стол/C++/Project/Project/OrcWars/proj.cmake" />
+         <Option type="4" />
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/alexey/Рабочий\ стол/C++/Project/Project/OrcWars/proj.cmake/Makefile&quot;  VERBOSE=1 edit_cache" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/alexey/Рабочий\ стол/C++/Project/Project/OrcWars/proj.cmake/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/alexey/Рабочий\ стол/C++/Project/Project/OrcWars/proj.cmake/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/alexey/Рабочий\ стол/C++/Project/Project/OrcWars/proj.cmake/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="oxygine-framework">
+         <Option output="/home/alexey/Рабочий стол/C++/Project/Project/OrcWars/proj.cmake/oxygine-framework/liboxygine-framework.a" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/alexey/Рабочий стол/C++/Project/Project/OrcWars/proj.cmake/oxygine-framework" />
+         <Option object_output="./" />
+         <Option type="2" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add option="-DOX_NO_HTTP" />
+            <Add option="-DOX_HAVE_LIBPNG" />
+            <Add option="-DOX_HAVE_LIBJPEG" />
+            <Add directory="/home/alexey/Рабочий стол/C++/Project/Project/OrcWars/proj.cmake/../data" />
+            <Add directory="/home/alexey/Рабочий стол/C++/Project/Project/OrcWars/proj.cmake/data" />
+            <Add directory="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine" />
+            <Add directory="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/third_party/linux/libjpeg" />
+            <Add directory="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/third_party/linux/libpng" />
+            <Add directory="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/third_party/linux/pthreads/include" />
+            <Add directory="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/third_party/linux/zlib" />
+            <Add directory="/usr/include" />
+            <Add directory="/usr/include/SDL2" />
+            <Add directory="/usr/include/c++/5" />
+            <Add directory="/usr/include/c++/5/backward" />
+            <Add directory="/usr/include/x86_64-linux-gnu" />
+            <Add directory="/usr/include/x86_64-linux-gnu/c++/5" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed" />
+            <Add directory="/usr/local/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/alexey/Рабочий\ стол/C++/Project/Project/OrcWars/proj.cmake/oxygine-framework/Makefile&quot;  VERBOSE=1 oxygine-framework" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/alexey/Рабочий\ стол/C++/Project/Project/OrcWars/proj.cmake/oxygine-framework/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/alexey/Рабочий\ стол/C++/Project/Project/OrcWars/proj.cmake/oxygine-framework/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/alexey/Рабочий\ стол/C++/Project/Project/OrcWars/proj.cmake/oxygine-framework/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="oxygine-framework/fast">
+         <Option output="/home/alexey/Рабочий стол/C++/Project/Project/OrcWars/proj.cmake/oxygine-framework/liboxygine-framework.a" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/alexey/Рабочий стол/C++/Project/Project/OrcWars/proj.cmake/oxygine-framework" />
+         <Option object_output="./" />
+         <Option type="2" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add option="-DOX_NO_HTTP" />
+            <Add option="-DOX_HAVE_LIBPNG" />
+            <Add option="-DOX_HAVE_LIBJPEG" />
+            <Add directory="/home/alexey/Рабочий стол/C++/Project/Project/OrcWars/proj.cmake/../data" />
+            <Add directory="/home/alexey/Рабочий стол/C++/Project/Project/OrcWars/proj.cmake/data" />
+            <Add directory="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine" />
+            <Add directory="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/third_party/linux/libjpeg" />
+            <Add directory="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/third_party/linux/libpng" />
+            <Add directory="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/third_party/linux/pthreads/include" />
+            <Add directory="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/third_party/linux/zlib" />
+            <Add directory="/usr/include" />
+            <Add directory="/usr/include/SDL2" />
+            <Add directory="/usr/include/c++/5" />
+            <Add directory="/usr/include/c++/5/backward" />
+            <Add directory="/usr/include/x86_64-linux-gnu" />
+            <Add directory="/usr/include/x86_64-linux-gnu/c++/5" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed" />
+            <Add directory="/usr/local/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/alexey/Рабочий\ стол/C++/Project/Project/OrcWars/proj.cmake/oxygine-framework/Makefile&quot;  VERBOSE=1 oxygine-framework/fast" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/alexey/Рабочий\ стол/C++/Project/Project/OrcWars/proj.cmake/oxygine-framework/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/alexey/Рабочий\ стол/C++/Project/Project/OrcWars/proj.cmake/oxygine-framework/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/alexey/Рабочий\ стол/C++/Project/Project/OrcWars/proj.cmake/oxygine-framework/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="Matrix">
+         <Option output="/home/alexey/Рабочий стол/C++/Project/Project/OrcWars/proj.cmake/Model/Matrix" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/alexey/Рабочий стол/C++/Project/Project/OrcWars/proj.cmake/Model" />
+         <Option object_output="./" />
+         <Option type="1" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add option="-DOX_NO_HTTP" />
+            <Add option="-DOX_HAVE_LIBPNG" />
+            <Add option="-DOX_HAVE_LIBJPEG" />
+            <Add directory="/home/alexey/Рабочий стол/C++/Project/Project/OrcWars/proj.cmake/../data" />
+            <Add directory="/home/alexey/Рабочий стол/C++/Project/Project/OrcWars/proj.cmake/Model/headers" />
+            <Add directory="/home/alexey/Рабочий стол/C++/Project/Project/OrcWars/proj.cmake/data" />
+            <Add directory="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src" />
+            <Add directory="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/third_party/linux/pthreads/include" />
+            <Add directory="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/third_party/linux/zlib" />
+            <Add directory="/usr/include" />
+            <Add directory="/usr/include/SDL2" />
+            <Add directory="/usr/include/c++/5" />
+            <Add directory="/usr/include/c++/5/backward" />
+            <Add directory="/usr/include/x86_64-linux-gnu" />
+            <Add directory="/usr/include/x86_64-linux-gnu/c++/5" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed" />
+            <Add directory="/usr/local/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/alexey/Рабочий\ стол/C++/Project/Project/OrcWars/proj.cmake/Model/Makefile&quot;  VERBOSE=1 Matrix" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/alexey/Рабочий\ стол/C++/Project/Project/OrcWars/proj.cmake/Model/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/alexey/Рабочий\ стол/C++/Project/Project/OrcWars/proj.cmake/Model/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/alexey/Рабочий\ стол/C++/Project/Project/OrcWars/proj.cmake/Model/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="Matrix/fast">
+         <Option output="/home/alexey/Рабочий стол/C++/Project/Project/OrcWars/proj.cmake/Model/Matrix" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/alexey/Рабочий стол/C++/Project/Project/OrcWars/proj.cmake/Model" />
+         <Option object_output="./" />
+         <Option type="1" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add option="-DOX_NO_HTTP" />
+            <Add option="-DOX_HAVE_LIBPNG" />
+            <Add option="-DOX_HAVE_LIBJPEG" />
+            <Add directory="/home/alexey/Рабочий стол/C++/Project/Project/OrcWars/proj.cmake/../data" />
+            <Add directory="/home/alexey/Рабочий стол/C++/Project/Project/OrcWars/proj.cmake/Model/headers" />
+            <Add directory="/home/alexey/Рабочий стол/C++/Project/Project/OrcWars/proj.cmake/data" />
+            <Add directory="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src" />
+            <Add directory="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/third_party/linux/pthreads/include" />
+            <Add directory="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/third_party/linux/zlib" />
+            <Add directory="/usr/include" />
+            <Add directory="/usr/include/SDL2" />
+            <Add directory="/usr/include/c++/5" />
+            <Add directory="/usr/include/c++/5/backward" />
+            <Add directory="/usr/include/x86_64-linux-gnu" />
+            <Add directory="/usr/include/x86_64-linux-gnu/c++/5" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed" />
+            <Add directory="/usr/local/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/alexey/Рабочий\ стол/C++/Project/Project/OrcWars/proj.cmake/Model/Makefile&quot;  VERBOSE=1 Matrix/fast" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/alexey/Рабочий\ стол/C++/Project/Project/OrcWars/proj.cmake/Model/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/alexey/Рабочий\ стол/C++/Project/Project/OrcWars/proj.cmake/Model/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/alexey/Рабочий\ стол/C++/Project/Project/OrcWars/proj.cmake/Model/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      </Build>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/OrcWars/proj.cmake/Model/Main.cpp">
+         <Option target="Matrix"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/OrcWars/proj.cmake/Model/Matrix.cpp">
+         <Option target="Matrix"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/OrcWars/proj.cmake/Model/Matrix.h">
+         <Option target="Matrix"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/OrcWars/src/ViewHelper.cpp">
+         <Option target="EmptyOxygine"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/OrcWars/src/ViewHelper.h">
+         <Option target="EmptyOxygine"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/OrcWars/src/example.cpp">
+         <Option target="EmptyOxygine"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/OrcWars/src/example.h">
+         <Option target="EmptyOxygine"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/OrcWars/src/main.cpp">
+         <Option target="EmptyOxygine"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/AnimationFrame.cpp">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/AnimationFrame.h">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/AsyncTask.cpp">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/AsyncTask.h">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/Clock.cpp">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/Clock.h">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/Draggable.cpp">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/Draggable.h">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/Event.h">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/EventDispatcher.cpp">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/EventDispatcher.h">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/Font.cpp">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/Font.h">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/HttpRequestTask.cpp">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/HttpRequestTask.h">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/Image.cpp">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/Image.h">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/Input.cpp">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/Input.h">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/InputText.cpp">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/InputText.h">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/KeyEvent.h">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/MaskedRenderer.cpp">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/MaskedRenderer.h">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/Material.cpp">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/Material.h">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/MaterialCache.cpp">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/MaterialCache.h">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/PointerState.cpp">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/PointerState.h">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/PostProcess.cpp">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/PostProcess.h">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/Property.h">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/RenderDelegate.cpp">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/RenderDelegate.h">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/RenderState.h">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/STDRenderDelegate.cpp">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/STDRenderDelegate.h">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/STDRenderer.cpp">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/STDRenderer.h">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/Serializable.cpp">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/Serializable.h">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/Serialize.cpp">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/Serialize.h">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/TextStyle.h">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/ThreadLoader.cpp">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/ThreadLoader.h">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/TouchEvent.h">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/UpdateState.h">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/VisualStyle.cpp">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/VisualStyle.h">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/actor/Actor.cpp">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/actor/Actor.h">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/actor/Box9Sprite.cpp">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/actor/Box9Sprite.h">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/actor/Button.cpp">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/actor/Button.h">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/actor/ClipRectActor.cpp">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/actor/ClipRectActor.h">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/actor/ColorRectSprite.cpp">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/actor/ColorRectSprite.h">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/actor/DebugActor.cpp">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/actor/DebugActor.h">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/actor/MaskedSprite.cpp">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/actor/MaskedSprite.h">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/actor/Polygon.cpp">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/actor/Polygon.h">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/actor/ProgressBar.cpp">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/actor/ProgressBar.h">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/actor/SlidingActor.cpp">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/actor/SlidingActor.h">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/actor/Sprite.cpp">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/actor/Sprite.h">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/actor/Stage.cpp">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/actor/Stage.h">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/actor/TextField.cpp">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/actor/TextField.h">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/actor/WebImage.cpp">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/actor/WebImage.h">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/closure/closure.h">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/closure/closure_impl.h">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/FileSystem.cpp">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/FileSystem.h">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/ImageData.cpp">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/ImageData.h">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/ImageDataOperations.cpp">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/ImageDataOperations.h">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/Mutex.cpp">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/Mutex.h">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/NativeTexture.cpp">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/NativeTexture.h">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/Object.cpp">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/Object.h">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/Renderer.cpp">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/Renderer.h">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/Restorable.cpp">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/Restorable.h">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/STDFileSystem.cpp">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/STDFileSystem.h">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/ShaderProgram.h">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/Texture.cpp">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/Texture.h">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/ThreadDispatcher.cpp">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/ThreadDispatcher.h">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/ThreadMessages.h">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/UberShaderProgram.cpp">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/UberShaderProgram.h">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/VertexDeclaration.h">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/VideoDriver.cpp">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/VideoDriver.h">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/ZipFileSystem.cpp">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/ZipFileSystem.h">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/Zips.cpp">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/Zips.h">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/file.cpp">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/file.h">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/gl/NativeTextureGLES.cpp">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/gl/NativeTextureGLES.h">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/gl/ShaderProgramGL.cpp">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/gl/ShaderProgramGL.h">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/gl/VertexDeclarationGL.cpp">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/gl/VertexDeclarationGL.h">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/gl/VideoDriverGL.cpp">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/gl/VideoDriverGL.h">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/gl/VideoDriverGLES20.cpp">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/gl/VideoDriverGLES20.h">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/gl/oxgl.cpp">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/gl/oxgl.h">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/intrusive_ptr.h">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/log.cpp">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/log.h">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/ox_debug.h">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/oxygine.cpp">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/oxygine.h">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/pixel.h">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/ref_counter.h">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/system_data.cpp">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/system_data.h">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/vertex.h">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/dev_tools/DeveloperMenu.cpp">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/dev_tools/DeveloperMenu.h">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/dev_tools/TexturesInspector.cpp">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/dev_tools/TexturesInspector.h">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/dev_tools/TreeInspector.cpp">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/dev_tools/TreeInspector.h">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/dev_tools/TreeInspectorLine.cpp">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/dev_tools/TreeInspectorLine.h">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/dev_tools/TreeInspectorPage.cpp">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/dev_tools/TreeInspectorPage.h">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/dev_tools/TreeInspectorPreview.cpp">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/dev_tools/TreeInspectorPreview.h">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/initActor.h">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/json/json-forwards.h">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/json/json.h">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/json/jsoncpp.cpp">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/key.cpp">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/key.h">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/math/AffineTransform.cpp">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/math/AffineTransform.h">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/math/Color.cpp">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/math/Color.h">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/math/Matrix.h">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/math/OBBox.h">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/math/Rect.h">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/math/ScalarMath.h">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/math/Vector2.h">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/math/Vector3.h">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/math/Vector4.h">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/minizip/ioapi.c">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/minizip/ioapi.h">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/minizip/ioapi_mem.c">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/minizip/ioapi_mem.h">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/minizip/unzip.c">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/minizip/unzip.h">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/oxygine-forwards.h">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/oxygine-include.h">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/pugixml/pugixml.cpp">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/pugixml/pugixml.hpp">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/res/CreateResourceContext.cpp">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/res/CreateResourceContext.h">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/res/ResAnim.cpp">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/res/ResAnim.h">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/res/ResAtlas.cpp">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/res/ResAtlas.h">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/res/ResAtlasGeneric.cpp">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/res/ResAtlasGeneric.h">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/res/ResAtlasPrebuilt.cpp">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/res/ResAtlasPrebuilt.h">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/res/ResBuffer.cpp">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/res/ResBuffer.h">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/res/ResFont.cpp">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/res/ResFont.h">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/res/ResFontBM.cpp">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/res/ResFontBM.h">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/res/ResStarlingAtlas.cpp">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/res/ResStarlingAtlas.h">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/res/Resource.cpp">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/res/Resource.h">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/res/Resources.cpp">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/res/Resources.h">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/res/SingleResAnim.cpp">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/res/SingleResAnim.h">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/text_utils/Aligner.cpp">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/text_utils/Aligner.h">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/text_utils/Node.cpp">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/text_utils/Node.h">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/text_utils/TextBuilder.cpp">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/text_utils/TextBuilder.h">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/tween/Tween.cpp">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/tween/Tween.h">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/tween/TweenAlphaFade.cpp">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/tween/TweenAlphaFade.h">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/tween/TweenAnim.cpp">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/tween/TweenAnim.h">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/tween/TweenGlow.cpp">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/tween/TweenGlow.h">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/tween/TweenOutline.cpp">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/tween/TweenOutline.h">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/tween/TweenQueue.cpp">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/tween/TweenQueue.h">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/utils/AtlasBuilder.cpp">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/utils/AtlasBuilder.h">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/utils/ImageUtils.cpp">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/utils/ImageUtils.h">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/utils/cdecode.c">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/utils/cdecode.h">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/utils/intrusive_list.h">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/utils/stringUtils.cpp">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/utils/stringUtils.h">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/winnie_alloc/system_alloc.cpp">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/winnie_alloc/system_alloc.h">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/winnie_alloc/winnie_alloc.cpp">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/winnie_alloc/winnie_alloc.h">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/winnie_alloc/winnie_alloc_config.h">
+         <Option target="oxygine-framework"/>
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/OrcWars/proj.cmake/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\" />
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/OrcWars/proj.cmake/Model/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\Model\" />
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/OrcWars/proj.cmake/Model/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\Model\" />
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/OrcWars/proj.cmake/../../oxygine-framework/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\..\..\oxygine-framework\" />
+      </Unit>
+      <Unit filename="/home/alexey/Рабочий стол/C++/Project/Project/OrcWars/proj.cmake/../../oxygine-framework/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\..\..\oxygine-framework\" />
+      </Unit>
+   </Project>
+</CodeBlocks_project_file>

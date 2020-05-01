@@ -1,3 +1,1 @@
-"C:\Program Files\CMake\bin\cmake.exe" -E rm -f CMakeFiles\Matrix.dir/objects.a
-C:\Users\1tira\gcc\bin\ar.exe cr CMakeFiles\Matrix.dir/objects.a @CMakeFiles\Matrix.dir\objects1.rsp
-C:\Users\1tira\gcc\bin\g++.exe    -Wl,--whole-archive CMakeFiles\Matrix.dir/objects.a -Wl,--no-whole-archive  -o Matrix.exe -Wl,--out-implib,libMatrix.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\Matrix.dir\linklibs.rsp
+/usr/bin/c++     -std=c++11    CMakeFiles/Matrix.dir/Main.cpp.o CMakeFiles/Matrix.dir/Matrix.cpp.o  -o Matrix  -L"/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/libs"  -L"/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/third_party/linux/libraries" -rdynamic 

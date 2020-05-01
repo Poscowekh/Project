@@ -1,15 +1,21 @@
-C:/Users/1tira/Desktop/GitHub/Project/OrcWars/proj.cmake/CMakeFiles/Matrix.dir
-C:/Users/1tira/Desktop/GitHub/Project/OrcWars/proj.cmake/CMakeFiles/install/strip.dir
-C:/Users/1tira/Desktop/GitHub/Project/OrcWars/proj.cmake/CMakeFiles/EmptyOxygine.dir
-C:/Users/1tira/Desktop/GitHub/Project/OrcWars/proj.cmake/CMakeFiles/install/local.dir
-C:/Users/1tira/Desktop/GitHub/Project/OrcWars/proj.cmake/CMakeFiles/install.dir
-C:/Users/1tira/Desktop/GitHub/Project/OrcWars/proj.cmake/CMakeFiles/edit_cache.dir
-C:/Users/1tira/Desktop/GitHub/Project/OrcWars/proj.cmake/CMakeFiles/rebuild_cache.dir
-C:/Users/1tira/Desktop/GitHub/Project/OrcWars/proj.cmake/CMakeFiles/list_install_components.dir
-C:/Users/1tira/Desktop/GitHub/Project/OrcWars/proj.cmake/oxygine-framework/CMakeFiles/install/strip.dir
-C:/Users/1tira/Desktop/GitHub/Project/OrcWars/proj.cmake/oxygine-framework/CMakeFiles/oxygine-framework.dir
-C:/Users/1tira/Desktop/GitHub/Project/OrcWars/proj.cmake/oxygine-framework/CMakeFiles/install/local.dir
-C:/Users/1tira/Desktop/GitHub/Project/OrcWars/proj.cmake/oxygine-framework/CMakeFiles/install.dir
-C:/Users/1tira/Desktop/GitHub/Project/OrcWars/proj.cmake/oxygine-framework/CMakeFiles/edit_cache.dir
-C:/Users/1tira/Desktop/GitHub/Project/OrcWars/proj.cmake/oxygine-framework/CMakeFiles/rebuild_cache.dir
-C:/Users/1tira/Desktop/GitHub/Project/OrcWars/proj.cmake/oxygine-framework/CMakeFiles/list_install_components.dir
+/home/alexey/Рабочий стол/C++/Project/Project/OrcWars/proj.cmake/CMakeFiles/install.dir
+/home/alexey/Рабочий стол/C++/Project/Project/OrcWars/proj.cmake/CMakeFiles/list_install_components.dir
+/home/alexey/Рабочий стол/C++/Project/Project/OrcWars/proj.cmake/CMakeFiles/rebuild_cache.dir
+/home/alexey/Рабочий стол/C++/Project/Project/OrcWars/proj.cmake/CMakeFiles/EmptyOxygine.dir
+/home/alexey/Рабочий стол/C++/Project/Project/OrcWars/proj.cmake/CMakeFiles/install/strip.dir
+/home/alexey/Рабочий стол/C++/Project/Project/OrcWars/proj.cmake/CMakeFiles/install/local.dir
+/home/alexey/Рабочий стол/C++/Project/Project/OrcWars/proj.cmake/CMakeFiles/edit_cache.dir
+/home/alexey/Рабочий стол/C++/Project/Project/OrcWars/proj.cmake/oxygine-framework/CMakeFiles/install.dir
+/home/alexey/Рабочий стол/C++/Project/Project/OrcWars/proj.cmake/oxygine-framework/CMakeFiles/list_install_components.dir
+/home/alexey/Рабочий стол/C++/Project/Project/OrcWars/proj.cmake/oxygine-framework/CMakeFiles/rebuild_cache.dir
+/home/alexey/Рабочий стол/C++/Project/Project/OrcWars/proj.cmake/oxygine-framework/CMakeFiles/oxygine-framework.dir
+/home/alexey/Рабочий стол/C++/Project/Project/OrcWars/proj.cmake/oxygine-framework/CMakeFiles/install/strip.dir
+/home/alexey/Рабочий стол/C++/Project/Project/OrcWars/proj.cmake/oxygine-framework/CMakeFiles/install/local.dir
+/home/alexey/Рабочий стол/C++/Project/Project/OrcWars/proj.cmake/oxygine-framework/CMakeFiles/edit_cache.dir
+/home/alexey/Рабочий стол/C++/Project/Project/OrcWars/proj.cmake/Model/CMakeFiles/install.dir
+/home/alexey/Рабочий стол/C++/Project/Project/OrcWars/proj.cmake/Model/CMakeFiles/list_install_components.dir
+/home/alexey/Рабочий стол/C++/Project/Project/OrcWars/proj.cmake/Model/CMakeFiles/rebuild_cache.dir
+/home/alexey/Рабочий стол/C++/Project/Project/OrcWars/proj.cmake/Model/CMakeFiles/Matrix.dir
+/home/alexey/Рабочий стол/C++/Project/Project/OrcWars/proj.cmake/Model/CMakeFiles/install/local.dir
+/home/alexey/Рабочий стол/C++/Project/Project/OrcWars/proj.cmake/Model/CMakeFiles/install/strip.dir
+/home/alexey/Рабочий стол/C++/Project/Project/OrcWars/proj.cmake/Model/CMakeFiles/edit_cache.dir

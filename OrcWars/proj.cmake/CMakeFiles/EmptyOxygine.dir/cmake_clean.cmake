@@ -1,11 +1,9 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/EmptyOxygine.dir/C_/Users/1tira/Desktop/GitHub/Project/OrcWars/src/ViewHelper.cpp.obj"
-  "CMakeFiles/EmptyOxygine.dir/C_/Users/1tira/Desktop/GitHub/Project/OrcWars/src/example.cpp.obj"
-  "CMakeFiles/EmptyOxygine.dir/C_/Users/1tira/Desktop/GitHub/Project/OrcWars/src/main.cpp.obj"
-  "EmptyOxygine.exe"
-  "EmptyOxygine.exe.manifest"
+  "CMakeFiles/EmptyOxygine.dir/home/alexey/Рабочий_стол/C++/Project/Project/OrcWars/src/example.cpp.o"
+  "CMakeFiles/EmptyOxygine.dir/home/alexey/Рабочий_стол/C++/Project/Project/OrcWars/src/main.cpp.o"
+  "CMakeFiles/EmptyOxygine.dir/home/alexey/Рабочий_стол/C++/Project/Project/OrcWars/src/ViewHelper.cpp.o"
   "EmptyOxygine.pdb"
-  "libEmptyOxygine.dll.a"
+  "EmptyOxygine"
 )
 
 # Per-language clean rules from dependency scanning.

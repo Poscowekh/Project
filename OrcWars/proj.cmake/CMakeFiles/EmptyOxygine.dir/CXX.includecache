@@ -1,0 +1,1822 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/alexey/Рабочий стол/C++/Project/Project/OrcWars/src/ViewHelper.cpp
+ViewHelper.h
+/home/alexey/Рабочий стол/C++/Project/Project/OrcWars/src/ViewHelper.h
+ctime
+-
+
+/home/alexey/Рабочий стол/C++/Project/Project/OrcWars/src/ViewHelper.h
+oxygine-framework.h
+/home/alexey/Рабочий стол/C++/Project/Project/OrcWars/src/oxygine-framework.h
+
+/home/alexey/Рабочий стол/C++/Project/Project/OrcWars/src/example.cpp
+oxygine-framework.h
+/home/alexey/Рабочий стол/C++/Project/Project/OrcWars/src/oxygine-framework.h
+functional
+-
+ViewHelper.h
+/home/alexey/Рабочий стол/C++/Project/Project/OrcWars/src/ViewHelper.h
+
+/home/alexey/Рабочий стол/C++/Project/Project/OrcWars/src/example.h
+
+/home/alexey/Рабочий стол/C++/Project/Project/OrcWars/src/main.cpp
+example.h
+/home/alexey/Рабочий стол/C++/Project/Project/OrcWars/src/example.h
+oxygine-framework.h
+/home/alexey/Рабочий стол/C++/Project/Project/OrcWars/src/oxygine-framework.h
+SDL_main.h
+/home/alexey/Рабочий стол/C++/Project/Project/OrcWars/src/SDL_main.h
+SDL.h
+/home/alexey/Рабочий стол/C++/Project/Project/OrcWars/src/SDL.h
+
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine-framework.h
+oxygine/oxygine-include.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/oxygine-include.h
+oxygine/actor/Actor.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/actor/Actor.h
+oxygine/AnimationFrame.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/AnimationFrame.h
+oxygine/actor/Box9Sprite.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/actor/Box9Sprite.h
+oxygine/actor/Button.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/actor/Button.h
+oxygine/actor/ClipRectActor.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/actor/ClipRectActor.h
+oxygine/Clock.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/Clock.h
+oxygine/actor/ColorRectSprite.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/actor/ColorRectSprite.h
+oxygine/actor/DebugActor.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/actor/DebugActor.h
+oxygine/Draggable.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/Draggable.h
+oxygine/Event.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/Event.h
+oxygine/EventDispatcher.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/EventDispatcher.h
+oxygine/HttpRequestTask.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/HttpRequestTask.h
+oxygine/Font.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/Font.h
+oxygine/initActor.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/initActor.h
+oxygine/Input.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/Input.h
+oxygine/InputText.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/InputText.h
+oxygine/Image.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/Image.h
+oxygine/ThreadLoader.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/ThreadLoader.h
+oxygine/PointerState.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/PointerState.h
+oxygine/actor/ProgressBar.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/actor/ProgressBar.h
+oxygine/RenderState.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/RenderState.h
+oxygine/actor/Stage.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/actor/Stage.h
+oxygine/actor/SlidingActor.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/actor/SlidingActor.h
+oxygine/actor/Sprite.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/actor/Sprite.h
+oxygine/actor/MaskedSprite.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/actor/MaskedSprite.h
+oxygine/actor/TextField.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/actor/TextField.h
+oxygine/TextStyle.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/TextStyle.h
+oxygine/tween/Tween.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/tween/Tween.h
+oxygine/tween/TweenQueue.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/tween/TweenQueue.h
+oxygine/TouchEvent.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/TouchEvent.h
+oxygine/KeyEvent.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/KeyEvent.h
+oxygine/UpdateState.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/UpdateState.h
+oxygine/VisualStyle.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/VisualStyle.h
+oxygine/Serialize.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/Serialize.h
+oxygine/STDRenderer.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/STDRenderer.h
+oxygine/actor/WebImage.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/actor/WebImage.h
+oxygine/key.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/key.h
+oxygine/actor/Polygon.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/actor/Polygon.h
+oxygine/tween/TweenOutline.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/tween/TweenOutline.h
+oxygine/tween/TweenGlow.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/tween/TweenGlow.h
+oxygine/tween/TweenAlphaFade.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/tween/TweenAlphaFade.h
+oxygine/Material.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/Material.h
+oxygine/MaterialCache.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/MaterialCache.h
+oxygine/closure/closure.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/closure/closure.h
+oxygine/core/file.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/file.h
+oxygine/core/ImageData.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/ImageData.h
+oxygine/core/ImageDataOperations.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/ImageDataOperations.h
+oxygine/core/intrusive_ptr.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/intrusive_ptr.h
+oxygine/core/log.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/log.h
+oxygine/core/Mutex.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/Mutex.h
+oxygine/core/NativeTexture.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/NativeTexture.h
+oxygine/core/Object.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/Object.h
+oxygine/core/oxygine.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/oxygine.h
+oxygine/core/ox_debug.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/ox_debug.h
+oxygine/core/pixel.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/pixel.h
+oxygine/core/ref_counter.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/ref_counter.h
+oxygine/core/Renderer.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/Renderer.h
+oxygine/core/ShaderProgram.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/ShaderProgram.h
+oxygine/core/Texture.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/Texture.h
+oxygine/core/vertex.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/vertex.h
+oxygine/core/VertexDeclaration.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/VertexDeclaration.h
+oxygine/core/VideoDriver.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/VideoDriver.h
+oxygine/core/STDFileSystem.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/STDFileSystem.h
+oxygine/core/UberShaderProgram.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/UberShaderProgram.h
+oxygine/core/gl/NativeTextureGLES.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/gl/NativeTextureGLES.h
+oxygine/core/gl/oxgl.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/gl/oxgl.h
+oxygine/core/gl/VertexDeclarationGL.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/gl/VertexDeclarationGL.h
+oxygine/core/gl/VideoDriverGLES20.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/gl/VideoDriverGLES20.h
+oxygine/core/gl/ShaderProgramGL.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/gl/ShaderProgramGL.h
+oxygine/math/AffineTransform.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/math/AffineTransform.h
+oxygine/math/Color.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/math/Color.h
+oxygine/math/Matrix.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/math/Matrix.h
+oxygine/math/Rect.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/math/Rect.h
+oxygine/math/ScalarMath.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/math/ScalarMath.h
+oxygine/math/Vector2.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/math/Vector2.h
+oxygine/math/Vector3.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/math/Vector3.h
+oxygine/math/Vector4.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/math/Vector4.h
+oxygine/pugixml/pugixml.hpp
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/pugixml/pugixml.hpp
+oxygine/res/CreateResourceContext.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/res/CreateResourceContext.h
+oxygine/res/ResAnim.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/res/ResAnim.h
+oxygine/res/ResAtlas.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/res/ResAtlas.h
+oxygine/res/ResBuffer.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/res/ResBuffer.h
+oxygine/res/ResFont.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/res/ResFont.h
+oxygine/res/ResFontBM.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/res/ResFontBM.h
+oxygine/res/Resource.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/res/Resource.h
+oxygine/res/Resources.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/res/Resources.h
+oxygine/res/ResStarlingAtlas.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/res/ResStarlingAtlas.h
+oxygine/res/SingleResAnim.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/res/SingleResAnim.h
+oxygine/text_utils/Aligner.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/text_utils/Aligner.h
+oxygine/text_utils/Node.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/text_utils/Node.h
+oxygine/text_utils/TextBuilder.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/text_utils/TextBuilder.h
+oxygine/utils/AtlasBuilder.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/utils/AtlasBuilder.h
+oxygine/utils/ImageUtils.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/utils/ImageUtils.h
+oxygine/utils/intrusive_list.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/utils/intrusive_list.h
+oxygine/utils/stringUtils.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/utils/stringUtils.h
+
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/AnimationFrame.h
+oxygine-include.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/oxygine-include.h
+core/NativeTexture.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/NativeTexture.h
+core/Texture.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/Texture.h
+math/Rect.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/math/Rect.h
+
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/AsyncTask.h
+oxygine-include.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/oxygine-include.h
+Event.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/Event.h
+EventDispatcher.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/EventDispatcher.h
+core/ThreadDispatcher.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/ThreadDispatcher.h
+core/oxygine.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/oxygine.h
+
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/Clock.h
+oxygine-include.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/oxygine-include.h
+core/Object.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/Object.h
+
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/Draggable.h
+oxygine-include.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/oxygine-include.h
+actor/Actor.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/actor/Actor.h
+
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/Event.h
+oxygine-include.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/oxygine-include.h
+EventDispatcher.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/EventDispatcher.h
+Input.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/Input.h
+closure/closure.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/closure/closure.h
+
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/EventDispatcher.h
+oxygine-include.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/oxygine-include.h
+closure/closure.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/closure/closure.h
+core/Object.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/Object.h
+list
+-
+
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/Font.h
+oxygine-include.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/oxygine-include.h
+core/Object.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/Object.h
+math/Rect.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/math/Rect.h
+unordered_set
+-
+
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/HttpRequestTask.h
+oxygine-include.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/oxygine-include.h
+AsyncTask.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/AsyncTask.h
+core/file.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/file.h
+string
+-
+vector
+-
+
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/Image.h
+oxygine-include.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/oxygine-include.h
+core/Texture.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/Texture.h
+core/file.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/file.h
+
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/Input.h
+oxygine-include.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/oxygine-include.h
+EventDispatcher.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/EventDispatcher.h
+PointerState.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/PointerState.h
+closure/closure.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/closure/closure.h
+
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/InputText.h
+oxygine-include.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/oxygine-include.h
+Event.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/Event.h
+EventDispatcher.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/EventDispatcher.h
+SDL.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/SDL.h
+string
+-
+
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/KeyEvent.h
+Event.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/Event.h
+
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/Material.h
+oxygine-include.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/oxygine-include.h
+core/Renderer.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/Renderer.h
+core/ref_counter.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/ref_counter.h
+
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/MaterialCache.h
+oxygine-include.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/oxygine-include.h
+core/Mutex.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/Mutex.h
+core/intrusive_ptr.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/intrusive_ptr.h
+core/ref_counter.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/ref_counter.h
+unordered_map
+-
+vector
+-
+
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/PointerState.h
+oxygine-include.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/oxygine-include.h
+math/Vector2.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/math/Vector2.h
+list
+-
+
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/PostProcess.h
+oxygine-include.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/oxygine-include.h
+RenderDelegate.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/RenderDelegate.h
+core/NativeTexture.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/NativeTexture.h
+core/Renderer.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/Renderer.h
+math/Rect.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/math/Rect.h
+tween/Tween.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/tween/Tween.h
+
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/Property.h
+
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/RenderDelegate.h
+oxygine-include.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/oxygine-include.h
+
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/RenderState.h
+oxygine-include.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/oxygine-include.h
+STDRenderDelegate.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/STDRenderDelegate.h
+core/Renderer.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/Renderer.h
+
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/STDRenderDelegate.h
+oxygine-include.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/oxygine-include.h
+RenderDelegate.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/RenderDelegate.h
+STDRenderer.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/STDRenderer.h
+
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/STDRenderer.h
+oxygine-include.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/oxygine-include.h
+Material.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/Material.h
+core/Renderer.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/Renderer.h
+functional
+-
+
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/Serializable.h
+oxygine-include.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/oxygine-include.h
+
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/Serialize.h
+oxygine-include.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/oxygine-include.h
+core/Object.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/Object.h
+pugixml/pugixml.hpp
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/pugixml/pugixml.hpp
+res/ResAnim.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/res/ResAnim.h
+res/ResFont.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/res/ResFont.h
+utils/stringUtils.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/utils/stringUtils.h
+
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/TextStyle.h
+oxygine-include.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/oxygine-include.h
+math/Color.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/math/Color.h
+string
+-
+
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/ThreadLoader.h
+oxygine-include.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/oxygine-include.h
+Event.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/Event.h
+EventDispatcher.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/EventDispatcher.h
+pthread.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/pthread.h
+core/ThreadDispatcher.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/ThreadDispatcher.h
+functional
+-
+
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/TouchEvent.h
+oxygine-include.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/oxygine-include.h
+Event.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/Event.h
+
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/UpdateState.h
+oxygine-include.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/oxygine-include.h
+
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/VisualStyle.h
+oxygine-include.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/oxygine-include.h
+Material.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/Material.h
+actor/Actor.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/actor/Actor.h
+
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/actor/Actor.h
+../oxygine-include.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/oxygine-include.h
+../EventDispatcher.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/EventDispatcher.h
+../Serializable.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/Serializable.h
+../TouchEvent.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/TouchEvent.h
+../core/Object.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/Object.h
+../core/Renderer.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/Renderer.h
+../math/AffineTransform.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/math/AffineTransform.h
+../math/Rect.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/math/Rect.h
+../oxygine-forwards.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/oxygine-forwards.h
+../tween/Tween.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/tween/Tween.h
+../utils/intrusive_list.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/utils/intrusive_list.h
+
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/actor/Box9Sprite.h
+../oxygine-include.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/oxygine-include.h
+Sprite.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/actor/Sprite.h
+
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/actor/Button.h
+../oxygine-include.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/oxygine-include.h
+Sprite.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/actor/Sprite.h
+
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/actor/ClipRectActor.h
+../oxygine-include.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/oxygine-include.h
+Actor.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/actor/Actor.h
+
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/actor/ColorRectSprite.h
+../oxygine-include.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/oxygine-include.h
+Sprite.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/actor/Sprite.h
+
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/actor/DebugActor.h
+../oxygine-include.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/oxygine-include.h
+Actor.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/actor/Actor.h
+
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/actor/MaskedSprite.h
+../oxygine-include.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/oxygine-include.h
+Sprite.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/actor/Sprite.h
+
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/actor/Polygon.h
+../oxygine-include.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/oxygine-include.h
+Sprite.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/actor/Sprite.h
+
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/actor/ProgressBar.h
+../oxygine-include.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/oxygine-include.h
+Sprite.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/actor/Sprite.h
+
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/actor/SlidingActor.h
+../oxygine-include.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/oxygine-include.h
+Actor.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/actor/Actor.h
+ClipRectActor.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/actor/ClipRectActor.h
+../Draggable.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/Draggable.h
+../math/Vector2.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/math/Vector2.h
+
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/actor/Sprite.h
+../oxygine-include.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/oxygine-include.h
+Actor.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/actor/Actor.h
+../AnimationFrame.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/AnimationFrame.h
+../VisualStyle.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/VisualStyle.h
+../core/Texture.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/Texture.h
+../math/Rect.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/math/Rect.h
+../res/ResAnim.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/res/ResAnim.h
+../tween/TweenAnim.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/tween/TweenAnim.h
+
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/actor/Stage.h
+../oxygine-include.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/oxygine-include.h
+Actor.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/actor/Actor.h
+
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/actor/TextField.h
+../oxygine-include.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/oxygine-include.h
+Actor.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/actor/Actor.h
+../TextStyle.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/TextStyle.h
+../VisualStyle.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/VisualStyle.h
+
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/actor/WebImage.h
+../oxygine-include.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/oxygine-include.h
+Actor.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/actor/Actor.h
+../HttpRequestTask.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/HttpRequestTask.h
+../res/ResAnim.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/res/ResAnim.h
+string
+-
+
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/closure/closure.h
+functional
+-
+memory
+-
+closure_impl.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/closure/closure_impl.h
+closure_impl.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/closure/closure_impl.h
+closure_impl.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/closure/closure_impl.h
+closure_impl.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/closure/closure_impl.h
+closure_impl.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/closure/closure_impl.h
+
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/closure/closure_impl.h
+
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/FileSystem.h
+../oxygine-include.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/oxygine-include.h
+Object.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/Object.h
+
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/ImageData.h
+../oxygine-include.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/oxygine-include.h
+pixel.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/pixel.h
+../math/Rect.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/math/Rect.h
+
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/ImageDataOperations.h
+../oxygine-include.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/oxygine-include.h
+ImageData.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/ImageData.h
+
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/Mutex.h
+../oxygine-include.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/oxygine-include.h
+pthread.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/pthread.h
+
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/NativeTexture.h
+../oxygine-include.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/oxygine-include.h
+Restorable.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/Restorable.h
+Texture.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/Texture.h
+ox_debug.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/ox_debug.h
+../closure/closure.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/closure/closure.h
+
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/Object.h
+../oxygine-include.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/oxygine-include.h
+ref_counter.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/ref_counter.h
+string
+-
+vector
+-
+
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/Renderer.h
+../oxygine-include.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/oxygine-include.h
+NativeTexture.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/NativeTexture.h
+VideoDriver.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/VideoDriver.h
+../math/AffineTransform.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/math/AffineTransform.h
+../math/Color.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/math/Color.h
+../math/Rect.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/math/Rect.h
+vector
+-
+
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/Restorable.h
+../oxygine-include.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/oxygine-include.h
+../closure/closure.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/closure/closure.h
+vector
+-
+
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/STDFileSystem.h
+../oxygine-include.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/oxygine-include.h
+FileSystem.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/FileSystem.h
+
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/ShaderProgram.h
+../oxygine-include.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/oxygine-include.h
+Object.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/Object.h
+
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/Texture.h
+../oxygine-include.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/oxygine-include.h
+ImageData.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/ImageData.h
+Object.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/Object.h
+ref_counter.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/ref_counter.h
+../math/Rect.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/math/Rect.h
+vector
+-
+
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/ThreadDispatcher.h
+../oxygine-include.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/oxygine-include.h
+functional
+-
+vector
+-
+pthread.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/pthread.h
+
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/UberShaderProgram.h
+Object.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/Object.h
+Restorable.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/Restorable.h
+vector
+-
+
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/VertexDeclaration.h
+../oxygine-include.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/oxygine-include.h
+vertex.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/vertex.h
+
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/VideoDriver.h
+../oxygine-include.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/oxygine-include.h
+ref_counter.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/ref_counter.h
+vertex.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/vertex.h
+../math/Matrix.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/math/Matrix.h
+../math/Rect.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/math/Rect.h
+../math/Vector4.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/math/Vector4.h
+vector
+-
+
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/file.h
+../oxygine-include.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/oxygine-include.h
+FileSystem.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/FileSystem.h
+Object.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/Object.h
+string
+-
+vector
+-
+
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/gl/NativeTextureGLES.h
+../../oxygine-include.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/oxygine-include.h
+../NativeTexture.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/NativeTexture.h
+
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/gl/ShaderProgramGL.h
+oxgl.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/gl/oxgl.h
+../ShaderProgram.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/ShaderProgram.h
+
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/gl/VertexDeclarationGL.h
+../../oxygine-include.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/oxygine-include.h
+oxgl.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/gl/oxgl.h
+../VertexDeclaration.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/VertexDeclaration.h
+
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/gl/VideoDriverGL.h
+../../oxygine-include.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/oxygine-include.h
+VertexDeclarationGL.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/gl/VertexDeclarationGL.h
+oxgl.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/gl/oxgl.h
+../VideoDriver.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/VideoDriver.h
+
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/gl/VideoDriverGLES20.h
+../../oxygine-include.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/oxygine-include.h
+VideoDriverGL.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/gl/VideoDriverGL.h
+../../core/Restorable.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/Restorable.h
+../ShaderProgram.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/ShaderProgram.h
+../file.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/file.h
+
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/gl/oxgl.h
+../../oxygine-include.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/oxygine-include.h
+SDL_config.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/gl/SDL_config.h
+SDL_opengl.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/gl/SDL_opengl.h
+GLES2/gl2.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/gl/GLES2/gl2.h
+GLES2/gl2ext.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/gl/GLES2/gl2ext.h
+TargetConditionals.h
+-
+OpenGLES/ES2/gl.h
+-
+OpenGLES/ES2/glext.h
+-
+OpenGLES/ES1/gl.h
+-
+OpenGLES/ES1/glext.h
+-
+SDL_opengl.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/gl/SDL_opengl.h
+GLES2/gl2.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/gl/GLES2/gl2.h
+GLES2/gl2ext.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/gl/GLES2/gl2ext.h
+SDL_opengl.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/gl/SDL_opengl.h
+
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/intrusive_ptr.h
+../oxygine-include.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/oxygine-include.h
+ox_debug.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/ox_debug.h
+
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/log.h
+../oxygine-include.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/oxygine-include.h
+stdarg.h
+-
+
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/ox_debug.h
+../oxygine-include.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/oxygine-include.h
+log.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/log.h
+assert.h
+-
+
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/oxygine.h
+../oxygine-include.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/oxygine-include.h
+../EventDispatcher.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/EventDispatcher.h
+../Event.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/Event.h
+../math/Vector2.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/math/Vector2.h
+string
+-
+
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/pixel.h
+../oxygine-include.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/oxygine-include.h
+
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/ref_counter.h
+../oxygine-include.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/oxygine-include.h
+intrusive_ptr.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/intrusive_ptr.h
+
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/vertex.h
+../oxygine-include.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/oxygine-include.h
+../math/Vector2.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/math/Vector2.h
+
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/initActor.h
+oxygine-include.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/oxygine-include.h
+actor/Actor.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/actor/Actor.h
+actor/Button.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/actor/Button.h
+actor/Sprite.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/actor/Sprite.h
+actor/TextField.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/actor/TextField.h
+
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/key.h
+oxygine-include.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/oxygine-include.h
+SDL_keyboard.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/SDL_keyboard.h
+
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/math/AffineTransform.h
+../oxygine-include.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/oxygine-include.h
+Matrix.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/math/Matrix.h
+Vector2.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/math/Vector2.h
+
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/math/Color.h
+../oxygine-include.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/oxygine-include.h
+ScalarMath.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/math/ScalarMath.h
+Vector4.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/math/Vector4.h
+
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/math/Matrix.h
+../oxygine-include.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/oxygine-include.h
+Vector2.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/math/Vector2.h
+Vector3.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/math/Vector3.h
+Vector4.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/math/Vector4.h
+algorithm
+-
+math.h
+-
+stdlib.h
+-
+
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/math/Rect.h
+../oxygine-include.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/oxygine-include.h
+Vector2.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/math/Vector2.h
+algorithm
+-
+limits
+-
+
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/math/ScalarMath.h
+../oxygine-include.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/oxygine-include.h
+math.h
+-
+stdlib.h
+-
+
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/math/Vector2.h
+../oxygine-include.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/oxygine-include.h
+ScalarMath.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/math/ScalarMath.h
+
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/math/Vector3.h
+../oxygine-include.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/oxygine-include.h
+Vector2.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/math/Vector2.h
+
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/math/Vector4.h
+../oxygine-include.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/oxygine-include.h
+Vector3.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/math/Vector3.h
+
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/oxygine-forwards.h
+core/ref_counter.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/ref_counter.h
+closure/closure.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/closure/closure.h
+
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/oxygine-include.h
+assert.h
+-
+string.h
+-
+stdio.h
+-
+stdarg.h
+-
+TargetConditionals.h
+-
+emscripten.h
+-
+qglobal.h
+-
+oxygine-forwards.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/oxygine-forwards.h
+
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/pugixml/pugiconfig.hpp
+
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/pugixml/pugixml.hpp
+pugiconfig.hpp
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/pugixml/pugiconfig.hpp
+stddef.h
+-
+exception
+-
+iterator
+-
+iosfwd
+-
+string
+-
+
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/res/CreateResourceContext.h
+../oxygine-include.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/oxygine-include.h
+../core/Object.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/Object.h
+../pugixml/pugixml.hpp
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/pugixml/pugixml.hpp
+string
+-
+
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/res/ResAnim.h
+../oxygine-include.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/oxygine-include.h
+Resource.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/res/Resource.h
+../AnimationFrame.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/AnimationFrame.h
+../core/Texture.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/Texture.h
+vector
+-
+
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/res/ResAtlas.h
+../oxygine-include.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/oxygine-include.h
+CreateResourceContext.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/res/CreateResourceContext.h
+ResAnim.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/res/ResAnim.h
+Resource.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/res/Resource.h
+
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/res/ResBuffer.h
+../oxygine-include.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/oxygine-include.h
+Resource.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/res/Resource.h
+../core/file.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/file.h
+vector
+-
+
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/res/ResFont.h
+../oxygine-include.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/oxygine-include.h
+Resource.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/res/Resource.h
+
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/res/ResFontBM.h
+../oxygine-include.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/oxygine-include.h
+ResFont.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/res/ResFont.h
+../core/Texture.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/Texture.h
+vector
+-
+
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/res/ResStarlingAtlas.h
+../oxygine-include.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/oxygine-include.h
+Resource.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/res/Resource.h
+
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/res/Resource.h
+../oxygine-include.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/oxygine-include.h
+../core/Object.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/Object.h
+../pugixml/pugixml.hpp
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/pugixml/pugixml.hpp
+string
+-
+
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/res/Resources.h
+../oxygine-include.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/oxygine-include.h
+Resource.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/res/Resource.h
+../closure/closure.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/closure/closure.h
+../core/Object.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/Object.h
+../pugixml/pugixml.hpp
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/pugixml/pugixml.hpp
+list
+-
+string.h
+-
+string
+-
+unordered_map
+-
+
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/res/SingleResAnim.h
+../oxygine-include.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/oxygine-include.h
+ResAnim.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/res/ResAnim.h
+
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/text_utils/Aligner.h
+../oxygine-include.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/oxygine-include.h
+../Font.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/Font.h
+../Material.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/Material.h
+../TextStyle.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/TextStyle.h
+../core/NativeTexture.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/NativeTexture.h
+../math/Color.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/math/Color.h
+../math/Rect.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/math/Rect.h
+vector
+-
+
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/text_utils/Node.h
+../oxygine-include.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/oxygine-include.h
+Aligner.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/text_utils/Aligner.h
+../core/Object.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/Object.h
+../math/Color.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/math/Color.h
+../math/Vector2.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/math/Vector2.h
+string
+-
+vector
+-
+
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/text_utils/TextBuilder.h
+../oxygine-include.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/oxygine-include.h
+string
+-
+
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/tween/Tween.h
+oxygine-include.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/tween/oxygine-include.h
+../Event.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/Event.h
+../EventDispatcher.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/EventDispatcher.h
+../Property.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/Property.h
+../UpdateState.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/UpdateState.h
+../closure/closure.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/closure/closure.h
+../core/Object.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/Object.h
+../utils/intrusive_list.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/utils/intrusive_list.h
+limits
+-
+stdint.h
+-
+
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/tween/TweenAlphaFade.h
+oxygine-include.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/tween/oxygine-include.h
+Tween.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/tween/Tween.h
+../PostProcess.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/PostProcess.h
+
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/tween/TweenAnim.h
+oxygine-include.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/tween/oxygine-include.h
+
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/tween/TweenGlow.h
+oxygine-include.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/tween/oxygine-include.h
+../PostProcess.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/PostProcess.h
+
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/tween/TweenOutline.h
+oxygine-include.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/tween/oxygine-include.h
+../PostProcess.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/PostProcess.h
+
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/tween/TweenQueue.h
+oxygine-include.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/tween/oxygine-include.h
+Tween.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/tween/Tween.h
+
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/utils/AtlasBuilder.h
+../oxygine-include.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/oxygine-include.h
+../AnimationFrame.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/AnimationFrame.h
+../math/Rect.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/math/Rect.h
+deque
+-
+
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/utils/ImageUtils.h
+../oxygine-include.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/oxygine-include.h
+../core/file.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/core/file.h
+
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/utils/intrusive_list.h
+../oxygine-include.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/oxygine-include.h
+
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/utils/stringUtils.h
+../oxygine-include.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/oxygine-include.h
+../math/Color.h
+/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/src/oxygine/math/Color.h
+stdarg.h
+-
+string
+-
+
+/usr/include/SDL2/SDL.h
+SDL_main.h
+/usr/include/SDL2/SDL_main.h
+SDL_stdinc.h
+/usr/include/SDL2/SDL_stdinc.h
+SDL_assert.h
+/usr/include/SDL2/SDL_assert.h
+SDL_atomic.h
+/usr/include/SDL2/SDL_atomic.h
+SDL_audio.h
+/usr/include/SDL2/SDL_audio.h
+SDL_clipboard.h
+/usr/include/SDL2/SDL_clipboard.h
+SDL_cpuinfo.h
+/usr/include/SDL2/SDL_cpuinfo.h
+SDL_endian.h
+/usr/include/SDL2/SDL_endian.h
+SDL_error.h
+/usr/include/SDL2/SDL_error.h
+SDL_events.h
+/usr/include/SDL2/SDL_events.h
+SDL_filesystem.h
+/usr/include/SDL2/SDL_filesystem.h
+SDL_joystick.h
+/usr/include/SDL2/SDL_joystick.h
+SDL_gamecontroller.h
+/usr/include/SDL2/SDL_gamecontroller.h
+SDL_haptic.h
+/usr/include/SDL2/SDL_haptic.h
+SDL_hints.h
+/usr/include/SDL2/SDL_hints.h
+SDL_loadso.h
+/usr/include/SDL2/SDL_loadso.h
+SDL_log.h
+/usr/include/SDL2/SDL_log.h
+SDL_messagebox.h
+/usr/include/SDL2/SDL_messagebox.h
+SDL_mutex.h
+/usr/include/SDL2/SDL_mutex.h
+SDL_power.h
+/usr/include/SDL2/SDL_power.h
+SDL_render.h
+/usr/include/SDL2/SDL_render.h
+SDL_rwops.h
+/usr/include/SDL2/SDL_rwops.h
+SDL_system.h
+/usr/include/SDL2/SDL_system.h
+SDL_thread.h
+/usr/include/SDL2/SDL_thread.h
+SDL_timer.h
+/usr/include/SDL2/SDL_timer.h
+SDL_version.h
+/usr/include/SDL2/SDL_version.h
+SDL_video.h
+/usr/include/SDL2/SDL_video.h
+begin_code.h
+/usr/include/SDL2/begin_code.h
+close_code.h
+/usr/include/SDL2/close_code.h
+
+/usr/include/SDL2/SDL_assert.h
+SDL_config.h
+/usr/include/SDL2/SDL_config.h
+begin_code.h
+/usr/include/SDL2/begin_code.h
+signal.h
+-
+close_code.h
+/usr/include/SDL2/close_code.h
+
+/usr/include/SDL2/SDL_atomic.h
+SDL_stdinc.h
+/usr/include/SDL2/SDL_stdinc.h
+SDL_platform.h
+/usr/include/SDL2/SDL_platform.h
+begin_code.h
+/usr/include/SDL2/begin_code.h
+mbarrier.h
+-
+close_code.h
+/usr/include/SDL2/close_code.h
+
+/usr/include/SDL2/SDL_audio.h
+SDL_stdinc.h
+/usr/include/SDL2/SDL_stdinc.h
+SDL_error.h
+/usr/include/SDL2/SDL_error.h
+SDL_endian.h
+/usr/include/SDL2/SDL_endian.h
+SDL_mutex.h
+/usr/include/SDL2/SDL_mutex.h
+SDL_thread.h
+/usr/include/SDL2/SDL_thread.h
+SDL_rwops.h
+/usr/include/SDL2/SDL_rwops.h
+begin_code.h
+/usr/include/SDL2/begin_code.h
+close_code.h
+/usr/include/SDL2/close_code.h
+
+/usr/include/SDL2/SDL_blendmode.h
+begin_code.h
+/usr/include/SDL2/begin_code.h
+close_code.h
+/usr/include/SDL2/close_code.h
+
+/usr/include/SDL2/SDL_clipboard.h
+SDL_stdinc.h
+/usr/include/SDL2/SDL_stdinc.h
+begin_code.h
+/usr/include/SDL2/begin_code.h
+close_code.h
+/usr/include/SDL2/close_code.h
+
+/usr/include/SDL2/SDL_config.h
+SDL_platform.h
+/usr/include/SDL2/SDL_platform.h
+
+/usr/include/SDL2/SDL_cpuinfo.h
+SDL_stdinc.h
+/usr/include/SDL2/SDL_stdinc.h
+intrin.h
+-
+intrin.h
+-
+altivec.h
+-
+mmintrin.h
+-
+mm3dnow.h
+-
+xmmintrin.h
+-
+emmintrin.h
+-
+begin_code.h
+/usr/include/SDL2/begin_code.h
+close_code.h
+/usr/include/SDL2/close_code.h
+
+/usr/include/SDL2/SDL_endian.h
+SDL_stdinc.h
+/usr/include/SDL2/SDL_stdinc.h
+endian.h
+-
+begin_code.h
+/usr/include/SDL2/begin_code.h
+close_code.h
+/usr/include/SDL2/close_code.h
+
+/usr/include/SDL2/SDL_error.h
+SDL_stdinc.h
+/usr/include/SDL2/SDL_stdinc.h
+begin_code.h
+/usr/include/SDL2/begin_code.h
+close_code.h
+/usr/include/SDL2/close_code.h
+
+/usr/include/SDL2/SDL_events.h
+SDL_stdinc.h
+/usr/include/SDL2/SDL_stdinc.h
+SDL_error.h
+/usr/include/SDL2/SDL_error.h
+SDL_video.h
+/usr/include/SDL2/SDL_video.h
+SDL_keyboard.h
+/usr/include/SDL2/SDL_keyboard.h
+SDL_mouse.h
+/usr/include/SDL2/SDL_mouse.h
+SDL_joystick.h
+/usr/include/SDL2/SDL_joystick.h
+SDL_gamecontroller.h
+/usr/include/SDL2/SDL_gamecontroller.h
+SDL_quit.h
+/usr/include/SDL2/SDL_quit.h
+SDL_gesture.h
+/usr/include/SDL2/SDL_gesture.h
+SDL_touch.h
+/usr/include/SDL2/SDL_touch.h
+begin_code.h
+/usr/include/SDL2/begin_code.h
+close_code.h
+/usr/include/SDL2/close_code.h
+
+/usr/include/SDL2/SDL_filesystem.h
+SDL_stdinc.h
+/usr/include/SDL2/SDL_stdinc.h
+begin_code.h
+/usr/include/SDL2/begin_code.h
+close_code.h
+/usr/include/SDL2/close_code.h
+
+/usr/include/SDL2/SDL_gamecontroller.h
+SDL_stdinc.h
+/usr/include/SDL2/SDL_stdinc.h
+SDL_error.h
+/usr/include/SDL2/SDL_error.h
+SDL_rwops.h
+/usr/include/SDL2/SDL_rwops.h
+SDL_joystick.h
+/usr/include/SDL2/SDL_joystick.h
+begin_code.h
+/usr/include/SDL2/begin_code.h
+close_code.h
+/usr/include/SDL2/close_code.h
+
+/usr/include/SDL2/SDL_gesture.h
+SDL_stdinc.h
+/usr/include/SDL2/SDL_stdinc.h
+SDL_error.h
+/usr/include/SDL2/SDL_error.h
+SDL_video.h
+/usr/include/SDL2/SDL_video.h
+SDL_touch.h
+/usr/include/SDL2/SDL_touch.h
+begin_code.h
+/usr/include/SDL2/begin_code.h
+close_code.h
+/usr/include/SDL2/close_code.h
+
+/usr/include/SDL2/SDL_haptic.h
+SDL_stdinc.h
+/usr/include/SDL2/SDL_stdinc.h
+SDL_error.h
+/usr/include/SDL2/SDL_error.h
+SDL_joystick.h
+/usr/include/SDL2/SDL_joystick.h
+begin_code.h
+/usr/include/SDL2/begin_code.h
+close_code.h
+/usr/include/SDL2/close_code.h
+
+/usr/include/SDL2/SDL_hints.h
+SDL_stdinc.h
+/usr/include/SDL2/SDL_stdinc.h
+begin_code.h
+/usr/include/SDL2/begin_code.h
+close_code.h
+/usr/include/SDL2/close_code.h
+
+/usr/include/SDL2/SDL_joystick.h
+SDL_stdinc.h
+/usr/include/SDL2/SDL_stdinc.h
+SDL_error.h
+/usr/include/SDL2/SDL_error.h
+begin_code.h
+/usr/include/SDL2/begin_code.h
+close_code.h
+/usr/include/SDL2/close_code.h
+
+/usr/include/SDL2/SDL_keyboard.h
+SDL_stdinc.h
+/usr/include/SDL2/SDL_stdinc.h
+SDL_error.h
+/usr/include/SDL2/SDL_error.h
+SDL_keycode.h
+/usr/include/SDL2/SDL_keycode.h
+SDL_video.h
+/usr/include/SDL2/SDL_video.h
+begin_code.h
+/usr/include/SDL2/begin_code.h
+close_code.h
+/usr/include/SDL2/close_code.h
+
+/usr/include/SDL2/SDL_keycode.h
+SDL_stdinc.h
+/usr/include/SDL2/SDL_stdinc.h
+SDL_scancode.h
+/usr/include/SDL2/SDL_scancode.h
+
+/usr/include/SDL2/SDL_loadso.h
+SDL_stdinc.h
+/usr/include/SDL2/SDL_stdinc.h
+SDL_error.h
+/usr/include/SDL2/SDL_error.h
+begin_code.h
+/usr/include/SDL2/begin_code.h
+close_code.h
+/usr/include/SDL2/close_code.h
+
+/usr/include/SDL2/SDL_log.h
+SDL_stdinc.h
+/usr/include/SDL2/SDL_stdinc.h
+begin_code.h
+/usr/include/SDL2/begin_code.h
+close_code.h
+/usr/include/SDL2/close_code.h
+
+/usr/include/SDL2/SDL_main.h
+SDL_stdinc.h
+/usr/include/SDL2/SDL_stdinc.h
+begin_code.h
+/usr/include/SDL2/begin_code.h
+close_code.h
+/usr/include/SDL2/close_code.h
+
+/usr/include/SDL2/SDL_messagebox.h
+SDL_stdinc.h
+/usr/include/SDL2/SDL_stdinc.h
+SDL_video.h
+/usr/include/SDL2/SDL_video.h
+begin_code.h
+/usr/include/SDL2/begin_code.h
+close_code.h
+/usr/include/SDL2/close_code.h
+
+/usr/include/SDL2/SDL_mouse.h
+SDL_stdinc.h
+/usr/include/SDL2/SDL_stdinc.h
+SDL_error.h
+/usr/include/SDL2/SDL_error.h
+SDL_video.h
+/usr/include/SDL2/SDL_video.h
+begin_code.h
+/usr/include/SDL2/begin_code.h
+close_code.h
+/usr/include/SDL2/close_code.h
+
+/usr/include/SDL2/SDL_mutex.h
+SDL_stdinc.h
+/usr/include/SDL2/SDL_stdinc.h
+SDL_error.h
+/usr/include/SDL2/SDL_error.h
+begin_code.h
+/usr/include/SDL2/begin_code.h
+close_code.h
+/usr/include/SDL2/close_code.h
+
+/usr/include/SDL2/SDL_opengl.h
+SDL_config.h
+/usr/include/SDL2/SDL_config.h
+gl_mangle.h
+/usr/include/SDL2/gl_mangle.h
+windows.h
+-
+SDL_opengl_glext.h
+/usr/include/SDL2/SDL_opengl_glext.h
+
+/usr/include/SDL2/SDL_opengl_glext.h
+windows.h
+-
+stddef.h
+-
+inttypes.h
+-
+inttypes.h
+-
+inttypes.h
+-
+stdint.h
+-
+stdint.h
+-
+inttypes.h
+-
+
+/usr/include/SDL2/SDL_pixels.h
+SDL_stdinc.h
+/usr/include/SDL2/SDL_stdinc.h
+begin_code.h
+/usr/include/SDL2/begin_code.h
+close_code.h
+/usr/include/SDL2/close_code.h
+
+/usr/include/SDL2/SDL_platform.h
+AvailabilityMacros.h
+/usr/include/SDL2/AvailabilityMacros.h
+TargetConditionals.h
+/usr/include/SDL2/TargetConditionals.h
+winapifamily.h
+-
+begin_code.h
+/usr/include/SDL2/begin_code.h
+close_code.h
+/usr/include/SDL2/close_code.h
+
+/usr/include/SDL2/SDL_power.h
+SDL_stdinc.h
+/usr/include/SDL2/SDL_stdinc.h
+begin_code.h
+/usr/include/SDL2/begin_code.h
+close_code.h
+/usr/include/SDL2/close_code.h
+
+/usr/include/SDL2/SDL_quit.h
+SDL_stdinc.h
+/usr/include/SDL2/SDL_stdinc.h
+SDL_error.h
+/usr/include/SDL2/SDL_error.h
+
+/usr/include/SDL2/SDL_rect.h
+SDL_stdinc.h
+/usr/include/SDL2/SDL_stdinc.h
+SDL_error.h
+/usr/include/SDL2/SDL_error.h
+SDL_pixels.h
+/usr/include/SDL2/SDL_pixels.h
+SDL_rwops.h
+/usr/include/SDL2/SDL_rwops.h
+begin_code.h
+/usr/include/SDL2/begin_code.h
+close_code.h
+/usr/include/SDL2/close_code.h
+
+/usr/include/SDL2/SDL_render.h
+SDL_stdinc.h
+/usr/include/SDL2/SDL_stdinc.h
+SDL_rect.h
+/usr/include/SDL2/SDL_rect.h
+SDL_video.h
+/usr/include/SDL2/SDL_video.h
+begin_code.h
+/usr/include/SDL2/begin_code.h
+close_code.h
+/usr/include/SDL2/close_code.h
+
+/usr/include/SDL2/SDL_rwops.h
+SDL_stdinc.h
+/usr/include/SDL2/SDL_stdinc.h
+SDL_error.h
+/usr/include/SDL2/SDL_error.h
+begin_code.h
+/usr/include/SDL2/begin_code.h
+close_code.h
+/usr/include/SDL2/close_code.h
+
+/usr/include/SDL2/SDL_scancode.h
+SDL_stdinc.h
+/usr/include/SDL2/SDL_stdinc.h
+
+/usr/include/SDL2/SDL_stdinc.h
+SDL_config.h
+/usr/include/SDL2/SDL_config.h
+sys/types.h
+-
+stdio.h
+-
+stdlib.h
+-
+stddef.h
+-
+stdarg.h
+-
+stdlib.h
+-
+malloc.h
+-
+stddef.h
+-
+stdarg.h
+-
+memory.h
+-
+string.h
+-
+strings.h
+-
+inttypes.h
+-
+stdint.h
+-
+ctype.h
+-
+math.h
+-
+float.h
+-
+iconv.h
+-
+sal.h
+-
+begin_code.h
+/usr/include/SDL2/begin_code.h
+alloca.h
+-
+malloc.h
+-
+malloc.h
+-
+malloc.h
+-
+stdlib.h
+-
+close_code.h
+/usr/include/SDL2/close_code.h
+
+/usr/include/SDL2/SDL_surface.h
+SDL_stdinc.h
+/usr/include/SDL2/SDL_stdinc.h
+SDL_pixels.h
+/usr/include/SDL2/SDL_pixels.h
+SDL_rect.h
+/usr/include/SDL2/SDL_rect.h
+SDL_blendmode.h
+/usr/include/SDL2/SDL_blendmode.h
+SDL_rwops.h
+/usr/include/SDL2/SDL_rwops.h
+begin_code.h
+/usr/include/SDL2/begin_code.h
+close_code.h
+/usr/include/SDL2/close_code.h
+
+/usr/include/SDL2/SDL_system.h
+SDL_stdinc.h
+/usr/include/SDL2/SDL_stdinc.h
+SDL_keyboard.h
+/usr/include/SDL2/SDL_keyboard.h
+SDL_render.h
+/usr/include/SDL2/SDL_render.h
+SDL_video.h
+/usr/include/SDL2/SDL_video.h
+begin_code.h
+/usr/include/SDL2/begin_code.h
+close_code.h
+/usr/include/SDL2/close_code.h
+
+/usr/include/SDL2/SDL_thread.h
+SDL_stdinc.h
+/usr/include/SDL2/SDL_stdinc.h
+SDL_error.h
+/usr/include/SDL2/SDL_error.h
+SDL_atomic.h
+/usr/include/SDL2/SDL_atomic.h
+SDL_mutex.h
+/usr/include/SDL2/SDL_mutex.h
+begin_code.h
+/usr/include/SDL2/begin_code.h
+process.h
+-
+close_code.h
+/usr/include/SDL2/close_code.h
+
+/usr/include/SDL2/SDL_timer.h
+SDL_stdinc.h
+/usr/include/SDL2/SDL_stdinc.h
+SDL_error.h
+/usr/include/SDL2/SDL_error.h
+begin_code.h
+/usr/include/SDL2/begin_code.h
+close_code.h
+/usr/include/SDL2/close_code.h
+
+/usr/include/SDL2/SDL_touch.h
+SDL_stdinc.h
+/usr/include/SDL2/SDL_stdinc.h
+SDL_error.h
+/usr/include/SDL2/SDL_error.h
+SDL_video.h
+/usr/include/SDL2/SDL_video.h
+begin_code.h
+/usr/include/SDL2/begin_code.h
+close_code.h
+/usr/include/SDL2/close_code.h
+
+/usr/include/SDL2/SDL_version.h
+SDL_stdinc.h
+/usr/include/SDL2/SDL_stdinc.h
+begin_code.h
+/usr/include/SDL2/begin_code.h
+close_code.h
+/usr/include/SDL2/close_code.h
+
+/usr/include/SDL2/SDL_video.h
+SDL_stdinc.h
+/usr/include/SDL2/SDL_stdinc.h
+SDL_pixels.h
+/usr/include/SDL2/SDL_pixels.h
+SDL_rect.h
+/usr/include/SDL2/SDL_rect.h
+SDL_surface.h
+/usr/include/SDL2/SDL_surface.h
+begin_code.h
+/usr/include/SDL2/begin_code.h
+close_code.h
+/usr/include/SDL2/close_code.h
+
+/usr/include/SDL2/begin_code.h
+
+/usr/include/SDL2/close_code.h
+

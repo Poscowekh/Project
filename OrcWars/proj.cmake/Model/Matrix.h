@@ -9,18 +9,17 @@
 
 using namespace std;
 
-class Matrix
-{
+class Matrix {
 	private:
-		unsigned rows;
-		unsigned columns;
+		size_t rows;
+		size_t columns;
 	public:
-		vector< vector<unsigned> > matrix;
+		vector< vector<int> > matrix;
 		Matrix();
-		Matrix(unsigned, unsigned);
-		unsigned& operator()(const unsigned &, const unsigned &);
-		unsigned getRows() const;
-	    unsigned getCols() const;
+		Matrix(int, int);
+		int& operator()(const int &, const int &);
+		int getRows() const;
+	    int getCols() const;
 	    void print() const;
 };
 #endif // MATRIX_H

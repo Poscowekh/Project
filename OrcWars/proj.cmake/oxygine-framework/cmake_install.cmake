@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/1tira/Desktop/GitHub/Project/oxygine-framework
+# Install script for directory: /home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -27,20 +27,20 @@ if(NOT CMAKE_INSTALL_COMPONENT)
   endif()
 endif()
 
-# Is this installation the result of a crosscompile?
-if(NOT DEFINED CMAKE_CROSSCOMPILING)
-  set(CMAKE_CROSSCOMPILING "FALSE")
+# Install shared libraries without execute permission?
+if(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
+  set(CMAKE_INSTALL_SO_NO_EXE "1")
 endif()
 
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   if("${CMAKE_INSTALL_CONFIG_NAME}" MATCHES "^([Dd][Ee][Bb][Uu][Gg])$")
-    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/./debug" TYPE STATIC_LIBRARY FILES "C:/Users/1tira/Desktop/GitHub/Project/OrcWars/proj.cmake/oxygine-framework/liboxygine-framework.a")
+    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/./debug" TYPE STATIC_LIBRARY FILES "/home/alexey/Рабочий стол/C++/Project/Project/OrcWars/proj.cmake/oxygine-framework/liboxygine-framework.a")
   endif("${CMAKE_INSTALL_CONFIG_NAME}" MATCHES "^([Dd][Ee][Bb][Uu][Gg])$")
 endif()
 
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   if("${CMAKE_INSTALL_CONFIG_NAME}" MATCHES "^([Rr][Ee][Ll][Ee][Aa][Ss][Ee])$")
-    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/./release" TYPE STATIC_LIBRARY FILES "C:/Users/1tira/Desktop/GitHub/Project/OrcWars/proj.cmake/oxygine-framework/liboxygine-framework.a")
+    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/./release" TYPE STATIC_LIBRARY FILES "/home/alexey/Рабочий стол/C++/Project/Project/OrcWars/proj.cmake/oxygine-framework/liboxygine-framework.a")
   endif("${CMAKE_INSTALL_CONFIG_NAME}" MATCHES "^([Rr][Ee][Ll][Ee][Aa][Ss][Ee])$")
 endif()
 

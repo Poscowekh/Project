@@ -1,3 +1,0 @@
-C:/Users/1tira/Desktop/GitHub/Project/OrcWars/proj.cmake/Model/CMakeFiles/Matrix.dir
-C:/Users/1tira/Desktop/GitHub/Project/OrcWars/proj.cmake/Model/CMakeFiles/edit_cache.dir
-C:/Users/1tira/Desktop/GitHub/Project/OrcWars/proj.cmake/Model/CMakeFiles/rebuild_cache.dir
