@@ -15,13 +15,14 @@ link_directories(${OXYGINE_LIBRARY_DIRS})
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${OXYGINE_CXX_FLAGS}")
 ###########################E#N#D############################
 
+
 add_executable(EmptyOxygine 
-    example.cpp 
-    main.cpp
-    ViewHelper.cpp
+    ../src/example.cpp 
+    ../src/main.cpp
+    ../src/ViewHelper.cpp
 )
 
-add_subdirectory(Model)
+add_subdirectory(../src/Model Model)
 
 target_link_libraries(EmptyOxygine ${OXYGINE_CORE_LIBS})
 
