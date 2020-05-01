@@ -17,18 +17,12 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${OXYGINE_CXX_FLAGS}")
 
 add_executable(EmptyOxygine 
     ../src/example.cpp 
-    #../src/main.cpp
+    ../src/main.cpp
     ../src/ViewHelper.cpp
-)
 
-#add_subdirectory(../src/Model Model)
-
-#include_directories(headers)
-
-add_executable(Main
-	../src/Model/Main.cpp
-	../src/Model/Matrix.cpp
-	../src/Model/Snake.cpp
+    #../src/Model/Main.cpp
+    ../src/Model/Matrix.cpp
+    ../src/Model/Snake.cpp
 )
 
 target_link_libraries(EmptyOxygine ${OXYGINE_CORE_LIBS})
