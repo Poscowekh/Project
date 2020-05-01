@@ -5,7 +5,7 @@ project(Snake)
 include_directories(../data data)
 ##########################################################
 #########################OXYGINE##########################
-add_subdirectory(../../../oxygine-framework oxygine-framework)
+add_subdirectory(../../oxygine-framework oxygine-framework)
 
 add_definitions(${OXYGINE_DEFINITIONS})
 include_directories(${OXYGINE_INCLUDE_DIRS})
