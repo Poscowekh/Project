@@ -11,12 +11,11 @@ using namespace std;
 #include <string>
 
 class Snake {
-	private:
-		vector< pair<int, int> > body;
 	public:
+		vector< pair<int, int> > body;
 		Snake();
 		Snake(int size, pair<int, int> head);
-        void snake_move(pair<int, int> direction) const;
+        void snake_move(pair<int, int> direction);
 	    int get_size();
 };
 #endif // SNAKE_H
