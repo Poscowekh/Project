@@ -15,8 +15,8 @@ class Snake {
 		vector< pair<int, int> > body;
 	public:
 		Snake();
-		Snake(int, int, int);
-        void snake_move(int) const;
+		Snake(int size, pair<int, int> head);
+        void snake_move(pair<int, int> direction) const;
 	    int get_size();
 };
 #endif // SNAKE_H
