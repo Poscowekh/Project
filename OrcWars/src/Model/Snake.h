@@ -14,8 +14,9 @@ namespace GameModel
     class Snake {
     public:
         vector< pair<int, int> > body;
+
         Snake();
-        Snake(int size, pair<int, int> head);
+        Snake(size_t size, pair<int, int> head);
         void snake_move(pair<int, int> direction);
         size_t get_size();
     };

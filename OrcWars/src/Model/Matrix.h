@@ -19,7 +19,7 @@ namespace GameModel
         vector< vector<int> > matrix;
         Matrix();
         Matrix(int, int);
-        int& operator()(const int &, const int &);
+        int& operator()(const int &row, const int &col);
         int getRows() const;
         int getCols() const;
         void print() const;
