@@ -1,1 +1,0 @@
-/usr/bin/c++     -std=c++11    CMakeFiles/Matrix.dir/Main.cpp.o CMakeFiles/Matrix.dir/Matrix.cpp.o  -o Matrix  -L"/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/libs"  -L"/home/alexey/Рабочий стол/C++/Project/Project/oxygine-framework/oxygine/third_party/linux/libraries" -rdynamic 
