@@ -1,5 +1,5 @@
 cmake_minimum_required (VERSION 2.6)
-project (EmptyOxygine)
+project(Snake)
 
 
 include_directories(../data data)
@@ -15,6 +15,7 @@ link_directories(${OXYGINE_LIBRARY_DIRS})
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${OXYGINE_CXX_FLAGS}")
 ###########################E#N#D############################
 
+add_subdirectory(../proj.cmake/Model)
 
 add_executable(EmptyOxygine 
     ../src/example.cpp 

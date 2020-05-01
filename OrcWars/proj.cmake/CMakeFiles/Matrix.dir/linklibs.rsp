@@ -1,0 +1,1 @@
+  -LC:/Users/1tira/Desktop/GitHub/Project/oxygine-framework/libs  -LC:/Users/1tira/Desktop/GitHub/Project/oxygine-framework/oxygine/third_party/win32_mingw/libraries  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 

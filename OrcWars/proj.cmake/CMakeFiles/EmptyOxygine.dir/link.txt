@@ -1,0 +1,3 @@
+"C:\Program Files\CMake\bin\cmake.exe" -E rm -f CMakeFiles\EmptyOxygine.dir/objects.a
+C:\Users\1tira\gcc\bin\ar.exe cr CMakeFiles\EmptyOxygine.dir/objects.a @CMakeFiles\EmptyOxygine.dir\objects1.rsp
+C:\Users\1tira\gcc\bin\g++.exe   -std=c++11    -Wl,--whole-archive CMakeFiles\EmptyOxygine.dir/objects.a -Wl,--no-whole-archive  -o EmptyOxygine.exe -Wl,--out-implib,libEmptyOxygine.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\EmptyOxygine.dir\linklibs.rsp
