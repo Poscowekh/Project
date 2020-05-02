@@ -20,7 +20,8 @@ namespace GameModel
         vector<Snake > snakes;          //All snakes
         vector<pair<int, int> > food;   //All food
         vector<pair<int, int> > blocks; //All blocks
-        vector<int> ignore;             //Snakes that grow this tick (by id)
+        vector<int> snakes_grow;        //Snakes that grow this tick (by id)
+        vector<int> snakes_destroy;     //Snakes that continue being destroyed this tick (by id)
     public:
         Matrix();
         Matrix(int, int);
@@ -33,11 +34,16 @@ namespace GameModel
         void move_snakes();
         void change_movement(size_t id, pair<int, int> movement);
         void add_snake(size_t size, pair<int, int> head);
-        void destruction_check(Snake snake);
+        void remove_snake(size_t id);
+        bool destruction_check(Snake snake);
+        bool growth_check(Snake snake);
+        size_t get_id(Snake snake);
 
         //for food and blocks
         void spawn_food(size_t n);
         void spawn_blocks(size_t n);
+        void remove_food(size_t apple);
+        size_t get_food_id(pair<int, int> apple);
 
         //for printing matrix
         void reload();

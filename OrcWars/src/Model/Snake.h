@@ -27,6 +27,8 @@ namespace GameModel
         void set_tail();
         pair<int, int> get_head();
         pair<int, int> part_of_body(size_t i);
+        void cut_snake();
+        void grow_snake();
     };
 }
 #endif // SNAKE_H

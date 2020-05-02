@@ -37,7 +37,7 @@ using namespace std;
 
     void Snake::move()
     { //Moves Snake in predefined direction [x,y]
-        tail = body.back();
+        set_tail();
         for (size_t i = 1; i < body.size(); i++)
         {
             body[i].first = body[i - 1].first;
@@ -65,6 +65,19 @@ using namespace std;
 
     pair<int, int> Snake::get_head()
     { //Returns coordinates of head
-        return this->head;
+        return this->body[0];
+    }
+
+    void Snake::cut_snake()
+    {
+        for(size_t i = 0; i < get_size() - 1; i++)
+            body[i] = body[i + 1];
+        body.pop_back();
+        head = get_head();
+    }
+
+    void Snake::grow_snake()
+    {
+        body.push_back(tail);
     }
 }

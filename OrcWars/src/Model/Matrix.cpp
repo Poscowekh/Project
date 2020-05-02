@@ -101,42 +101,67 @@ namespace GameModel
         }
     }
 
-    /*void Matrix::reload()
-    { //Sets matrix to 0 values
-        for(size_t i = 0; i < rows; i++)
-        {
-            for(size_t j = 0; j < columns; i++)
-            {
-                matrix[i][j] = 0;
-            }
-        }
-    }*/
-
     void Matrix::set_values()
-    { //Sets values: 0 = free; 1 = snake; 2 = food; 3 = block)
+    { //Sets values: 0 = free; 1 = snake, 8 = snake head; 2 = food; 3 = block)
         for(size_t i = 0; i < food.size(); i++)
         { //Food
             matrix[food[i].first][food[i].second] = 2;
-        }/*
-        for(size_t i = 0; i < blocks.size(); i++)
-        { //Blocks
-            matrix[blocks[i].first][blocks[i].second] = 3;
-        }*/
+        }
         for(size_t i = 0; i < snakes.size(); i++)
         { //Snakes
-            for(size_t j = 0; j < snakes[i].get_size(); j++)
+            if(!growth_check(snakes[i]) && (!destruction_check(snakes[i])))
             {
-                matrix[snakes[i].part_of_body(j).first][snakes[i].part_of_body(j).second] = 1;
+                for(size_t j = 1; j < snakes[i].get_size(); j++)
+                {
+                    matrix[snakes[i].part_of_body(j).first][snakes[i].part_of_body(j).second] = 1;
+                }
+                matrix[snakes[i].get_tail().first][snakes[i].get_tail().second] = 0;
+                matrix[snakes[i].get_head().first][snakes[i].get_head().second] = 8;
             }
-            matrix[snakes[i].get_head().first][snakes[i].get_head().second] = 8;
-            matrix[snakes[i].get_tail().first][snakes[i].get_tail().second] = 0;
-            snakes[i].set_tail();
+            if(destruction_check(snakes[i]))
+            {
+                for(size_t j = 1; j < snakes[i].get_size(); j++)
+                    matrix[snakes[i].part_of_body(j).first][snakes[i].part_of_body(j).second] = 1;
+                matrix[snakes[i].get_tail().first][snakes[i].get_tail().second] = 0;
+                matrix[snakes[i].get_head().first][snakes[i].get_head().second] = 3;
+                snakes[i].cut_snake();
+            }
+            if(snakes[i].get_size() == 0)
+            {
+                remove_snake(i);
+            }
+            if(growth_check(snakes[i]))
+            {
+                remove_food(get_food_id(snakes[i].get_head()));
+                snakes[i].grow_snake();
+                for(size_t j = 1; j < snakes[i].get_size(); j++)
+                    matrix[snakes[i].part_of_body(j).first][snakes[i].part_of_body(j).second] = 1;
+                matrix[snakes[i].get_head().first][snakes[i].get_head().second] = 8;
+            }
         }
     }
 
-    void Matrix::destruction_check(Snake snake)
+    bool Matrix::destruction_check(Snake snake)
     {
+        for(size_t i = 0; i < blocks.size(); i++)
+            if(snake.get_head() == blocks[i])
+                return true;
+    }
 
+    bool Matrix::growth_check(Snake snake)
+    {
+        for(size_t i = 0; i < food.size(); i++)
+            if(snake.get_head() == food[i])
+                return true;
+    }
+
+    void Matrix::remove_food(size_t apple)
+    {
+        for(size_t i = apple; i < food.size() - 1; i++)
+        {
+            food[i] = food[i + 1];
+        }
+        food.pop_back();
     }
 
     void Matrix::change_movement(size_t id, pair<int, int> movement)
@@ -153,6 +178,28 @@ namespace GameModel
         }
         matrix[tmp.get_head().first][tmp.get_head().second] = 8; //head = 8
         snakes.push_back(tmp);
-        //ignore.push_back(tmp); ?
+    }
+
+    void Matrix::remove_snake(size_t id)
+    {
+        for(size_t i = id; i < snakes.size() - 1; i++)
+        {
+            snakes[i] = snakes[i + 1];
+        }
+        snakes.pop_back();
+    }
+
+    size_t Matrix::get_id(Snake snake)
+    {
+        for(size_t i = 0; i < snakes.size(); i++)
+            if(snake.get_head() == snakes[i].get_head())
+                return i;
+    }
+
+    size_t Matrix::get_food_id(pair<int, int> apple)
+    {
+        for(size_t i = 0; i < food.size(); i++)
+            if(food[i] == apple)
+                return i;
     }
 }

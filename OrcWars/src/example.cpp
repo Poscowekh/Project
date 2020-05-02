@@ -30,8 +30,16 @@ void example_init()
     //cin >> x >> y;
     GameModel::Matrix field = GameModel::Matrix(x, y); //Matrix x by y
     field.add_snake(3, make_pair(2,2));  //Snake of size 3 at x(2-2),y(2-4)
-    field.spawn_food(1);
+    field.add_snake(2, make_pair(3,3));
+    field.add_snake(1, make_pair(2,1));
+    field.spawn_food(2);
     field.spawn_blocks(2);
+    field.print();
+    field.change_movement(0, make_pair(0,-1)); //(0,-1) = up, (0,1) = right, etc
+    field.change_movement(1, make_pair(0,-1));
+    field.change_movement(2, make_pair(0,-1));
+    field.move_snakes();
+    field.set_values();
     field.print();
     field.move_snakes();
     field.set_values();
