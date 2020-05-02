@@ -23,23 +23,20 @@ void example_init()
 {
     ViewHelper::res.loadXML("res.xml");
 
-    int x = 5;
+     //srand(time(NULL));
+    srand(1);
+    int x = 7;
     int y = 5;
     //cin >> x >> y;
-    GameModel::Matrix field = GameModel::Matrix(x, y);
+    GameModel::Matrix field = GameModel::Matrix(x, y); //Matrix x by y
+    field.add_snake(3, make_pair(2,2));  //Snake of size 3 at x(2-2),y(2-4)
+    field.spawn_food(1);
+    field.spawn_blocks(2);
     field.print();
-    GameModel::Snake viper  = GameModel::Snake();
-    for(size_t i = 0; i < viper.body.size(); ++ i) {
-        field.matrix[viper.body[i].first][viper.body[i].second] = 1;
-    };
+    field.move_snakes();
+    field.set_values();
     field.print();
-    viper.snake_move(make_pair(1,0));
-    for(int i = 0; i < (int)viper.body.size(); i++) {
-        field.matrix[viper.body[i].first][viper.body[i].second] = 1;
-    };
-    field.print();
-    std:cout << viper.body.size();
-
+    
     //st = new GameState();
     //getStage()->addChild(st);
 
