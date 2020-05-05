@@ -6,8 +6,10 @@
 #include <stdlib.h>
 #include <vector>
 #include "Snake.h"
-#include <random>
-#include <time.h>
+#include "Food.h"
+#include "Block.h"
+//#include <random>
+//#include <time.h>
 using namespace std;
 namespace GameModel
 {
@@ -17,37 +19,45 @@ namespace GameModel
         size_t rows;
         size_t columns;
         vector< vector<int> > matrix;   //The field
-        vector<Snake > snakes;          //All snakes
-        vector<pair<int, int> > food;   //All food
-        vector<pair<int, int> > blocks; //All blocks
-        vector<int> snakes_grow;        //Snakes that grow this tick (by id)
-        vector<int> snakes_destroy;     //Snakes that continue being destroyed this tick (by id)
+        vector<Snake> snakes;           //All snakes
+        vector<Food> food;              //All food
+        vector<Block> blocks;           //All blocks
+        size_t new_id_snake;            //Provide a new id for each object
+        size_t new_id_food;
+        size_t new_id_block;
     public:
         Matrix();
-        Matrix(int, int);
-        int& operator()(const int &row, const int &col);
+        Matrix(size_t m, size_t n);
         size_t get_rows();
         size_t get_columns();
         bool check_cell(pair<int, int>);
+        pair<int, int> get_random_coordinates(size_t seed);
+        pair<int, int> get_random_free_coordinates(size_t seed);
+        size_t get_new_id_snake();
+        size_t get_new_id_food();
+        size_t get_new_id_block();
 
         //for snakes
         void move_snakes();
         void change_movement(size_t id, pair<int, int> movement);
-        void add_snake(size_t size, pair<int, int> head);
+        void add_snake(size_t new_size, pair<int, int> head, size_t new_id);
         void remove_snake(size_t id);
         bool destruction_check(Snake snake);
         bool growth_check(Snake snake);
-        size_t get_id(Snake snake);
+        size_t get_snake_id(Snake snake);
+        size_t return_snakes_index_by_id(size_t id);
 
         //for food and blocks
-        void spawn_food(size_t n);
-        void spawn_blocks(size_t n);
-        void remove_food(size_t apple);
-        size_t get_food_id(pair<int, int> apple);
+        void spawn_food(string new_type, pair<int, int> new_coordinates, size_t new_id);
+        void spawn_block(string new_type, pair<int, int> new_coordinates, size_t new_id);
+        void remove_food(pair<int, int> coordinates);
+        void remove_block(size_t remove_id);
+        size_t get_food_id(pair<int, int> coordinates);
+        size_t get_block_id(pair<int, int> coordinates);
 
         //for printing matrix
-        void reload();
-        void set_values();
+        void reset_matrix();
+        void update_matrix();
         void print();
     };
 }

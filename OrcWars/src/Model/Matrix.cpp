@@ -6,29 +6,22 @@ using namespace std;
 namespace GameModel
 {
     Matrix::Matrix()
-    {//Creates default matrix 5x5
-        rows = 5;
-        columns = 5;
-        matrix.resize(columns);
-        for (int i = 0; i < columns; i++) {
-            matrix[i].resize(rows, 0);
+    { //Creates default matrix 10x10
+        rows = 10;
+        columns = 10;
+        matrix.resize(rows);
+        for (size_t i = 0; i < rows; i++) {
+            matrix[i].resize(columns, 0);
         }
     }
 
-    Matrix::Matrix(int x, int y)
-    {//Creates matrix x by y
-        rows = y;
-        columns = x;
+    Matrix::Matrix(size_t m, size_t n)
+    { //Creates matrix m by n
+        rows = m;
+        columns = n;
         matrix.resize(rows);
         for (size_t i = 0; i < rows; i++)
-        {
-            matrix[i].resize(columns);
-        }
-    }
-
-    int& Matrix::operator()(const int &row, const int &column)
-    {//Returns value
-        return this->matrix[row][column];
+            matrix[i].resize(columns, 0);
     }
 
     size_t Matrix::get_rows()
@@ -43,15 +36,22 @@ namespace GameModel
 
     void Matrix::print()
     { //Prints matrix
-        cout << "Field: " << endl;
-        for (size_t i = 0; i < rows; i++)
+        cout << "Field:" << endl;
+        for (size_t i = 0; i < get_rows(); i++)
         {
-            for (size_t j=0; j < columns; j++)
+            for (size_t j=0; j < get_columns(); j++)
             {
                 cout << matrix[i][j] << " ";
             }
             cout << endl;
         }
+    }
+
+    void Matrix::reset_matrix()
+    {
+        for(size_t i = 0; i < rows; i++)
+            for(size_t j = 0; j < columns; j++)
+                matrix[i][j] = 0;
     }
 
     bool Matrix::check_cell(pair<int, int> coordinates)
@@ -73,133 +73,159 @@ namespace GameModel
 
     }
 
-    void Matrix::spawn_food(size_t n)
-    { //Spawns food in n random free cells
-        for(size_t i = 0; i < n; i++)
-        {
-            pair<int, int> tmp = make_pair(rand() % get_rows(), rand() % get_columns());
-            while(check_cell(tmp))
-            {
-                pair<int, int> tmp = make_pair(rand() % get_rows(), rand() % get_columns());
-            }
-            food.push_back(tmp);
-            matrix[tmp.first][tmp.second] = 2;
-        }
+    pair<int, int> Matrix::get_random_coordinates(size_t seed)
+    {
+        srand(seed);
+        int x = rand() % get_columns();
+        int y = rand() % get_rows();
+        return make_pair(x, y);
     }
 
-    void Matrix::spawn_blocks(size_t n)
-    { //Spawns n blocks in random free cell
-        for(size_t i = 0; i < n; i++)
+    pair<int, int> Matrix::get_random_free_coordinates(size_t seed)
+    {
+        pair<int, int> tmp = get_random_coordinates(seed);
+        while(!check_cell(tmp))
         {
-            pair<int, int> tmp = make_pair(rand() % get_rows(), rand() % get_columns());
-            while(check_cell(tmp))
-            {
-                pair<int, int> tmp = make_pair(rand() % get_rows(), rand() % get_columns());
-            };
-            blocks.push_back(tmp);
-            matrix[tmp.first][tmp.second] = 3;
+            seed++;
+            tmp = get_random_coordinates(seed);
         }
+        return tmp;
     }
 
-    void Matrix::set_values()
+    size_t Matrix::get_new_id_snake()
+    {
+        new_id_snake++;
+        return new_id_snake;
+    }
+
+    size_t Matrix::get_new_id_food()
+    {
+        new_id_food++;
+        return new_id_food;
+    }
+
+    size_t Matrix::get_new_id_block()
+    {
+        new_id_block++;
+        return new_id_block;
+    }
+
+    void Matrix::spawn_food(string new_type, pair<int, int> new_coordinates, size_t new_id)
+    { //Spawns food in the cell
+        Food tmp = Food(new_id, new_coordinates, new_type);
+        food.push_back(tmp);
+    }
+
+    void Matrix::spawn_block(string new_type, pair<int, int> new_coordinates, size_t new_id)
+    { //Spawns block in a random free cell
+        Block tmp = Block(new_id, new_coordinates, new_type);
+        blocks.push_back(tmp);
+    }
+
+    void Matrix::update_matrix()
     { //Sets values: 0 = free; 1 = snake, 8 = snake head; 2 = food; 3 = block)
+        reset_matrix();
+        move_snakes();
         for(size_t i = 0; i < food.size(); i++)
-        { //Food
-            matrix[food[i].first][food[i].second] = 2;
-        }
+            matrix[food[i].get_coordinates().first][food[i].get_coordinates().second] = 2;
+        for(size_t i = 0; i < blocks.size(); i++)
+            matrix[blocks[i].get_coordinates().first][blocks[i].get_coordinates().second] = 3;
         for(size_t i = 0; i < snakes.size(); i++)
-        { //Snakes
-            if(!growth_check(snakes[i]) && (!destruction_check(snakes[i])))
-            {
-                for(size_t j = 1; j < snakes[i].get_size(); j++)
-                {
-                    matrix[snakes[i].part_of_body(j).first][snakes[i].part_of_body(j).second] = 1;
-                }
-                matrix[snakes[i].get_tail().first][snakes[i].get_tail().second] = 0;
-                matrix[snakes[i].get_head().first][snakes[i].get_head().second] = 8;
-            }
-            if(destruction_check(snakes[i]))
-            {
-                for(size_t j = 1; j < snakes[i].get_size(); j++)
-                    matrix[snakes[i].part_of_body(j).first][snakes[i].part_of_body(j).second] = 1;
-                matrix[snakes[i].get_tail().first][snakes[i].get_tail().second] = 0;
-                matrix[snakes[i].get_head().first][snakes[i].get_head().second] = 3;
-                snakes[i].cut_snake();
-            }
-            if(snakes[i].get_size() == 0)
-            {
-                remove_snake(i);
-            }
+        {
+            for(size_t j = 0; j < snakes[i].get_size(); j++)
+                matrix[snakes[i].part_of_body(j).first][snakes[i].part_of_body(j).second] = 1;
             if(growth_check(snakes[i]))
             {
-                remove_food(get_food_id(snakes[i].get_head()));
-                snakes[i].grow_snake();
-                for(size_t j = 1; j < snakes[i].get_size(); j++)
-                    matrix[snakes[i].part_of_body(j).first][snakes[i].part_of_body(j).second] = 1;
-                matrix[snakes[i].get_head().first][snakes[i].get_head().second] = 8;
+               snakes[i].grow_snake();
+               remove_food(snakes[i].get_head());
+               matrix[snakes[i].get_tail().first][snakes[i].get_tail().second] = 1;
             }
+            if(!destruction_check(snakes[i]))
+                matrix[snakes[i].get_head().first][snakes[i].get_head().second] = 8;
         }
     }
 
     bool Matrix::destruction_check(Snake snake)
     {
+        bool tmp;
         for(size_t i = 0; i < blocks.size(); i++)
-            if(snake.get_head() == blocks[i])
-                return true;
+            if(snake.get_head() == blocks[i].get_coordinates())
+                tmp = true;
+        if(tmp)
+            return true;
+        else
+            return false;
     }
 
     bool Matrix::growth_check(Snake snake)
     {
+        bool tmp;
         for(size_t i = 0; i < food.size(); i++)
-            if(snake.get_head() == food[i])
-                return true;
+            if(snake.get_head() == food[i].get_coordinates())
+                tmp = true;
+        if(tmp)
+            return true;
+        else
+            return false;
+
     }
 
-    void Matrix::remove_food(size_t apple)
+    void Matrix::remove_food(pair<int, int> coordinates)
     {
-        for(size_t i = apple; i < food.size() - 1; i++)
-        {
-            food[i] = food[i + 1];
-        }
-        food.pop_back();
+        for(size_t i = 0; i < food.size(); i++)
+            if(food[i].get_coordinates() == coordinates)
+            {
+                Food tmp = food[i];
+                food[i] = food[food.size() - 1];
+                food[food.size() - 1] = tmp;
+                food.pop_back();
+            }
     }
 
     void Matrix::change_movement(size_t id, pair<int, int> movement)
     { //Changes snake id's movement vector
-        snakes[id].change_direction(movement);
+        snakes[return_snakes_index_by_id(id)].change_direction(movement);
     }
 
-    void Matrix::add_snake(size_t size, pair<int, int> head)
+    void Matrix::add_snake(size_t new_size, pair<int, int> head, size_t new_id)
     {
-        Snake tmp = Snake(size, head);
-        for(size_t i = 0; i < size; i++)
-        {
-            matrix[tmp.part_of_body(i).first][tmp.part_of_body(i).second] = 1;
-        }
-        matrix[tmp.get_head().first][tmp.get_head().second] = 8; //head = 8
+        Snake tmp = Snake(new_size, head, new_id);
         snakes.push_back(tmp);
     }
 
-    void Matrix::remove_snake(size_t id)
+    void Matrix::remove_snake(size_t index)
     {
-        for(size_t i = id; i < snakes.size() - 1; i++)
-        {
-            snakes[i] = snakes[i + 1];
-        }
+        Snake tmp = snakes[snakes.size() - 1];
+        snakes[snakes.size() - 1] = snakes[index];
+        snakes[index] = tmp;
         snakes.pop_back();
     }
 
-    size_t Matrix::get_id(Snake snake)
+    size_t Matrix::get_snake_id(Snake snake)
     {
-        for(size_t i = 0; i < snakes.size(); i++)
-            if(snake.get_head() == snakes[i].get_head())
-                return i;
+        return snake.get_id();
     }
 
-    size_t Matrix::get_food_id(pair<int, int> apple)
+    size_t Matrix::return_snakes_index_by_id(size_t id)
+    {
+        int index;
+        for(size_t i = 0; i < snakes.size(); i++)
+            if(snakes[i].get_id() == id)
+                index = i;
+        return index;
+    }
+
+    size_t Matrix::get_food_id(pair<int, int> coordinates)
     {
         for(size_t i = 0; i < food.size(); i++)
-            if(food[i] == apple)
-                return i;
+            if(food[i].get_coordinates() == coordinates)
+                return food[i].get_id();
+    }
+
+    size_t Matrix::get_block_id(pair<int, int> coordinates)
+    {
+        for(size_t i = 0; i < blocks.size(); i++)
+            if(blocks[i].get_coordinates() == coordinates)
+                return blocks[i].get_id();
     }
 }

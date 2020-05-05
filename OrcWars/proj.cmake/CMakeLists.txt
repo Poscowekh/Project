@@ -20,9 +20,12 @@ add_executable(EmptyOxygine
     ../src/main.cpp
     ../src/ViewHelper.cpp
 
-    #../src/Model/Main.cpp
     ../src/Model/Matrix.cpp
     ../src/Model/Snake.cpp
+    ../src/Model/Block.cpp
+    ../src/Model/Food.cpp
+    ../src/Model/graph.cpp
+    ../src/Model/node.cpp
 )
 
 target_link_libraries(EmptyOxygine ${OXYGINE_CORE_LIBS})

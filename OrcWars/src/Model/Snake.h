@@ -16,19 +16,23 @@ namespace GameModel
         pair<int, int> movement_vector;
         vector< pair<int, int> > body;
         pair<int, int> tail;
-        pair<int, int> head;
+        size_t id;
+        size_t size;
     public:
-        Snake();
-        Snake(size_t size, pair<int, int> place);
-        void move();
-        void change_direction(pair<int, int> new_direction);
-        size_t get_size();
-        pair<int, int> get_tail();
+        Snake(size_t new_id);
+        Snake(size_t new_size, pair<int, int> place, size_t new_id);
         void set_tail();
+        size_t get_size();
+        size_t get_id();
+        void set_id(size_t new_id);
+        pair<int, int> get_tail();
         pair<int, int> get_head();
         pair<int, int> part_of_body(size_t i);
+        void move();
+        void change_direction(pair<int, int> new_direction);
         void cut_snake();
         void grow_snake();
+        void add_to_snake(pair<int, int> new_part);
     };
 }
 #endif // SNAKE_H
