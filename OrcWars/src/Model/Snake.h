@@ -9,13 +9,12 @@
 using namespace std;
 namespace GameModel
 {
-
-
-    class Snake {
+class Snake {
     private:
         pair<int, int> movement_vector;
         vector< pair<int, int> > body;
         pair<int, int> tail;
+        pair<int, int> prev_head;
         size_t id;
         size_t size;
     public:
@@ -27,6 +26,7 @@ namespace GameModel
         void set_id(size_t new_id);
         pair<int, int> get_tail();
         pair<int, int> get_head();
+        pair<int, int> get_prev_head();
         pair<int, int> part_of_body(size_t i);
         void move();
         void change_direction(pair<int, int> new_direction);

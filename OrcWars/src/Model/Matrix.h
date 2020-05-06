@@ -25,6 +25,7 @@ namespace GameModel
         size_t new_id_snake;            //Provide a new id for each object
         size_t new_id_food;
         size_t new_id_block;
+        bool start_movement_flag;
     public:
         Matrix();
         Matrix(size_t m, size_t n);
@@ -33,6 +34,7 @@ namespace GameModel
         bool check_cell(pair<int, int>);
         pair<int, int> get_random_coordinates(size_t seed);
         pair<int, int> get_random_free_coordinates(size_t seed);
+        void spawn_borderline();
         size_t get_new_id_snake();
         size_t get_new_id_food();
         size_t get_new_id_block();

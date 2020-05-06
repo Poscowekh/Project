@@ -1,7 +1,7 @@
 // Snake.cpp for Snake
 
 #include "Snake.h"
-
+#include <iostream>
 namespace GameModel
 {
 using namespace std;
@@ -18,9 +18,10 @@ using namespace std;
     { //Creates Snake of size at (x,y) !!vertically head at place tail up
         body.resize(new_size);
         size = new_size;
-        for (size_t i = 0; i < size; i++)
-            body[i] = make_pair(place.first - i, place.second);
-        tail = body[size - 1];
+        body[0] = place;
+        for (size_t i = 1; i < size; i++)
+            body[i] = make_pair(place.first, place.second - i);
+        prev_head = body[1];
         movement_vector = (make_pair(0,-1)); //By default moves left
         id = new_id;
         set_tail();
@@ -36,9 +37,14 @@ using namespace std;
         return this->id;
     }
 
+    pair<int, int> Snake::get_prev_head()
+    { //Returns coordinates of prev_head
+        return this->prev_head;
+    }
+
     pair<int, int> Snake::get_tail()
     { //Returns coordinates of tail
-        return this->tail;
+        return tail;
     }
 
     void Snake::set_tail()
@@ -59,18 +65,19 @@ using namespace std;
     void Snake::change_direction(pair<int, int> new_direction)
     { //Changes Snake's movement direction
         if(get_size() > 1)  //Shouldn't move to itself!
-        {
+        /*{
             if((get_head().first + new_direction.first != part_of_body(1).first) && (get_head().second + new_direction.second != part_of_body(1).second))
                 movement_vector = new_direction;
         }
-        else
+        else*/
                 movement_vector = new_direction;
     }
 
     void Snake::move()
     { //Moves Snake in predefined direction [x,y]
         set_tail();
-        for (size_t i = 1; i < body.size(); i++)
+        prev_head = get_head();
+        for (size_t i = get_size() - 1; i > 0; i--)
         {
             body[i].first = body[i - 1].first;
             body[i].second = body[i - 1].second;
@@ -87,13 +94,15 @@ using namespace std;
     void Snake::cut_snake()
     {
         for(size_t i = 0; i < get_size() - 1; i++)
-            body[i] = body[i + 1];
+             body[i] = body[i + 1];
         body.pop_back();
+        size -= 1;
     }
 
     void Snake::grow_snake()
     {
         body.push_back(get_tail());
+        size = body.size();
     }
 
     void Snake::add_to_snake(pair<int, int> new_part)

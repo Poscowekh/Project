@@ -24,8 +24,9 @@ add_executable(EmptyOxygine
     ../src/Model/Snake.cpp
     ../src/Model/Block.cpp
     ../src/Model/Food.cpp
-    ../src/Model/graph.cpp
-    ../src/Model/node.cpp
+    ../src/Model/Graph.cpp
+    ../src/Model/Node.cpp
+    ../src/Model/Tests.cpp
 )
 
 target_link_libraries(EmptyOxygine ${OXYGINE_CORE_LIBS})
