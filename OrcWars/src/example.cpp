@@ -34,7 +34,9 @@ void example_init()
     //GameModel::test_border_block();       //Test destroying by block at border
     //GameModel::test_border_food_block();  //Test eating and destroying at border
     
-    spGame_presenter presenter;
+    Vector2 a(10, 10);
+    size_t b = 10;
+    spGame_presenter presenter = new Game_presenter(a, b);
     presenter->show(getStage());
 
     //st = new GameState();
