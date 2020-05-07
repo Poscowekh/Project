@@ -3,6 +3,7 @@
 #include "ViewHelper.h"
 #include "Model/Matrix.h"
 #include "Model/Tests.h"
+#include "Presenter/Game_presenter.h"
 
 using namespace oxygine;
 //it is our resources
@@ -33,6 +34,9 @@ void example_init()
     //GameModel::test_border_block();       //Test destroying by block at border
     //GameModel::test_border_food_block();  //Test eating and destroying at border
     
+    spGame_presenter presenter;
+    presenter->show(getStage());
+
     //st = new GameState();
     //getStage()->addChild(st);
 

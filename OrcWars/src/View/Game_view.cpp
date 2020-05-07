@@ -2,7 +2,7 @@
 
 Game_view::Game_view()
 {
-    oxygine::spColorRectSprite sprite = new oxygine::spColorRectSprite();
+    oxygine::spColorRectSprite sprite = new oxygine::ColorRectSprite();
     sprite->setColor(oxygine::Color(0xFF0000FF));
     sprite->setSize(oxygine::Vector2(100, 100));
     addChild(sprite);
