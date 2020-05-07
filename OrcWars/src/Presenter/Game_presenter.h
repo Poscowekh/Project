@@ -3,7 +3,7 @@
 
 #include "oxygine-framework.h"
 
-DECLARE_SMART(Game_presenter, sp_Game_presenter);
+DECLARE_SMART(Game_presenter, spGame_presenter)
 
 class Game_presenter
 {

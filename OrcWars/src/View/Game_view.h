@@ -3,10 +3,12 @@
 
 #include "oxygine-framework.h"
 
+DECLARE_SMART(Game_view, spGame_view)
+
 class Game_view
 {
 public:
-    class Presenter : public oxygine::Actor
+    class View : public oxygine::Actor
     {
 
     };
