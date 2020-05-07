@@ -70,7 +70,7 @@ using namespace std;
                 movement_vector = new_direction;
         }
         else*/
-                movement_vector = new_direction;
+            movement_vector = new_direction;
     }
 
     void Snake::move()

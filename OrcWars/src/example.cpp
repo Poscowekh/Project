@@ -2,7 +2,7 @@
 #include <functional>
 #include "ViewHelper.h"
 #include "Model/Matrix.h"
-#include "Model/Test.h"
+#include "Model/Tests.h"
 
 using namespace oxygine;
 //it is our resources
