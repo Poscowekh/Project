@@ -10,8 +10,9 @@ DECLARE_SMART(Game_presenter, spGame_presenter)
 using namespace std;
 class Game_presenter : public oxygine::EventDispatcher
 {
-    spGame_view view;
-    GameModel::spMatrix matrix;
+    private:
+        spGame_view view;
+        GameModel::spMatrix matrix;
     public:
         void show(oxygine::spActor actor);
         void hide();
