@@ -5,15 +5,10 @@
 
 DECLARE_SMART(Game_presenter, spGame_presenter)
 
-class Game_presenter
+class Game_presenter : public oxygine::EventDispatcher
 {
     public:
-        class Presenter : public oxygine::EventDispatcher
-        {
-
-        };
-
-    Game_presenter();
+        Game_presenter();
 };
 
 #endif // GAME_PRESENTER_H

@@ -5,15 +5,10 @@
 
 DECLARE_SMART(Game_view, spGame_view)
 
-class Game_view
+class Game_view : public oxygine::Actor
 {
-public:
-    class View : public oxygine::Actor
-    {
-
-    };
-
-    Game_view();
+    public:
+        Game_view();
 };
 
 #endif // GAME_VIEW_H
