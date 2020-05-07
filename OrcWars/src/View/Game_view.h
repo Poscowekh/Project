@@ -10,6 +10,7 @@ using namespace std;
 class Game_view : public oxygine::Actor
 {
     public:
+        Game_view(oxygine::Vector2 size, size_t players_cnt);
 
 };
 

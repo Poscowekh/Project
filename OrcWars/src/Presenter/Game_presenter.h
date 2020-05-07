@@ -13,8 +13,8 @@ class Game_presenter : public oxygine::EventDispatcher
     spGame_view view;
     GameModel::spMatrix matrix;
     public:
-        void show();
-        void hide();
+        void show(oxygine::spActor actor);
+        void hide(oxygine::spActor actor);
         Game_presenter();
 };
 
