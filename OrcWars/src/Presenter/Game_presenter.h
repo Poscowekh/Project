@@ -14,8 +14,8 @@ class Game_presenter : public oxygine::EventDispatcher
     GameModel::spMatrix matrix;
     public:
         void show(oxygine::spActor actor);
-        void hide(oxygine::spActor actor);
-        Game_presenter();
+        void hide();
+        Game_presenter(oxygine::Vector2 size, size_t players_cnt);
 };
 
 #endif // GAME_PRESENTER_H
