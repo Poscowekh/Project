@@ -1,9 +1,16 @@
 #include "Game_view.h"
 
-Game_view::Game_view()
+namespace GameGraphics
 {
-    oxygine::spColorRectSprite sprite = new oxygine::ColorRectSprite();
-    sprite->setColor(oxygine::Color(0xFF0000FF));
-    sprite->setSize(oxygine::Vector2(100, 100));
-    addChild(sprite);
+    Game_view::Game_view(oxygine::Vector2 new_size, int new_color, pair<int, int> new_position)
+    {
+        size = new_size;
+        color = new_color;
+        position = new_position;
+        oxygine::spColorRectSprite sprite = new oxygine::ColorRectSprite();
+        sprite->setColor(oxygine::Color(color));
+        sprite->setSize(size);
+        sprite->setPosition(position.first, position.second);
+        addChild(sprite);
+    }
 }

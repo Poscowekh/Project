@@ -5,26 +5,14 @@
 using namespace std;
 namespace GameModel
 {
-    Graph::Graph(pair<int, int> snakes_head_coordinates, pair<int, int> food_coordinates)
+    Graph::Graph(pair<int, int> snakes_head_coordinates, Matrix matrix)
     {
-        height = abs(snakes_head_coordinates.first - food_coordinates.first) + 1;
-        width = abs(snakes_head_coordinates.second - food_coordinates.second) + 1;
+        height = matrix.get_rows();
+        width = matrix.get_columns();
         snakes_head = snakes_head_coordinates;
-        food = food_coordinates;
-        if(snakes_head_coordinates.first - food_coordinates.first >= 0)
-        {
-            if(snakes_head_coordinates.second - food_coordinates.second >= 0)
-                quarter = "II";
-            else
-                quarter = "I";
-        }
-        else
-        {
-            if(snakes_head_coordinates.second - food_coordinates.second >= 0)
-                quarter = "III";
-            else
-                quarter = "IV";
-        }
+        food = matrix.get_food();
+        //block = matrix.get_blocks();
+        create_map();
     }
 
     void Graph::create_map()
@@ -34,6 +22,9 @@ namespace GameModel
             {
                 int tmp_key = width*j + i;
                 Node tmp_node(make_pair(i,j), 0, tmp_key);
+                set_neighbours(tmp_node, tmp_key);
+                //tmp_node.set_value();
+
                 nodes.insert(make_pair(tmp_key, tmp_node));
             }
     }
@@ -67,10 +58,20 @@ namespace GameModel
         return height*width;
     }
 
-    string Graph::get_quarter()
+    void Graph::set_neighbours(Node tmp_node, size_t tmp_key)
     {
-        return quarter;
+        if(tmp_node.get_coordinates().first + 1 < height)
+            tmp_node.set_up(tmp_key + 1);
+        if(tmp_node.get_coordinates().first - 1 > 0)
+            tmp_node.set_down(tmp_key - 1);
+        if(tmp_node.get_coordinates().second + 1 < width)
+            tmp_node.set_down(tmp_key + width);
+        if(tmp_node.get_coordinates().second - 1 > 0)
+            tmp_node.set_up(tmp_key - width);
     }
 
-    //size_t Graph::Dijkstra()
+    size_t Graph::Dijkstra(pair<int, int> food_coords)
+    {
+        //neighbours
+    }
 }

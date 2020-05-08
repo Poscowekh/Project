@@ -90,12 +90,12 @@ using namespace std;
     void test_border()
     {
         int m = 3;
-        int n = 5;
+        int n = 6;
         GameModel::Matrix field = GameModel::Matrix(m, n); //Matrix m rows by n columns
         field.spawn_borderline();
-        field.add_snake(2, make_pair(1,2), 0);             //Snake of size 2 at (1,1)
+        field.add_snake(3, make_pair(1,3), 0);             //Snake of size 2 at (1,1)
         field.change_movement(0, make_pair(0,1));          //Moves right 4 times
-        for(size_t i = 0; i < 4; i++)
+        for(size_t i = 0; i < 5; i++)
         {
             field.update_matrix();
             field.print();

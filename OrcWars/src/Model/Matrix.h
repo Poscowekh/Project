@@ -15,6 +15,7 @@
 using namespace std;
 namespace GameModel
 {
+    DECLARE_SMART(Matrix, spMatrix)
     class Matrix : public oxygine::EventDispatcher
     {
     private:
@@ -33,6 +34,7 @@ namespace GameModel
         Matrix(size_t m, size_t n);
         size_t get_rows();
         size_t get_columns();
+        size_t get_value(pair<int, int> coordinates);
         bool check_cell(pair<int, int>);
         pair<int, int> get_random_coordinates(size_t seed);
         pair<int, int> get_random_free_coordinates(size_t seed);
@@ -58,12 +60,13 @@ namespace GameModel
         void remove_block(size_t remove_id);
         size_t get_food_id(pair<int, int> coordinates);
         size_t get_block_id(pair<int, int> coordinates);
+        vector<Food> get_food();
+        vector<Block> get_blocks();
 
         //for printing matrix
         void reset_matrix();
         void update_matrix();
         void print();
     };
-    DECLARE_SMART(Matrix, spMatrix)
 }
 #endif // MATRIX_H

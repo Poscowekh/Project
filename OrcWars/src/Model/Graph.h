@@ -7,6 +7,7 @@
 #include <map>
 #include <vector>
 #include "Node.h"
+#include "Matrix.h"
 using namespace std;
 namespace GameModel
 {
@@ -16,17 +17,18 @@ namespace GameModel
             int height;
             int width;
             map<int, Node> nodes;
-            vector<int> marked_nodes;
-            pair<int, int> food;
+            //vector<int> marked_nodes;
+            vector<Food> food;
+            Matrix matrix;
+            vector< pair<int, int> > ways;
             pair<int, int> snakes_head;
-            string quarter;
         public:
-            Graph(pair<int, int> snakes_head_coordinates, pair<int, int> food_coordinates);
+            Graph(pair<int, int> snakes_head_coordinates, Matrix matrix);
             size_t get_height();
             size_t get_width();
             size_t get_count();
-            string get_quarter();
-            size_t Dijkstra();
+            size_t Dijkstra(pair<int, int> food_coords);
+            void set_neighbours(Node tmp_node, size_t tmp_key);
             void create_map();
             void print_graph();
     };

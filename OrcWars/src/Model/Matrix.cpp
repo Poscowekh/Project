@@ -245,9 +245,7 @@ namespace GameModel
 
     void Matrix::remove_snake(size_t index)
     {
-        Snake tmp = snakes[snakes.size() - 1];
-        snakes[snakes.size() - 1] = snakes[index];
-        snakes[index] = tmp;
+        snakes[index] = snakes[snakes.size() - 1];
         snakes.pop_back();
     }
 
@@ -277,5 +275,20 @@ namespace GameModel
         for(size_t i = 0; i < blocks.size(); i++)
             if(blocks[i].get_coordinates() == coordinates)
                 return blocks[i].get_id();
+    }
+
+    vector<Block> Matrix::get_blocks()
+    {
+        return blocks;
+    }
+
+    vector<Food> Matrix::get_food()
+    {
+        return food;
+    }
+
+    size_t Matrix::get_value(pair<int, int> coordinates)
+    {
+        return matrix[coordinates.first][coordinates.second];
     }
 }

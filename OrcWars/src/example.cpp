@@ -14,6 +14,7 @@ Resources gameResources;
 //GameState *st;
 
 using namespace GameModel;
+using namespace GameGraphics;
 
 void example_preinit() {}
 
@@ -23,6 +24,7 @@ Resources ViewHelper::res;
 void example_init()
 {
     ViewHelper::res.loadXML("res.xml");
+    //st = new GameState();
 
     //GameModel::test_circle();             //Test circle movement
     //GameModel::test_food();               //Test eating food
@@ -34,12 +36,40 @@ void example_init()
     //GameModel::test_border_block();       //Test destroying by block at border
     //GameModel::test_border_food_block();  //Test eating and destroying at border
     
-    Vector2 a(10, 10);
-    size_t b = 10;
-    spGame_presenter presenter = new Game_presenter(a, b);
+    int m = 7;
+    int n = 7;
+    GameModel::spMatrix field = new GameModel::Matrix(m, n); //Matrix m rows by n columns
+    field->spawn_borderline();
+    field->add_snake(2, make_pair(2,3), 0);            //Snake of size 2 at (1,1)
+    field->change_movement(0, make_pair(0,1));         //Moves right 1 time
+    GameGraphics::spGame_presenter presenter = new Game_presenter(Vector2(m * 100, n * 100), 0, field, make_pair(270, 35));
+    for(size_t i = 0; i < 2; i++)
+    {
+        presenter->draw_matrix();
+        field->update_matrix();
+        field->print();
+    }
+    field->change_movement(0, make_pair(1,0));         //Moves down 2 times
+    for(size_t i = 0; i < 2; i++)
+    {
+        field->update_matrix();
+        field->print();
+    }
+    field->change_movement(0, make_pair(0,-1));         //Moves left 2 times
+    for(size_t i = 0; i < 2; i++)
+    {
+        field->update_matrix();
+        field->print();
+    }
+    field->change_movement(0, make_pair(-1,0));         //Moves up 2 times
+    for(size_t i = 0; i < 2; i++)
+    {
+        field->update_matrix();
+        field->print();
+    }
+
     presenter->show(getStage());
 
-    //st = new GameState();
     //getStage()->addChild(st);
 
 }

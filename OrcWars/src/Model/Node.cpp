@@ -42,4 +42,33 @@ namespace GameModel
     {
         visit_flag = true;
     }
+
+    void Node::set_up(size_t tmp_key)
+    {
+        pair<int, int> up = make_pair(coordinates.first - 1, coordinates.second);
+        neighbours.insert(make_pair("up", tmp_key));
+    }
+
+    void Node::set_right(size_t tmp_key)
+    {
+        pair<int, int> up = make_pair(coordinates.first, coordinates.second + 1);
+        neighbours.insert(make_pair("right", tmp_key));
+    }
+
+    void Node::set_down(size_t tmp_key)
+    {
+        pair<int, int> down = make_pair(coordinates.first + 1, coordinates.second);
+        neighbours.insert(make_pair("down", tmp_key));
+    }
+
+    void Node::set_left(size_t tmp_key)
+    {
+        pair<int, int> left = make_pair(coordinates.first, coordinates.second - 1);
+        neighbours.insert(make_pair("left", tmp_key));
+    }
+
+    size_t Node::get_neighbour(string direction)
+    {
+        return neighbours[direction];
+    }
 }
