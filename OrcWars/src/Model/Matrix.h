@@ -54,6 +54,7 @@ namespace GameModel
             pair<int, int> get_snake_head(size_t id);
             size_t get_snake_id(Snake snake);
             size_t return_snakes_index_by_id(size_t id);
+            vector<Snake> get_snakes();
 
             //for food and blocks
             void spawn_food(string new_type, pair<int, int> new_coordinates, size_t new_id);

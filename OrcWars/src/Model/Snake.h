@@ -31,6 +31,7 @@ namespace GameModel
             pair<int, int> get_head();
             pair<int, int> get_prev_head();
             pair<int, int> part_of_body(size_t i);
+            pair<int, int> get_movement_vector();
             void move();
             void change_direction(pair<int, int> new_direction);
             void cut_snake();

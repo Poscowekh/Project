@@ -2,11 +2,15 @@
 <resources>
 	<set path = "images/Snake" />
 	<atlas>
-		<image file="Apple.png" />
+		<image file="red_apple.png" />
+		<image file="green_apple.png" />
+		<image file="yellow_apple.png" />
+		
+		<image file="head.png" />
 		<image file="body.png" />
-		<image file="tail_down.png" />
-		<image file="head_up.png" />
-		<image file="mount.png" />
+		<image file="tail.png" />
+		
+		<image file="mountains.png" />
 		<image file="grass.png" />
 	</atlas>
 	

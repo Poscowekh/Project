@@ -25,7 +25,8 @@ Resources ViewHelper::res;
 //called from main.cpp
 void example_init()
 {
-    ViewHelper::res.loadXML("./home/alexey/Рабочий стол/C++/Project/Project/Orc Wars/data/src/res.xml");
+    srand(time(NULL));
+    ViewHelper::res.loadXML("res.xml"); //кинуть можно
 
     //st = new GameState();
 
@@ -44,23 +45,35 @@ void example_init()
     int m = 8;
     int n = 12;
     GameModel::spMatrix field = new GameModel::Matrix(m, n); //Matrix m rows by n columns
+    GameGraphics::spGame_presenter presenter = new Game_presenter(display_size, 0, make_pair(0,0), field);
 
     field->spawn_borderline();
-    field->add_snake(3, make_pair(2,4), 0);            //Snake of size 2 at (1,1)
-    field->change_movement(0, make_pair(0,1));         //Moves right 1 time
+    field->add_snake(2, make_pair(2,4), 100);            //Snake of size 2 at (1,1)
+    field->change_movement(100, make_pair(0, 1));         //Moves right 1 time
     field->spawn_block("wall", make_pair(4,4), 1);
     field->spawn_food("apple", make_pair(6,6), 2);
+    field->spawn_food("apple", make_pair(5,10), 3);
+    field->spawn_food("apple", make_pair(2,10), 4);
+    field->spawn_food("apple", make_pair(2,1), 5);
 
     field->update_matrix();
     field->print();
+    presenter->init_view();
+    presenter->show(getStage());
+
+    field->update_matrix();
+    field->print();
+    presenter->update_view();
+    presenter->show(getStage());
+
+    field->update_matrix();
+    field->print();
+    presenter->update_view();
+    presenter->show(getStage());
 
     //GameModel::Graph graph(field->get_snake_head(0), field);
     //graph.create_map();
     //graph.Dijkstra();
-
-    GameGraphics::spGame_presenter presenter = new Game_presenter(display_size, 0, make_pair(0,0), field);
-
-    presenter->show(getStage());
 
     //getStage()->addChild(st);
 

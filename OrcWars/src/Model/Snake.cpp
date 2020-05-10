@@ -64,13 +64,18 @@ namespace GameModel
 
     void Snake::change_direction(pair<int, int> new_direction)
     { //Changes Snake's movement direction
-        if(get_size() > 1)  //Shouldn't move to itself!
+        //if(get_size() > 1)  //Shouldn't move to itself!
         /*{
             if((get_head().first + new_direction.first != part_of_body(1).first) && (get_head().second + new_direction.second != part_of_body(1).second))
                 movement_vector = new_direction;
         }
         else*/
             movement_vector = new_direction;
+    }
+
+    pair<int, int> Snake::get_movement_vector()
+    {
+        return movement_vector;
     }
 
     void Snake::move()

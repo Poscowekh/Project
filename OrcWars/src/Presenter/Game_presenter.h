@@ -21,6 +21,8 @@ namespace GameGraphics
             pair<int, int> position;
         public:
             Game_presenter(oxygine::Point new_size, size_t players_cnt, pair<int, int> new_position, GameModel::spMatrix mtrx);
+            void init_view();
+            void update_view();
             void show(oxygine::spActor actor);
             void hide();
     };

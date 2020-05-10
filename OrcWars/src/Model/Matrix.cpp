@@ -287,6 +287,11 @@ namespace GameModel
         return food;
     }
 
+    vector<Snake> Matrix::get_snakes()
+    {
+        return snakes;
+    }
+
     size_t Matrix::get_value(pair<int, int> coordinates)
     {
         return matrix[coordinates.first][coordinates.second];
