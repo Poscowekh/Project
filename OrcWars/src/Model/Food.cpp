@@ -1,10 +1,10 @@
-//Food.cpp fo Food
+//Food.cpp fo Model
 
 #include "Food.h"
 
+using namespace std;
 namespace GameModel
 {
-using namespace std;
     Food::Food(size_t new_id, pair<int, int> new_coordinates, string new_type/*, size_t new_growth_value*/)
     { //Creates Food at random coordinates of some type and gives it an id
         coordinates = new_coordinates;

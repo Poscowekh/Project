@@ -1,10 +1,10 @@
-// Tests.cpp for Tests
+// Tests.cpp for Model
 
 #include "Tests.h"
 
+using namespace std;
 namespace GameModel
 {
-using namespace std;
     void test_food()
     {
         int m = 3;

@@ -1,12 +1,14 @@
-//Tests.h for Tests
+//Tests.h for Model
 
 #ifndef TESTS_H
 #define TESTS_H
 
 #include "Matrix.h"
+
 using namespace std;
 namespace GameModel
-{   void test_food();
+{
+    void test_food();
     void test_block();
     void test_food_block();
     void test_circle();

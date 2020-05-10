@@ -1,11 +1,11 @@
-// Snake.cpp for Snake
+// Snake.cpp for Model
 
 #include "Snake.h"
 #include <iostream>
+
+using namespace std;
 namespace GameModel
 {
-using namespace std;
-
     Snake::Snake(size_t new_id)
     {//Creates Snake at (0,0)
         body.push_back(make_pair(0,0));

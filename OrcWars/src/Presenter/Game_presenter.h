@@ -1,3 +1,6 @@
+//Game_presenter.h for Graphics
+
+
 #ifndef GAME_PRESENTER_H
 #define GAME_PRESENTER_H
 
@@ -14,12 +17,12 @@ namespace GameGraphics
         private:
             spGame_view view;
             GameModel::spMatrix matrix;
+            oxygine::Point size;
             pair<int, int> position;
         public:
+            Game_presenter(oxygine::Point new_size, size_t players_cnt, pair<int, int> new_position, GameModel::spMatrix mtrx);
             void show(oxygine::spActor actor);
             void hide();
-            Game_presenter(oxygine::Vector2 size, size_t players_cnt, GameModel::spMatrix mtrx, pair<int, int> new_position);
-            void draw_matrix();
     };
 }
 #endif // GAME_PRESENTER_H

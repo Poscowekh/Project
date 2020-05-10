@@ -1,16 +1,27 @@
+//Game_presenter.cpp for Graphics
+
 #include "Game_presenter.h"
+#include <iostream>
 
 namespace GameGraphics
 {
-    Game_presenter::Game_presenter(oxygine::Vector2 size, size_t players_cnt, GameModel::spMatrix mtrx, pair<int, int> new_position)
+    Game_presenter::Game_presenter(Point display_size, size_t players_cnt, pair<int, int> new_position, GameModel::spMatrix mtrx)
     {
+        int size_shift = 80;
         matrix = mtrx;
+        size = display_size;
         position = new_position;
-        view = new Game_view(size, 0x00FF002F, position);
+        //float scale_factor_x = (display_size.x - 40) / display_size.x;
+        //float scale_factor_y = (display_size.y - 40) / display_size.y;
+
+        pair<int, int> view_pos = make_pair(size_shift / 2, size_shift / 2);
+
+        view = new Game_view(Vector2(display_size.x - size_shift, display_size.y - size_shift), view_pos, matrix);
     }
 
     void Game_presenter::show(oxygine::spActor actor)
     {
+        view->update_view();
         actor->addChild(view);
     }
 
@@ -18,30 +29,5 @@ namespace GameGraphics
     {
 
     }
-
-    void Game_presenter::draw_matrix()
-    {
-        spGame_view child;
-        for(size_t i = 0; i < matrix->get_rows(); i++)
-            for(size_t j = 0; j < matrix->get_columns(); j++)
-            {
-                if(matrix->get_value(make_pair(i,j)) == 1)
-                    child = new Game_view(oxygine::Vector2(100, 100), 0x1F1FFF50, make_pair(position.first + 100 * j, position.second + 100 * i));
-                else
-                    if(matrix->get_value(make_pair(i,j)) == 3)
-                        child = new Game_view(oxygine::Vector2(100, 100), 0xFF1F1F50, make_pair(position.first + 100 * j, position.second + 100 * i));
-                    else
-                        if(matrix->get_value(make_pair(i,j)) == 2)
-                            child = new Game_view(oxygine::Vector2(100, 100), 0x5FFF5F50, make_pair(position.first + 100 * j, position.second + 100 * i));
-                        else
-                            if(matrix->get_value(make_pair(i,j)) == 8)
-                            {
-                                child = new Game_view(oxygine::Vector2(100, 100), 0x1F1FFF50, make_pair(position.first + 100 * j, position.second + 100 * i));
-                                spGame_view child2 = new Game_view(oxygine::Vector2(40, 40), 0xFFFFFF50, make_pair(position.first + 100 * j + 30, position.second + 100 * i + 30));
-                                child2->attachTo(child);
-                            }
-            child->attachTo(view);
-            }
-    }
 }
-//Game_view(oxygine::Vector2 new_size, int new_color, pair<int, int> new_position)
+//Game_view(Vector2 new_size, int new_color, pair<int, int> new_position)

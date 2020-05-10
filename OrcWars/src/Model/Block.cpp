@@ -1,10 +1,10 @@
-//Block.cpp fo Block
+//Block.cpp fo Model
 
 #include "Block.h"
 
+using namespace std;
 namespace GameModel
 {
-using namespace std;
     Block::Block(size_t new_id, pair<int, int> new_coordinates, string new_type)
     { //Creates Block of size at random coordinates of some type and gives it an id
         coordinates = new_coordinates;

@@ -5,10 +5,22 @@
 using namespace std;
 namespace GameModel
 {
-    Node::Node(pair<int, int> new_coordinates, size_t initial_value, size_t new_key)
+    Node::Node()
+    {
+        coordinates = make_pair(0,0);
+        distance = 0;
+        value_in = 0;
+        value_out = 0;
+        visit_flag = false;
+        key = -1;
+    }
+
+    Node::Node(pair<int, int> new_coordinates, size_t new_value_in, size_t new_value_out, size_t new_key)
     {
         coordinates = new_coordinates;
-        value = initial_value;
+        distance = 0;
+        value_in = new_value_in;
+        value_out = new_value_out;
         visit_flag = false;
         key = new_key;
     }
@@ -18,9 +30,14 @@ namespace GameModel
         return coordinates;
     }
 
-    size_t Node::get_value()
+    pair<int, int> Node::get_values()
     {
-        return value;
+        return make_pair(value_in, value_out);
+    }
+
+    size_t Node::get_distance()
+    {
+        return distance;
     }
 
     size_t Node::get_key()
@@ -28,9 +45,19 @@ namespace GameModel
         return key;
     }
 
-    void Node::set_value(size_t new_value)
+    void Node::set_distance(size_t new_distance)
     {
-        value = new_value;
+        distance = new_distance;
+    }
+
+    void Node::set_value_in(size_t new_value)
+    {
+        value_in = new_value;
+    }
+
+    void Node::set_value_out(size_t new_value)
+    {
+        value_out = new_value;
     }
 
     bool Node::get_visit_flag()
@@ -43,32 +70,29 @@ namespace GameModel
         visit_flag = true;
     }
 
-    void Node::set_up(size_t tmp_key)
+    void Node::add_neighbour(size_t tmp_key)
     {
-        pair<int, int> up = make_pair(coordinates.first - 1, coordinates.second);
-        neighbours.insert(make_pair("up", tmp_key));
+        neighbours.push_back(tmp_key);
     }
 
-    void Node::set_right(size_t tmp_key)
+    vector<int> Node::get_neighbours_keys()
     {
-        pair<int, int> up = make_pair(coordinates.first, coordinates.second + 1);
-        neighbours.insert(make_pair("right", tmp_key));
+        return neighbours;
     }
 
-    void Node::set_down(size_t tmp_key)
+    size_t Node::get_neighbours_count()
     {
-        pair<int, int> down = make_pair(coordinates.first + 1, coordinates.second);
-        neighbours.insert(make_pair("down", tmp_key));
+        return neighbours.size();
     }
 
-    void Node::set_left(size_t tmp_key)
+    void Node::set_way_to(vector<int> way_to_prev)
     {
-        pair<int, int> left = make_pair(coordinates.first, coordinates.second - 1);
-        neighbours.insert(make_pair("left", tmp_key));
+        way_to = way_to_prev;
+        way_to.push_back(key);
     }
 
-    size_t Node::get_neighbour(string direction)
+    vector<int> Node::get_way_to()
     {
-        return neighbours[direction];
+        return way_to;
     }
 }
