@@ -16,11 +16,11 @@ namespace GameGraphics
     {
         private:
             spGame_view view;
-            GameModel::spMatrix matrix;
+            GameModel::spMatrix field;
             oxygine::Point size;
             pair<int, int> position;
         public:
-            Game_presenter(oxygine::Point new_size, size_t players_cnt, pair<int, int> new_position, GameModel::spMatrix mtrx);
+            Game_presenter(oxygine::Point new_size, size_t players_cnt, pair<int, int> new_position);
             void init_view();
             void update();
             void count_update();

@@ -48,8 +48,8 @@ namespace GameGraphics
 
     void Game_view::update()
     {
-        reset();
         if(!static_flag)
+            reset();
         {
             draw_field();
             for(size_t i = 0; i < matrix->get_rows(); i++)
@@ -66,6 +66,9 @@ namespace GameGraphics
             for(size_t j = 0; j < matrix->get_columns(); j++)
                 if(matrix->get_value(make_pair(i,j)) == 2)
                     draw_food(j,i);
+        if(!static_flag)
+            for(size_t i = 0; i < food_sprites.size(); i++)
+                addChild(food_sprites[i]);
         init_rotation_flag = false;
     }
 
@@ -121,7 +124,7 @@ namespace GameGraphics
                         //tmp_sprite->setRotationDegrees(get_snake_rotation(i,j));
                     tmp_sprite->setSize(rect_size.x, rect_size.y);
                     tmp[j] = tmp_sprite;
-                    addChild(tmp_sprite);
+                    field->addChild(tmp_sprite);
                 }
             ResAnim* res_head = ViewHelper::res.getResAnim("head");
             spSprite head = new Sprite();
@@ -135,10 +138,10 @@ namespace GameGraphics
             //head->setRotationDegrees(get_snake_init_rotation(snakes[i].get_movement_vector()));
             head->setSize(rect_size.x, rect_size.y);
             tmp[0] = head;
-            addChild(head);
+            field->addChild(head);
             tmp_snakes.push_back(tmp);
         }
-        snake_sprites.clear();
+        //snake_sprites.clear();
         snake_sprites = tmp_snakes;
     }
 
@@ -169,12 +172,12 @@ namespace GameGraphics
 
     void Game_view::reset()
     {
-        /*for(size_t i = 0; i < snake_sprites.size(); i++)
+        for(size_t i = 0; i < snake_sprites.size(); i++)
             for(size_t j = 0; j < snake_sprites[i].size(); j++)
-                removeChild(snakes_sprites[i][j]);
+                field->removeChild(snake_sprites[i][j]);
         for(size_t j = 0; j < food_sprites.size(); j++)
-            removeChild(food_sprites[i]);*/
-        addChild(field);
-        food_sprites.clear();
+            field->removeChild(food_sprites[j]);
+        //addChild(field);
+        //food_sprites.clear();
     }
 }

@@ -5,27 +5,41 @@
 
 namespace GameGraphics
 {
-    Game_presenter::Game_presenter(Point display_size, size_t players_cnt, pair<int, int> new_position, GameModel::spMatrix mtrx)
+    Game_presenter::Game_presenter(Point display_size, size_t players_cnt, pair<int, int> new_position)
     {
         //int size_shift = 80;
-        matrix = mtrx;
         size = display_size;
         position = new_position;
         //float scale_factor_x = (display_size.x - 40) / display_size.x;
         //float scale_factor_y = (display_size.y - 40) / display_size.y;
+
+        int m = 8;
+        int n = 12;
+        field = new GameModel::Matrix(m, n); //Matrix m rows by n columns
+
+        field->spawn_borderline();
+        field->add_snake(2, make_pair(2,4), 100);            //Snake of size 2 at (1,1)
+        field->change_movement(100, make_pair(0, 1));         //Moves right 1 time
+        field->spawn_block("wall", make_pair(4,4), 1);
+        field->spawn_food("apple", make_pair(6,6), 2);
+        field->spawn_food("apple", make_pair(5,10), 3);
+        field->spawn_food("apple", make_pair(2,10), 4);
+        field->spawn_food("apple", make_pair(2,1), 5);
+
+        init_view();
     }
 
     void Game_presenter::init_view()
     {
         int size_shift = 80;
         pair<int, int> view_pos = make_pair(size_shift / 2, size_shift / 2);
-        view = new Game_view(Vector2(size.x - size_shift, size.y - size_shift), view_pos, matrix);
+        view = new Game_view(Vector2(size.x - size_shift, size.y - size_shift), view_pos, field);
     }
 
     void Game_presenter::update()
     {
-        matrix->update_matrix();
-        matrix->print();
+        field->update_matrix();
+        field->print();
         view->update();
         show(getStage());
     }
