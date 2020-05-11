@@ -24,7 +24,8 @@ namespace GameGraphics
 
     void Game_presenter::update_view()
     {
-        view->init_draw();
+        view->update();
+        show(getStage());
     }
 
     void Game_presenter::show(oxygine::spActor actor)

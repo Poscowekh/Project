@@ -21,6 +21,7 @@ namespace GameGraphics
             pair<int, int> position;
             GameModel::spMatrix matrix;
             bool static_flag;
+            bool init_rotation_flag;
             spSprite field;
             vector<spSprite> food_sprites;
             vector< vector<spSprite> > snake_sprites;
@@ -32,15 +33,14 @@ namespace GameGraphics
         public:
             Game_view(Vector2 new_size, pair<int, int> new_position, GameModel::spMatrix mtrx);
             int get_snake_init_rotation(pair<int, int> movement_vector);
-            int get_snake_rotation(spSprite prev);
-            void init_draw();
+            int get_snake_rotation(int i, int j);
             void draw_field();
             void draw_grass(int x, int y);
             void draw_block(int x, int y);
             void draw_food(int x, int y);
             void draw_snakes();
             void reset();
-            void update_view();
+            void update();
     };
 }
 #endif // GAME_VIEW_H

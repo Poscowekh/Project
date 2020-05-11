@@ -26,7 +26,7 @@ Resources ViewHelper::res;
 void example_init()
 {
     srand(time(NULL));
-    ViewHelper::res.loadXML("res.xml"); //кинуть можно
+    ViewHelper::res.loadXML("res.xml");
 
     //st = new GameState();
 
@@ -59,17 +59,11 @@ void example_init()
     field->update_matrix();
     field->print();
     presenter->init_view();
-    presenter->show(getStage());
+    presenter->update_view();
 
     field->update_matrix();
     field->print();
     presenter->update_view();
-    presenter->show(getStage());
-
-    field->update_matrix();
-    field->print();
-    presenter->update_view();
-    presenter->show(getStage());
 
     //GameModel::Graph graph(field->get_snake_head(0), field);
     //graph.create_map();

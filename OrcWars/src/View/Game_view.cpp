@@ -13,30 +13,8 @@ namespace GameGraphics
         scale_factor_y = size.y / (matrix->get_rows() * size.y);
         rect_size = Point(scale_factor_x * size.x, scale_factor_y * size.y);
         static_flag = false;
-        init_draw();
-        int delay = 500;
-    }
-
-    void Game_view::init_draw()
-    {
-        if(!static_flag)
-            draw_field();
-        if(static_flag)
-            reset();
-        for(size_t i = 0; i < matrix->get_rows(); i++)
-            for(size_t j = 0; j < matrix->get_columns(); j++)
-            {
-                if(!static_flag)
-                {
-                    draw_grass(j, i);;
-                    if(matrix->get_value(make_pair(i,j)) == 3)
-                        draw_block(j,i);
-                }
-                if(matrix->get_value(make_pair(i,j)) == 2)
-                    draw_food(j,i);
-            }
-        draw_snakes();
-        static_flag = true;
+        init_rotation_flag = true;
+        //int delay = 500;
     }
 
     void Game_view::draw_field()
@@ -44,7 +22,7 @@ namespace GameGraphics
         field = new Sprite();
         field->setSize(size.x, size.y);
         field->setPosition(position.first, position.second);
-        field->setColor(Color(0x00000000));
+        //field->setColor(Color(0x00000000));
         addChild(field);
     }
 
@@ -68,21 +46,28 @@ namespace GameGraphics
         block->attachTo(field);
     }
 
-    /*void Game_view::update_view()
+    void Game_view::update()
     {
-        if(!field_and_blocks_flag)
+        if(!static_flag)
         {
             draw_field();
-            draw_blocks();
-            field_and_blocks_flag = true;
+            for(size_t i = 0; i < matrix->get_rows(); i++)
+                for(size_t j = 0; j < matrix->get_columns(); j++)
+                {
+                    draw_grass(j, i);;
+                    if(matrix->get_value(make_pair(i,j)) == 3)
+                        draw_block(j,i);
+                }
+            static_flag = true;
         }
-        for(size_t j = 0; j < 100; j++)
-        {
-            for(size_t i = 0; i < 5000; i++)
-                size_t time_pass = time_pass + i;
-
-        }
-    }*/
+        reset();
+        draw_snakes();
+        for(size_t i = 0; i < matrix->get_rows(); i++)
+            for(size_t j = 0; j < matrix->get_columns(); j++)
+                if(matrix->get_value(make_pair(i,j)) == 2)
+                    draw_food(j,i);
+        init_rotation_flag = false;
+    }
 
     void Game_view::draw_food(int x, int y)
     {
@@ -107,6 +92,8 @@ namespace GameGraphics
     void Game_view::draw_snakes()
     {
         snakes = matrix->get_snakes();
+        vector< vector<spSprite> > tmp_snakes;
+        tmp_snakes.resize(snakes.size());
         for(size_t i = 0; i < snakes.size(); i++)
         {
             vector<spSprite> tmp;
@@ -128,10 +115,10 @@ namespace GameGraphics
                         ResAnim* res_tail = ViewHelper::res.getResAnim("tail");
                         tmp_sprite->setResAnim(res_tail);
                     }
-                    /*if(!static_flag)
-                        tmp_sprite->setRotationDegrees(get_snake_init_rotation(snakes[i].get_movement_vector()));
-                    else
-                        tmp_sprite->setRotationDegrees(get_snake_rotation(snake_sprites[i][j - 1]));*/
+                    //if(init_rotation_flag)
+                        //tmp_sprite->setRotationDegrees(get_snake_init_rotation(snakes[i].get_movement_vector()));
+                    //else
+                        //tmp_sprite->setRotationDegrees(get_snake_rotation(i,j));
                     tmp_sprite->setSize(rect_size.x, rect_size.y);
                     tmp[j] = tmp_sprite;
                     addChild(tmp_sprite);
@@ -139,15 +126,20 @@ namespace GameGraphics
             ResAnim* res_head = ViewHelper::res.getResAnim("head");
             spSprite head = new Sprite();
             float tmp_pos_x = position.first + rect_size.x * (snakes[i].get_head().second + 1);
-            float tmp_pos_y = position.second + rect_size.y * snakes[i].get_head().first;
+            float tmp_pos_y = position.second + rect_size.y * (snakes[i].get_head().first);
             head->setPosition(tmp_pos_x, tmp_pos_y);
+            //float anchor_x = head->getPosition().x + rect_size.x / 2;
+            //float anchor_y = head->getPosition().y + rect_size.y / 2;
+            //head->setAnchor(Vector2(anchor_x, anchor_y));
             head->setResAnim(res_head);
             //head->setRotationDegrees(get_snake_init_rotation(snakes[i].get_movement_vector()));
             head->setSize(rect_size.x, rect_size.y);
             tmp[0] = head;
             addChild(head);
-            snake_sprites.push_back(tmp);
+            tmp_snakes.push_back(tmp);
         }
+        //snake_sprites.clear();
+        snake_sprites = tmp_snakes;
     }
 
     int Game_view::get_snake_init_rotation(pair<int, int> movement_vector)
@@ -170,20 +162,15 @@ namespace GameGraphics
         return rotation;
     }
 
-    int Game_view::get_snake_rotation(spSprite prev)
+    int Game_view::get_snake_rotation(int i, int j)
     {
-        return prev->getRotationDegrees();
+        return snake_sprites[i][j - 1]->getRotation();
     }
 
     void Game_view::reset()
     {
-        //for(size_t i = 0; i < food_sprites.size(); i++)
-            //food_sprites[i]->detach
-        //spSprite tmp = Sprite();
-        //tmp->
+        removeChildren();
+        addChild(field);
         food_sprites.clear();
-        //for(size_t i = 0; i < snake_sprites.size(); i++)
-            //removeChild(snake_sprites[i]);
-        snake_sprites.clear();
     }
 }
