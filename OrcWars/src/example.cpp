@@ -18,17 +18,23 @@ Resources gameResources;
 using namespace GameModel;
 using namespace GameGraphics;
 
-void example_preinit() {}
+
 
 Resources ViewHelper::res;
 GameGraphics::spGame_presenter presenter;
 int cnt = 0;
 
+void example_preinit() {}
+
+
+
 //called from main.cpp
 void example_init()
 {
+
+    ViewHelper::res.loadXML("res.xml");
     srand(time(NULL));
-    ViewHelper::res.loadXML("data/res.xml");
+
 
     //st = new GameState();
 
@@ -48,9 +54,14 @@ void example_init()
     //graph.Dijkstra();
 
     //getStage()->addChild(st);
+    getStage()->addTween(TweenDummy(), 1000)->setDoneCallback([&presenter](Event * )
+    {
+        Point display_size = core::getDisplaySize();
+        presenter = new Game_presenter(display_size, 0, make_pair(0,0));
+    }
+    );
 
-    Point display_size = core::getDisplaySize();
-    presenter = new Game_presenter(display_size, 0, make_pair(0,0));
+
 
 }
 
@@ -58,7 +69,7 @@ void example_init()
 //called each frame from main.cpp
 void example_update()
 {
-    if(cnt % 100 == 0)
+    if(cnt % 100 == 0 && presenter)
     {
         presenter->update();
         cnt = 0;
