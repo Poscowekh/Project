@@ -102,7 +102,7 @@ namespace GameGraphics
                 for(size_t j = 1; j < snakes[i].get_size(); j++)
                 {
                     spSprite tmp_sprite = new Sprite();
-                    float tmp_pos_x = position.first + rect_size.x * (snakes[i].part_of_body(j).second + 1);
+                    float tmp_pos_x = position.first + rect_size.x * snakes[i].part_of_body(j).second;
                     float tmp_pos_y = position.second + rect_size.y * snakes[i].part_of_body(j).first;
                     tmp_sprite->setPosition(tmp_pos_x, tmp_pos_y);
                     if(j < snakes[i].get_size() - 1)
@@ -125,8 +125,8 @@ namespace GameGraphics
                 }
             ResAnim* res_head = ViewHelper::res.getResAnim("head");
             spSprite head = new Sprite();
-            float tmp_pos_x = position.first + rect_size.x * (snakes[i].get_head().second + 1);
-            float tmp_pos_y = position.second + rect_size.y * (snakes[i].get_head().first);
+            float tmp_pos_x = position.first + rect_size.x * snakes[i].get_head().second;
+            float tmp_pos_y = position.second + rect_size.y * snakes[i].get_head().first;
             head->setPosition(tmp_pos_x, tmp_pos_y);
             //float anchor_x = head->getPosition().x + rect_size.x / 2;
             //float anchor_y = head->getPosition().y + rect_size.y / 2;

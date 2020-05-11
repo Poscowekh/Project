@@ -22,10 +22,18 @@ namespace GameGraphics
         view = new Game_view(Vector2(size.x - size_shift, size.y - size_shift), view_pos, matrix);
     }
 
-    void Game_presenter::update_view()
+    void Game_presenter::update()
     {
+        matrix->update_matrix();
+        matrix->print();
         view->update();
         show(getStage());
+    }
+
+    void Game_presenter::count_update()
+    {
+        for(size_t i = 0; i < 1; i++)
+            update();
     }
 
     void Game_presenter::show(oxygine::spActor actor)
@@ -35,7 +43,6 @@ namespace GameGraphics
 
     void Game_presenter::hide()
     {
-
     }
 }
 //Game_view(Vector2 new_size, int new_color, pair<int, int> new_position)

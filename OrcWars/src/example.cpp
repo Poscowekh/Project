@@ -26,7 +26,7 @@ Resources ViewHelper::res;
 void example_init()
 {
     srand(time(NULL));
-    ViewHelper::res.loadXML("res.xml");
+    ViewHelper::res.loadXML("data/res.xml");
 
     //st = new GameState();
 
@@ -56,14 +56,12 @@ void example_init()
     field->spawn_food("apple", make_pair(2,10), 4);
     field->spawn_food("apple", make_pair(2,1), 5);
 
-    field->update_matrix();
-    field->print();
     presenter->init_view();
-    presenter->update_view();
 
-    field->update_matrix();
-    field->print();
-    presenter->update_view();
+    //presenter->update_view();
+
+    presenter->count_update();
+
 
     //GameModel::Graph graph(field->get_snake_head(0), field);
     //graph.create_map();
