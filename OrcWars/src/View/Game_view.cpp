@@ -138,7 +138,7 @@ namespace GameGraphics
             addChild(head);
             tmp_snakes.push_back(tmp);
         }
-        //snake_sprites.clear();
+        snake_sprites.clear();
         snake_sprites = tmp_snakes;
     }
 
@@ -169,7 +169,7 @@ namespace GameGraphics
 
     void Game_view::reset()
     {
-        removeChildren();
+        getStage()->removeChildren();
         addChild(field);
         food_sprites.clear();
     }

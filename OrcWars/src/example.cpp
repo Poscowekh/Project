@@ -58,8 +58,6 @@ void example_init()
 
     presenter->init_view();
 
-    //presenter->update_view();
-
     presenter->count_update();
 
 
