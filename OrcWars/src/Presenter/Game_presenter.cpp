@@ -30,14 +30,6 @@ namespace GameGraphics
         show(getStage());
     }
 
-    void Game_presenter::count_update()
-    {
-        for(size_t i = 0; i < 3; i++)
-        {
-            update();
-        }
-    }
-
     void Game_presenter::show(oxygine::spActor actor)
     {
         actor->addChild(view);

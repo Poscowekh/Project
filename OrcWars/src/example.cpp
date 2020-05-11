@@ -21,6 +21,8 @@ using namespace GameGraphics;
 void example_preinit() {}
 
 Resources ViewHelper::res;
+GameGraphics::spGame_presenter presenter;
+int cnt = 0;
 
 //called from main.cpp
 void example_init()
@@ -40,26 +42,6 @@ void example_init()
     //GameModel::test_border_block();       //Test destroying by block at border
     //GameModel::test_border_food_block();  //Test eating and destroying at border
     
-    Point display_size = core::getDisplaySize();
-
-    int m = 8;
-    int n = 12;
-    GameModel::spMatrix field = new GameModel::Matrix(m, n); //Matrix m rows by n columns
-    GameGraphics::spGame_presenter presenter = new Game_presenter(display_size, 0, make_pair(0,0), field);
-
-    field->spawn_borderline();
-    field->add_snake(2, make_pair(2,4), 100);            //Snake of size 2 at (1,1)
-    field->change_movement(100, make_pair(0, 1));         //Moves right 1 time
-    field->spawn_block("wall", make_pair(4,4), 1);
-    field->spawn_food("apple", make_pair(6,6), 2);
-    field->spawn_food("apple", make_pair(5,10), 3);
-    field->spawn_food("apple", make_pair(2,10), 4);
-    field->spawn_food("apple", make_pair(2,1), 5);
-
-    presenter->init_view();
-
-    presenter->count_update();
-
 
     //GameModel::Graph graph(field->get_snake_head(0), field);
     //graph.create_map();
@@ -73,6 +55,30 @@ void example_init()
 //called each frame from main.cpp
 void example_update()
 {
+    Point display_size = core::getDisplaySize();
+
+    int m = 8;
+    int n = 12;
+    GameModel::spMatrix field = new GameModel::Matrix(m, n); //Matrix m rows by n columns
+
+    field->spawn_borderline();
+    field->add_snake(2, make_pair(2,4), 100);            //Snake of size 2 at (1,1)
+    field->change_movement(100, make_pair(0, 1));         //Moves right 1 time
+    field->spawn_block("wall", make_pair(4,4), 1);
+    field->spawn_food("apple", make_pair(6,6), 2);
+    field->spawn_food("apple", make_pair(5,10), 3);
+    field->spawn_food("apple", make_pair(2,10), 4);
+    field->spawn_food("apple", make_pair(2,1), 5);
+
+    presenter = new Game_presenter(display_size, 0, make_pair(0,0), field);
+    presenter->init_view();
+
+    if(cnt % 200 == 0)
+    {
+        presenter->update();
+        cnt = 0;
+    }
+    cnt++;
     //st->update();
 }
 

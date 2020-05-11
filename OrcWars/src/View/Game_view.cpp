@@ -48,6 +48,7 @@ namespace GameGraphics
 
     void Game_view::update()
     {
+        reset();
         if(!static_flag)
         {
             draw_field();
@@ -60,7 +61,6 @@ namespace GameGraphics
                 }
             static_flag = true;
         }
-        reset();
         draw_snakes();
         for(size_t i = 0; i < matrix->get_rows(); i++)
             for(size_t j = 0; j < matrix->get_columns(); j++)
@@ -73,13 +73,13 @@ namespace GameGraphics
     {
         spSprite food = new Sprite();
         ResAnim* res_food;
-        int r = rand() % 3;
-        if(r == 0)
+        /*int r = rand() % 3;
+        if(r == 0)*/
             res_food = ViewHelper::res.getResAnim("green_apple");
-        if(r == 1)
+        /*if(r == 1)
             res_food = ViewHelper::res.getResAnim("red_apple");
         if(r == 2)
-            res_food = ViewHelper::res.getResAnim("yellow_apple");
+            res_food = ViewHelper::res.getResAnim("yellow_apple");*/
         float tmp_x = rect_size.x * x + rect_size.x / 4;
         float tmp_y = rect_size.y * y + rect_size.y / 4;
         food->setPosition(tmp_x, tmp_y);
@@ -169,7 +169,11 @@ namespace GameGraphics
 
     void Game_view::reset()
     {
-        getStage()->removeChildren();
+        /*for(size_t i = 0; i < snake_sprites.size(); i++)
+            for(size_t j = 0; j < snake_sprites[i].size(); j++)
+                removeChild(snakes_sprites[i][j]);
+        for(size_t j = 0; j < food_sprites.size(); j++)
+            removeChild(food_sprites[i]);*/
         addChild(field);
         food_sprites.clear();
     }
