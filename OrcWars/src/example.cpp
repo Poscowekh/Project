@@ -54,6 +54,7 @@ void example_init()
     //graph.Dijkstra();
 
     //getStage()->addChild(st);
+
     getStage()->addTween(TweenDummy(), 1000)->setDoneCallback([&presenter](Event * )
     {
         Point display_size = core::getDisplaySize();
@@ -71,6 +72,7 @@ void example_update()
 {
     if(cnt % 100 == 0 && presenter)
     {
+        cnt++;
         presenter->update();
         cnt = 0;
     }

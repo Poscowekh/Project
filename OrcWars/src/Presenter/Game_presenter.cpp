@@ -25,8 +25,9 @@ namespace GameGraphics
         field->spawn_food("apple", make_pair(5,10), 3);
         field->spawn_food("apple", make_pair(2,10), 4);
         field->spawn_food("apple", make_pair(2,1), 5);
-
         init_view();
+
+        addEventListener(ox::core::EVENT_SYSTEM, CLOSURE(this, &GameGraphics::Game_presenter::move_handler));
     }
 
     void Game_presenter::init_view()
@@ -44,13 +45,49 @@ namespace GameGraphics
         show(getStage());
     }
 
+
     void Game_presenter::show(oxygine::spActor actor)
     {
         actor->addChild(view);
     }
 
-    void Game_presenter::hide()
+    void Game_presenter::hide() {}
+
+    void Game_presenter::move_handler(Event* ev)
     {
+        SDL_Event* event = (SDL_Event*)ev;
+        if(event->type != SDL_KEYDOWN)
+            return;
+        switch(event->key.keysym.sym)
+        {
+            case SDL_SCANCODE_UP:
+                field->change_movement(100, make_pair(-1,0));
+            break;
+            case SDL_SCANCODE_W:
+                field->change_movement(100, make_pair(-1,0));
+            break;
+
+            case SDL_SCANCODE_RIGHT:
+                field->change_movement(100, make_pair(0,1));
+            break;
+            case SDL_SCANCODE_D:
+                field->change_movement(100, make_pair(0,1));
+            break;
+
+            case SDL_SCANCODE_DOWN:
+                field->change_movement(100, make_pair(1,0));
+            break;
+            case SDL_SCANCODE_S:
+                field->change_movement(100, make_pair(1,0));
+            break;
+
+            case SDL_SCANCODE_LEFT:
+                field->change_movement(100, make_pair(0,-1));
+            break;
+            case SDL_SCANCODE_A:
+                field->change_movement(100, make_pair(0,-1));
+            break;
+        }
     }
 }
 //Game_view(Vector2 new_size, int new_color, pair<int, int> new_position)

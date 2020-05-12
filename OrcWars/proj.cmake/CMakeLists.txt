@@ -29,6 +29,7 @@ add_executable(EmptyOxygine
     ../src/Model/Tests.cpp
     ../src/Presenter/Game_presenter.cpp
     ../src/View/Game_view.cpp
+    #../src/Events/Events.cpp
 )
 
 target_link_libraries(EmptyOxygine ${OXYGINE_CORE_LIBS})

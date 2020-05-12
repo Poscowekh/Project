@@ -32,7 +32,6 @@ namespace GameGraphics
             int delay;
         public:
             Game_view(Vector2 new_size, pair<int, int> new_position, GameModel::spMatrix mtrx);
-            int get_snake_init_rotation(pair<int, int> movement_vector);
             int get_snake_rotation(int i, int j);
             void draw_field();
             void draw_grass(int x, int y);

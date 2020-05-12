@@ -7,6 +7,7 @@
 #include "oxygine-framework.h"
 #include "../Model/Matrix.h"
 #include "../View/Game_view.h"
+//#include "../Events/Events.h"
 
 using namespace std;
 namespace GameGraphics
@@ -26,6 +27,7 @@ namespace GameGraphics
             void count_update();
             void show(oxygine::spActor actor);
             void hide();
+            void move_handler(Event* ev);
     };
 }
 #endif // GAME_PRESENTER_H
