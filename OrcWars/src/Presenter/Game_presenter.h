@@ -7,6 +7,7 @@
 #include "oxygine-framework.h"
 #include "../Model/Matrix.h"
 #include "../View/Game_view.h"
+#include "../Model/Graph.h"
 //#include "../Events/Events.h"
 
 using namespace std;
@@ -20,6 +21,7 @@ namespace GameGraphics
             GameModel::spMatrix field;
             oxygine::Point size;
             pair<int, int> position;
+            GameModel::Graph* graph;
         public:
             Game_presenter(oxygine::Point new_size, size_t players_cnt, pair<int, int> new_position);
             void init_view();

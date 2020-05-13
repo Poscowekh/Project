@@ -68,13 +68,19 @@ namespace GameGraphics
             }
         }
         );
+        //graph->print_graph();
     }
 
     void Game_presenter::update()
     {
         field->update_matrix();
-        field->print();
+        //field->print();
         view->update();
+
+        graph = new GameModel::Graph(make_pair(2,4), field.get());
+        graph->Dijkstra();
+        graph->print_distance();
+        delete graph;
     }
 
 
