@@ -27,7 +27,6 @@ namespace GameGraphics
             void count_update();
             void show(oxygine::spActor actor);
             void hide();
-            void move_handler(Event* ev);
     };
 }
 #endif // GAME_PRESENTER_H
