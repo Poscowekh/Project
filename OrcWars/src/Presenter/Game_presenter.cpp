@@ -26,8 +26,15 @@ namespace GameGraphics
         field->spawn_food("apple", make_pair(2,10), 4);
         field->spawn_food("apple", make_pair(2,1), 5);
         init_view();
+    }
 
-        addEventListener(ox::core::EVENT_SYSTEM, [this](Event* ev){
+    void Game_presenter::init_view()
+    {
+        int size_shift = 80;
+        pair<int, int> view_pos = make_pair(size_shift / 2, size_shift / 2);
+        view = new Game_view(Vector2(size.x - size_shift, size.y - size_shift), view_pos, field);
+
+        view->addEventListener(ox::core::EVENT_SYSTEM, [this](Event* ev){
             KeyEvent* event = (KeyEvent*) ev;
             switch(event->data->keysym.scancode)
             {
@@ -61,13 +68,6 @@ namespace GameGraphics
             }
         }
         );
-    }
-
-    void Game_presenter::init_view()
-    {
-        int size_shift = 80;
-        pair<int, int> view_pos = make_pair(size_shift / 2, size_shift / 2);
-        view = new Game_view(Vector2(size.x - size_shift, size.y - size_shift), view_pos, field);
     }
 
     void Game_presenter::update()
