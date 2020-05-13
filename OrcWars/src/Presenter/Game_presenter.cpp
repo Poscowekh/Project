@@ -34,7 +34,7 @@ namespace GameGraphics
         pair<int, int> view_pos = make_pair(size_shift / 2, size_shift / 2);
         view = new Game_view(Vector2(size.x - size_shift, size.y - size_shift), view_pos, field);
 
-        view->addEventListener(ox::core::EVENT_SYSTEM, [this](Event* ev){
+        getStage()->addEventListener(KeyEvent::KEY_DOWN, [this](Event* ev){
             KeyEvent* event = (KeyEvent*) ev;
             switch(event->data->keysym.scancode)
             {
@@ -75,7 +75,6 @@ namespace GameGraphics
         field->update_matrix();
         field->print();
         view->update();
-        show(getStage());
     }
 
 

@@ -59,6 +59,7 @@ void example_init()
     {
         Point display_size = core::getDisplaySize();
         presenter = new Game_presenter(display_size, 0, make_pair(0,0));
+        presenter->show(getStage());
     }
     );
 
