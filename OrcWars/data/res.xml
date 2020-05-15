@@ -1,17 +1,31 @@
 <?xml version="1.0"?>
 <resources>
-	<set path = "images/Snake" />
+	<set path = "images" />
 	<atlas>
-		<image file="red_apple.png" />
-		<image file="green_apple.png" />
-		<image file="yellow_apple.png" />
+		<image file="Snake/red_apple.png" />
+		<image file="Snake/green_apple.png" />
+		<image file="Snake/yellow_apple.png" />
 		
-		<image file="head.png" />
-		<image file="body.png" />
-		<image file="tail.png" />
+		<image file="Snake/head.png" />
+		<image file="Snake/body.png" />
+		<image file="Snake/tail.png" />
+		<image file="Snake/eyes.png" />
 		
-		<image file="mountains.png" />
-		<image file="grass.png" />
+		<image file="Mountains/mountains.png" />
+		<image file="Mountains/mountains_up.png" />
+		<image file="Mountains/mountains_up_lake.png" />
+		<image file="Mountains/mountains_left.png" />
+		<image file="Mountains/mountains_left_lake.png" />
+		<image file="Mountains/mountains_right.png" />
+		<image file="Mountains/mountains_right_lake.png" />
+		<image file="Mountains/mountains_down.png" />
+
+		<image file="Menu/button.png" />
+		<image file="Menu/start_button.png" />
+		<image file="Menu/exit_button.png" />
+		<image file="Menu/pause_button.png" />
+
+		<image file="Snake/grass.png" />
 	</atlas>
 	
 </resources>

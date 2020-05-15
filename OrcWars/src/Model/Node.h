@@ -34,6 +34,7 @@ namespace GameModel
             size_t get_neighbours_count();
             vector<int> get_way_to();
             vector<int> get_neighbours_keys();
+            void sort_neighbours();
             void set_way_to(vector<int> way_to_prev);
             void set_distance(size_t new_distance);
             void set_value_in(size_t new_value);

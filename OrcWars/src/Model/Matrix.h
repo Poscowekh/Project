@@ -24,6 +24,7 @@ namespace GameModel
             size_t columns;
             vector< vector<int> > matrix;   //The field
             vector<Snake> snakes;           //All snakes
+            vector<int> ids_to_destroy;
             vector<Food> food;              //All food
             vector<Block> blocks;           //All blocks
             size_t new_id_snake;            //Provide a new id for each object
@@ -37,8 +38,8 @@ namespace GameModel
             size_t get_columns();
             size_t get_value(pair<int, int> coordinates);
             bool check_cell(pair<int, int>);
-            pair<int, int> get_random_coordinates(size_t seed);
-            pair<int, int> get_random_free_coordinates(size_t seed);
+            pair<int, int> get_random_coordinates();
+            pair<int, int> get_random_free_coordinates();
             void spawn_borderline();
             size_t get_new_id_snake();
             size_t get_new_id_food();
@@ -50,15 +51,18 @@ namespace GameModel
             void add_snake(size_t new_size, pair<int, int> head, size_t new_id);
             void remove_snake(size_t id);
             bool destruction_check(Snake snake);
+            bool destruction_by_snake_check(Snake snake);
             bool growth_check(Snake snake);
             pair<int, int> get_snake_head(size_t id);
             size_t get_snake_id(Snake snake);
             size_t return_snakes_index_by_id(size_t id);
             vector<Snake> get_snakes();
+            vector<int> get_ids_to_destroy();
 
             //for food and blocks
             void spawn_food(string new_type, pair<int, int> new_coordinates, size_t new_id);
             void spawn_block(string new_type, pair<int, int> new_coordinates, size_t new_id);
+            void check_add_food();
             void remove_food(pair<int, int> coordinates);
             void remove_block(size_t remove_id);
             size_t get_food_id(pair<int, int> coordinates);

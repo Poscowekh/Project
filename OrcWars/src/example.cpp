@@ -5,6 +5,7 @@
 #include "Model/Graph.h"
 #include "Model/Tests.h"
 #include "Presenter/Game_presenter.h"
+#include "Menu/Menu.h"
 #include <iostream>
 
 using namespace oxygine;
@@ -18,25 +19,22 @@ Resources gameResources;
 using namespace GameModel;
 using namespace GameGraphics;
 
-
-
 Resources ViewHelper::res;
 GameGraphics::spGame_presenter presenter;
+GameGraphics::spMenu menu;
+bool start_flag = false;        //if true game started game should start or not
+bool pause_flag = false;        //if true game is paused
+bool stop_flag = false;         //if true game is exited
 int cnt = 0;
 
 void example_preinit() {}
 
-
-
 //called from main.cpp
 void example_init()
 {
-
+    Point display_size = core::getDisplaySize();
     ViewHelper::res.loadXML("res.xml");
-    srand(time(NULL));
-
-
-    //st = new GameState();
+    /*st = new GameState();
 
     //GameModel::test_circle();             //Test circle movement
     //GameModel::test_food();               //Test eating food
@@ -53,7 +51,10 @@ void example_init()
     //graph.create_map();
     //graph.Dijkstra();
 
-    //getStage()->addChild(st);
+    //getStage()->addChild(st);*/
+
+    menu = new Menu(display_size);
+    menu->show_start_button(getStage());
 
     getStage()->addTween(TweenDummy(), 1000)->setDoneCallback([&presenter](Event * )
     {
@@ -62,22 +63,30 @@ void example_init()
         presenter->show(getStage());
     }
     );
-
-
-
 }
-
 
 //called each frame from main.cpp
 void example_update()
 {
-    if(cnt % 100 == 0 && presenter)
+    start_flag = menu->get_start_flag();
+    if(!stop_flag)
+        menu->update_time();
+    /*pause_flag = menu->get_pause_flag();
+    //stop_flag = menu->get_stop_flag();
+    if(pause_flag)
+        menu->hide_pause_button(getStage());
+    else*/
+    if(start_flag)
     {
+        menu->hide_start_button(getStage());
+        if(cnt % 20 == 0 && presenter)
+        {
+            //menu->hide(getStage());
+            presenter->update();
+            cnt = 0;
+        }
         cnt++;
-        presenter->update();
-        cnt = 0;
     }
-    cnt++;
     //st->update();
 }
 

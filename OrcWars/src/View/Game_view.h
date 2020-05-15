@@ -21,10 +21,12 @@ namespace GameGraphics
             pair<int, int> position;
             GameModel::spMatrix matrix;
             bool static_flag;
-            bool init_rotation_flag;
+            bool start_flag;
+            bool game_over_flag;
             spSprite field;
             vector<spSprite> food_sprites;
             vector< vector<spSprite> > snake_sprites;
+            vector<int> destroy_ids;
             vector<GameModel::Snake> snakes;
             Resources res;
             float scale_factor_x;
@@ -32,7 +34,9 @@ namespace GameGraphics
             int delay;
         public:
             Game_view(Vector2 new_size, pair<int, int> new_position, GameModel::spMatrix mtrx);
-            int get_snake_rotation(int i, int j);
+            int get_body_rotation(int i, int j);
+            int get_head_rotation(int i);
+            bool get_game_over_flag();
             void draw_field();
             void draw_grass(int x, int y);
             void draw_block(int x, int y);

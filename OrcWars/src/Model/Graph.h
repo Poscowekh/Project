@@ -21,17 +21,22 @@ namespace GameModel
             int shift;
             map<int, Node> nodes;
             vector< pair<int, int> > food;  //food indexes and distance
-            Matrix* matrix;
+            vector<int> way;                //contains keys
+            spMatrix matrix;
             pair<int, int> snakes_head;
         public:
-            Graph(pair<int, int> snakes_head_coordinates, Matrix* matrix);
+            Graph(pair<int, int> snakes_head_coordinates, spMatrix matrix);
             vector< pair<int, int> > sort_distance_vector(vector< pair<int, int> > vect);
             size_t get_height();
             size_t get_width();
             size_t get_count();
             pair<size_t, size_t> get_initial_values(pair<int, int>);
             void Dijkstra();
-            void count_from_node(Node* init_node, Node* prev_node);
+            void count_from_node(Node* init_node);
+            void build_way(int food_key, int head_key);
+            int choose_node(int key);
+            int get_distance();
+            vector<int> get_way();
             void set_neighbours(pair<int, int> coords, size_t tmp_key);
             void create_map();
             void print_graph();

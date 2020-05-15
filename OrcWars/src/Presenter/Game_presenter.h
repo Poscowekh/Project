@@ -1,6 +1,5 @@
 //Game_presenter.h for Graphics
 
-
 #ifndef GAME_PRESENTER_H
 #define GAME_PRESENTER_H
 
@@ -18,12 +17,17 @@ namespace GameGraphics
     {
         private:
             spGame_view view;
+            spColorRectSprite background;
             GameModel::spMatrix field;
             oxygine::Point size;
             pair<int, int> position;
             GameModel::Graph* graph;
+            int size_shift;
+            bool game_over_flag;
+            int points;
         public:
             Game_presenter(oxygine::Point new_size, size_t players_cnt, pair<int, int> new_position);
+            void create_background();
             void init_view();
             void update();
             void count_update();

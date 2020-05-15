@@ -25,6 +25,13 @@ namespace GameModel
         key = new_key;
     }
 
+    /*void Node::sort_neighbours()
+    {
+        for(size_t i = 0; i < neigbours.size(); i++)
+            for(size_t j = i; j < neigbours.size(); j++)
+                if(neighbours)
+    }*/
+
     pair<int, int> Node::get_coordinates()
     {
         return coordinates;
