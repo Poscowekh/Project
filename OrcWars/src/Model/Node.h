@@ -16,31 +16,32 @@ namespace GameModel
     class Node
     {
         private:
-            pair<int, int> coordinates;
+            pair<size_t, size_t> coordinates;
             size_t distance;
             size_t key;
             bool visit_flag;
-            vector<int> way_to;
-            vector<int> neighbours;        //keys here
+            vector<size_t> way_to;
+            vector<size_t> neighbours;        //keys here
             size_t value_in;               //Depends on type of terrain, maybe food or smth else
             size_t value_out;              //--||--||--
         public:
-            Node(pair<int, int> new_coordinates, size_t new_value_in, size_t new_value_out, size_t new_key);
+            Node(pair<size_t, size_t> new_coordinates, size_t new_value_in, size_t new_value_out, size_t new_key);
             Node();
-            pair<int, int> get_coordinates();
-            pair<int, int> get_values();
+            pair<size_t, size_t> get_coordinates();
+            pair<size_t, size_t> get_values();
             size_t get_distance();
             size_t get_key();
             size_t get_neighbours_count();
-            vector<int> get_way_to();
-            vector<int> get_neighbours_keys();
+            vector<size_t> get_way_to();
+            vector<size_t> get_neighbours_keys();
             void sort_neighbours();
-            void set_way_to(vector<int> way_to_prev);
+            void set_way_to(vector<size_t> way_to_prev);
             void set_distance(size_t new_distance);
             void set_value_in(size_t new_value);
             void set_value_out(size_t new_value);
             bool get_visit_flag();
             void mark_as_visited();
+            void unmark_as_visited();
             void add_neighbour(size_t tmp_key);
     };
 }

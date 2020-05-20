@@ -16,31 +16,42 @@ namespace GameModel
     class Graph
     {
         private:
-            int height;
-            int width;
-            int shift;
-            map<int, Node> nodes;
-            vector< pair<int, int> > food;  //food indexes and distance
-            vector<int> way;                //contains keys
+            size_t height;
+            size_t width;
+            size_t shift;
+            size_t infinity;
+            size_t head_key;
+            map<size_t, Node> nodes;
+            vector< pair<size_t, size_t> > food;  //food indexes and distance
+            vector<size_t> way;                //contains keys
             spMatrix matrix;
-            pair<int, int> snakes_head;
+            pair<size_t, size_t> snakes_head;
         public:
-            Graph(pair<int, int> snakes_head_coordinates, spMatrix matrix);
-            vector< pair<int, int> > sort_distance_vector(vector< pair<int, int> > vect);
+            Graph(size_t id, spMatrix matrix);
+            vector< pair<size_t, size_t> > sort_distance_vector(vector< pair<size_t, size_t> > vect);
             size_t get_height();
             size_t get_width();
             size_t get_count();
-            pair<size_t, size_t> get_initial_values(pair<int, int>);
+            size_t get_distance();
+            pair<size_t, size_t> get_initial_values(pair<size_t, size_t>);
+            pair<size_t, size_t> get_coords(size_t key);
+            pair<size_t, size_t> get_snake_head();
+            vector<size_t> safe_coords(size_t opponent_distance);
             void Dijkstra();
             void count_from_node(Node* init_node);
-            void build_way(int food_key, int head_key);
-            int choose_node(int key);
-            int get_distance();
-            vector<int> get_way();
-            void set_neighbours(pair<int, int> coords, size_t tmp_key);
+            void recount_distance_to_node(Node* init_node);
+            void recount_distance_to_neighbours(Node* init_node);
+            void count_next_nodes(Node* init_node);
+            void recheck_distances(Node* init_node);
+            void build_way(size_t food_key);
+            void unmark_nodes();
+            int choose_node(size_t key);
+            vector<size_t> get_way();
+            void set_neighbours(pair<size_t, size_t> coords, size_t tmp_key);
             void create_map();
             void print_graph();
             void print_distance();
+            void print_keys();
     };
 }
 #endif // GRAPH_H

@@ -11,6 +11,7 @@ namespace GameGraphics
         size = display_size;
         position = new_position;
         game_over_flag = false;
+        init_flag = true;
 
         int m = 8;
         int n = 12;
@@ -19,8 +20,8 @@ namespace GameGraphics
         create_background();
 
         field->spawn_borderline();
-        field->add_snake(1, make_pair(m / 2 + 1, n / 2 + 1), 100);            //Snake of size 2 at (1,1)
-        field->change_movement(100, make_pair(0, 1));         //Moves right 1 time
+        field->add_snake(1, make_pair(m / 2 + 1, n / 2 + 1), 102);            //Snake of size 2 at (1,1)
+        field->change_movement(102, make_pair(0, 1));         //Moves right 1 time
         field->spawn_block("wall", make_pair(4,4), 1);
         field->spawn_block("wall", make_pair(4,5), 1);
         field->spawn_block("wall", make_pair(4,6), 1);
@@ -34,7 +35,7 @@ namespace GameGraphics
     {
         pair<int, int> view_pos = make_pair(size_shift, size_shift);
         view = new Game_view(Vector2(size.x - size_shift * 2, size.y - size_shift * 2), view_pos, field);
-        getStage()->addEventListener(KeyEvent::KEY_DOWN, [this](Event* ev){
+        /*getStage()->addEventListener(KeyEvent::KEY_DOWN, [this](Event* ev){
             if(!game_over_flag)
             {
                 KeyEvent* event = (KeyEvent*) ev;
@@ -70,15 +71,14 @@ namespace GameGraphics
                 }
             }
         }
-        );
-        //graph->print_graph();
+        );*/
     }
 
     void Game_presenter::update()
     {
         view->removeChildren();
         field->update_matrix();
-        if(!game_over_flag)
+        /*if(!game_over_flag)
         {
             pair<int, int> snakes_head_coordinates = field->get_snakes()[field->return_snakes_index_by_id(100)].get_head();
             GameModel::Graph graph = GameModel::Graph(snakes_head_coordinates, field); ///KEY = X*SHIFT + Y; x = right; y = down
@@ -86,8 +86,17 @@ namespace GameGraphics
             cout << endl;
             graph.print_distance();
             cout << endl;
-        }
+        }*/
         //field->print();
+        if(init_flag)
+            init_flag = false;
+        else
+        {
+            GameModel::AI* ai = new GameModel::AI(field);
+            ai->count_ways();
+            ai->choose_way();
+        }
+        //graph->print_graph();
         view->update();
         game_over_flag = view->get_game_over_flag();
         if(game_over_flag)

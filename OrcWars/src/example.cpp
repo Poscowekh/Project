@@ -79,7 +79,7 @@ void example_update()
     if(start_flag)
     {
         menu->hide_start_button(getStage());
-        if(cnt % 20 == 0 && presenter)
+        if(cnt % 40 == 0 && presenter)
         {
             //menu->hide(getStage());
             presenter->update();

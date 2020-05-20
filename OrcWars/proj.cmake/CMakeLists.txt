@@ -33,6 +33,7 @@ add_executable(Game_Unix
     ../src/Presenter/Game_presenter.cpp
     ../src/View/Game_view.cpp
     ../src/Menu/Menu.cpp
+    ../src/AI/AI.cpp
     #../src/Events/Events.cpp
 )
 
@@ -54,6 +55,7 @@ add_executable(Game_Win.exe
     ../src/Presenter/Game_presenter.cpp
     ../src/View/Game_view.cpp
     ../src/Menu/Menu.cpp
+    ../src/AI/AI.cpp
     #../src/Events/Events.cpp
 )
 

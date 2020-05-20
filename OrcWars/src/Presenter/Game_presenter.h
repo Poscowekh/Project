@@ -6,7 +6,7 @@
 #include "oxygine-framework.h"
 #include "../Model/Matrix.h"
 #include "../View/Game_view.h"
-#include "../Model/Graph.h"
+#include "../AI/AI.h"
 //#include "../Events/Events.h"
 
 using namespace std;
@@ -24,6 +24,7 @@ namespace GameGraphics
             GameModel::Graph* graph;
             int size_shift;
             bool game_over_flag;
+            bool init_flag;
             int points;
         public:
             Game_presenter(oxygine::Point new_size, size_t players_cnt, pair<int, int> new_position);

@@ -116,9 +116,9 @@ namespace GameGraphics
             tmp.resize(snakes[i].get_size());
             for(size_t j = 0; j < snakes[i].get_size(); j++)
             {
-                for(size_t k = 0; k < matrix->get_ids_to_destroy().size(); k++)
+                /*for(size_t k = 0; k < matrix->get_ids_to_destroy().size(); k++)
                     if(matrix->get_ids_to_destroy()[k] == 100)
-                        game_over_flag = true;
+                        game_over_flag = true;*/
                 spSprite sprite = new Sprite();
                 float pos_x = rect_size.x * snakes[i].part_of_body(j).second + rect_size.x;
                 float pos_y = rect_size.y * snakes[i].part_of_body(j).first + rect_size.y;

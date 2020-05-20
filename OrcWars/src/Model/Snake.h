@@ -20,6 +20,7 @@ namespace GameModel
             pair<int, int> prev_head;
             size_t id;
             size_t size;
+            bool death_flag;
         public:
             Snake(size_t new_id);
             Snake(size_t new_size, pair<int, int> place, size_t new_id);
@@ -32,6 +33,8 @@ namespace GameModel
             pair<int, int> get_prev_head();
             pair<int, int> part_of_body(size_t i);
             pair<int, int> get_movement_vector();
+            bool get_death_flag();
+            void set_death_flag();
             void move();
             void change_direction(pair<int, int> new_direction);
             void cut_snake();

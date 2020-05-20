@@ -15,7 +15,7 @@ namespace GameModel
         key = -1;
     }
 
-    Node::Node(pair<int, int> new_coordinates, size_t new_value_in, size_t new_value_out, size_t new_key)
+    Node::Node(pair<size_t, size_t> new_coordinates, size_t new_value_in, size_t new_value_out, size_t new_key)
     {
         coordinates = new_coordinates;
         distance = 0;
@@ -32,12 +32,12 @@ namespace GameModel
                 if(neighbours)
     }*/
 
-    pair<int, int> Node::get_coordinates()
+    pair<size_t, size_t> Node::get_coordinates()
     {
         return coordinates;
     }
 
-    pair<int, int> Node::get_values()
+    pair<size_t, size_t> Node::get_values()
     {
         return make_pair(value_in, value_out);
     }
@@ -77,12 +77,17 @@ namespace GameModel
         visit_flag = true;
     }
 
+    void Node::unmark_as_visited()
+    {
+        visit_flag = false;
+    }
+
     void Node::add_neighbour(size_t tmp_key)
     {
         neighbours.push_back(tmp_key);
     }
 
-    vector<int> Node::get_neighbours_keys()
+    vector<size_t> Node::get_neighbours_keys()
     {
         return neighbours;
     }
@@ -92,13 +97,13 @@ namespace GameModel
         return neighbours.size();
     }
 
-    void Node::set_way_to(vector<int> way_to_prev)
+    void Node::set_way_to(vector<size_t> way_to_prev)
     {
         way_to = way_to_prev;
         way_to.push_back(key);
     }
 
-    vector<int> Node::get_way_to()
+    vector<size_t> Node::get_way_to()
     {
         return way_to;
     }
