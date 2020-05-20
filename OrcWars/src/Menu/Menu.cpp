@@ -66,7 +66,7 @@ namespace GameGraphics
         pause_button->setPosition(size.x / 2 - shift / 2,0);
         pause_button->addEventListener(TouchEvent::CLICK, [this](Event*){
             pause_flag = true;
-            start_button = false;
+            start_flag = false;
         }
         );
     }
