@@ -17,6 +17,7 @@ namespace GameModel
             vector<size_t> ids;
             spMatrix matrix;
             bool compete_flag;
+            bool game_over_flag;
         public:
             AI(spMatrix mtrx);
             void count_ways();

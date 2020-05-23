@@ -44,14 +44,9 @@ void example_init()
     //GameModel::test_border();             //Test destroying at border
     //GameModel::test_border_food();        //Test eating food at border
     //GameModel::test_border_block();       //Test destroying by block at border
-    //GameModel::test_border_food_block();  //Test eating and destroying at border
-    
+    //GameModel::test_border_food_block();  //Test eating and destroying at border*/
 
-    //GameModel::Graph graph(field->get_snake_head(0), field);
-    //graph.create_map();
-    //graph.Dijkstra();
-
-    //getStage()->addChild(st);*/
+    //getStage()->addChild(st);
 
     menu = new Menu(display_size);
     menu->show_start_button(getStage());
@@ -69,24 +64,20 @@ void example_init()
 void example_update()
 {
     start_flag = menu->get_start_flag();
-    if(!stop_flag)
-        menu->update_time();
-    /*pause_flag = menu->get_pause_flag();
-    //stop_flag = menu->get_stop_flag();
-    if(pause_flag)
-        menu->hide_pause_button(getStage());
-    else*/
     if(start_flag)
     {
+        //menu->
         menu->hide_start_button(getStage());
-        if(cnt % 40 == 0 && presenter)
+        if(cnt % 40 == 0 && presenter)              //frames per tick
         {
-            //menu->hide(getStage());
+
             presenter->update();
             cnt = 0;
         }
         cnt++;
     }
+    //else
+        //
     //st->update();
 }
 

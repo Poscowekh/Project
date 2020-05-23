@@ -18,6 +18,7 @@ namespace GameModel
         else
             shift = width;
         infinity = shift * shift + 1;
+        count = height * width;
         head_key = snakes_head.first + snakes_head.second * shift;
         create_map();
     }
@@ -211,13 +212,18 @@ namespace GameModel
 
     void Graph::build_way(size_t food_key)
     {
+        int check;
+        bool flag = true;
         size_t tmp_key;
         tmp_key = food_key;
-        if(nodes[food_key].get_distance() < infinity)
+        if(nodes[food_key].get_distance() < infinity && flag)
             while(tmp_key != head_key)
             {
                way.push_back(tmp_key);
                tmp_key = choose_node(tmp_key);
+               check++;
+               if(check >= count)
+                   flag = false;
             }
         else
             way.resize(0);
@@ -265,7 +271,10 @@ namespace GameModel
         recheck_distances(&nodes[head_key]);
         size_t food_key = matrix->get_food()[0].get_coordinates().first +
                 matrix->get_food()[0].get_coordinates().second * shift;
-        build_way(food_key);
+        if(nodes[food_key].get_distance() == infinity)
+            way.resize(0);
+        else
+            build_way(food_key);
     }
 
     size_t Graph::get_distance()
@@ -289,25 +298,55 @@ namespace GameModel
         return snakes_head;
     };
 
-    vector<size_t> Graph::safe_coords(size_t opponent_distance)
+    vector<size_t> Graph::safe_way(size_t diff_dist)
     {
-        vector<size_t> tmp;
+        vector<size_t> tmp_keys;
+        size_t max = 0;
+        size_t max_index = 0;
         for(size_t i = 0; i < height; i++)
             for(size_t j = 0; j < width; j++)
             {
                 size_t tmp_key = shift * j + i;
-                int diff_x = nodes[tmp_key].get_coordinates().first - snakes_head.first;
-                if(diff_x < 0)
-                    diff_x = -diff_x;
-                int diff_y = nodes[tmp_key].get_coordinates().second - snakes_head.second;
-                if(diff_y < 0)
-                    diff_y = -diff_y;
-                size_t diff = diff_x + diff_y;
-                if(nodes[tmp_key].get_distance() >= opponent_distance && diff <= opponent_distance)
-                    tmp.push_back(tmp_key);
+                if(matrix->get_value(get_coords(tmp_key)) == 0 && nodes[tmp_key].get_distance() >= diff_dist)
+                    tmp_keys.push_back(tmp_key);
+            };
+        for(size_t i = 0; i < tmp_keys.size(); i++)
+        {
+            build_way(tmp_keys[i]);
+            if(way.size() == 0)
+            {
+                tmp_keys[i] = tmp_keys[tmp_keys.size() - 1];
+                tmp_keys.pop_back();
             }
-        if(tmp.size() == 0)
-            tmp.push_back(0);
+            else
+                if(way.size() > max)
+                {
+                    max = way.size();
+                    max_index = i;
+                };
+        };
+        if(tmp_keys.size() == 0 && diff_dist > 0)
+        {
+            diff_dist--;
+            safe_way(diff_dist - 1);
+        };
+        if(max == 0)
+        {
+            way.resize(0);
+        }
+        else
+            build_way(tmp_keys[max_index]);
+        return way;
+    };
+
+    /*
+    pair<size_t,size_t> Graph::any_move()
+    {
+        pair<size_t,size_t> tmp = make_pair(0,0);
+        for(size_t i = 0; i < nodes[head_key].get_neighbours_count(); i++)
+            if(matrix->get_value(get_coords(nodes[head_key].get_neighbours_keys()[i])) == 0)
+                tmp = get_coords(nodes[head_key].get_neighbours_keys()[i]);
         return tmp;
     };
+    */
 }

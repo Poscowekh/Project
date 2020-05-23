@@ -27,10 +27,12 @@ namespace GameModel
             vector<Snake> snakes;           //All snakes
             vector<Food> food;              //All food
             vector<Block> blocks;           //All blocks
+            vector<size_t> ids_to_destroy;
             size_t new_id_snake;            //Provide a new id for each object
             size_t new_id_food;
             size_t new_id_block;
             bool start_movement_flag;
+            bool player_death_flag;
         public:
             Matrix();
             Matrix(size_t m, size_t n);
@@ -52,10 +54,13 @@ namespace GameModel
             void remove_snake(size_t id);
             bool destruction_check(Snake snake);
             bool growth_check(Snake snake);
+            bool destruction_by_snake_check(Snake snake);
+            bool get_player_death_flag();
             pair<int, int> get_snake_head(size_t id);
             size_t get_snake_id(Snake snake);
             size_t return_snakes_index_by_id(size_t id);
             vector<Snake> get_snakes();
+            vector<size_t> get_ids_to_destroy();
 
             //for food and blocks
             void spawn_food(string new_type, pair<int, int> new_coordinates, size_t new_id);

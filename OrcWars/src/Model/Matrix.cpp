@@ -17,6 +17,7 @@ namespace GameModel
 
     Matrix::Matrix(size_t m, size_t n)
     { //Creates matrix m by n
+        srand(time(NULL));
         rows = m;
         columns = n;
         matrix.clear();
@@ -27,7 +28,8 @@ namespace GameModel
         snakes.clear();
         blocks.clear();
         start_movement_flag = false;
-        last_seed = 1;
+        player_death_flag = false;
+        last_seed = rand() % 10 + 1;
     }
 
     size_t Matrix::get_rows()
@@ -93,17 +95,21 @@ namespace GameModel
         return make_pair(x, y);
     }
 
-    pair<int, int> Matrix::get_random_free_coordinates(size_t new_seed)
+    pair<int, int> Matrix::get_random_free_coordinates(size_t seed)
     {
-        size_t seed = new_seed;
-        pair<int, int> tmp = get_random_coordinates(seed);
+        size_t tmp_seed = seed;
+        srand(tmp_seed);
+        int y = rand() % get_columns();
+        int x = rand() % get_rows();
+        pair<int, int> tmp = make_pair(x, y);
         while(!check_cell(tmp))
         {
-            cout << tmp.first << ',' << tmp.second << endl;
-            seed++;
-            tmp = get_random_coordinates(seed);
+            tmp_seed++;
+            y = rand() % get_columns();
+            x = rand() % get_rows();
+            tmp = make_pair(x, y);
         }
-        last_seed = seed;
+        last_seed = tmp_seed;
         return tmp;
     }
 
@@ -129,9 +135,11 @@ namespace GameModel
     {
         if(food.size() < 1)
         {
-            if(last_seed > 1000000)
-                last_seed = 1;
-            spawn_food("apple", get_random_free_coordinates(last_seed), 2);
+            if(last_seed > 1000)
+                last_seed = last_seed % 5;
+            size_t tmp_seed = 2 * (rand() % last_seed + 1) + 7;
+            spawn_food("apple", get_random_free_coordinates(tmp_seed), 2);
+            matrix[food.back().get_coordinates().first][food.back().get_coordinates().second] = 2;
         }
     }
 
@@ -174,7 +182,7 @@ namespace GameModel
     void Matrix::update_matrix()
     { //Sets values: 0 = free; 1 = snake, 8 = snake head; 2 = food; 3 = block)
         reset_matrix();
-        check_add_food();
+        bool add_food;
         if(start_movement_flag && snakes.size() > 0)
             move_snakes();
         else
@@ -191,43 +199,99 @@ namespace GameModel
             bool destroy = false;
             if(destruction_check(snakes[i]))
                 destroy = true;
+            bool destroy_by_snake = false;
+            if(destruction_by_snake_check(snakes[i]))
+                destroy_by_snake = true;
             for(size_t j = 1; j < snakes[i].get_size(); j++)
                 matrix[snakes[i].part_of_body(j).first][snakes[i].part_of_body(j).second] = 1;
-            if(grow)
+            if(grow && !destroy_by_snake)
             {
-               snakes[i].grow_snake();
-               remove_food(snakes[i].get_head());
-               matrix[snakes[i].get_tail().first][snakes[i].get_tail().second] = 1;
+                snakes[i].grow_snake();
+                remove_food(snakes[i].get_head());
+                matrix[snakes[i].get_tail().first][snakes[i].get_tail().second] = 1;
+                add_food = true;
             }
             if(!destroy)
                 matrix[snakes[i].get_head().first][snakes[i].get_head().second] = 8;
             else
             {
                 matrix[snakes[i].get_tail().first][snakes[i].get_tail().second] = 0;
-                if(snakes[i].get_size() > 1)
+                if(destroy_by_snake)
                 {
-                    matrix[snakes[i].get_head().first][snakes[i].get_head().second] = 3;
-                    snakes[i].cut_snake();
+                    //matrix[snakes[i].get_head().first][snakes[i].get_head().second] = 1;
+                    if(grow)
+                    {
+                        remove_food(snakes[i].get_head());
+                        add_food = true;
+                    }
+                    if(snakes[i].get_size() > 1)
+                    {
+                        snakes[i].cut_snake();
+                    }
+                    else
+                    {
+                        remove_snake(snakes[i].get_id());
+                    }
                 }
                 else
                 {
                     matrix[snakes[i].get_head().first][snakes[i].get_head().second] = 3;
-                    remove_snake(get_snake_id(snakes[i]));
+                    if(snakes[i].get_size() > 1)
+                        snakes[i].cut_snake();
+                    else
+                        remove_snake(snakes[i].get_id());
                 }
             }
         }
-        check_add_food();
+        if(add_food)
+            check_add_food();
     }
 
     bool Matrix::destruction_check(Snake snake)
     {
-        bool tmp;
+        bool tmp = false;
         for(size_t i = 0; i < blocks.size(); i++)
             if(snake.get_head() == blocks[i].get_coordinates())
                 tmp = true;
         if(tmp)
         {
             snake.set_death_flag();
+            ids_to_destroy.push_back(snake.get_id());
+            if(snake.get_id() == 100)
+                player_death_flag = true;
+            return true;
+        }
+        else
+            return false;
+    }
+
+    bool Matrix::destruction_by_snake_check(Snake snake)
+    {
+        size_t index2 = 0;
+        bool tmp = false;
+        for(size_t i = 0; i < snakes.size(); i++)
+            if(snakes[i].get_id() != snake.get_id())
+            {
+                for(size_t j = 0; j < snakes[i].get_size(); j++)
+                    if(snake.get_head() == snakes[i].part_of_body(j))
+                    {
+                        index2 = i;
+                        tmp = true;
+                    };
+            }
+            else
+                if(snake.get_size() > 1)
+                    for(size_t j = 1; j < snakes[i].get_size(); j++)
+                        if(snake.get_head() == snakes[i].part_of_body(j))
+                            if(!(i == return_snakes_index_by_id(snake.get_id()) && j > 2))
+                                tmp = true;
+        if(tmp)
+        {
+            snake.set_death_flag();
+            if(snake.get_id() == 100)
+                player_death_flag = true;
+            snakes[index2].set_death_flag();
+            ids_to_destroy.push_back(snake.get_id());
             return true;
         }
         else
@@ -249,12 +313,13 @@ namespace GameModel
 
     void Matrix::remove_food(pair<int, int> coordinates)
     {
-        for(size_t i = 0; i < food.size(); i++)
+        food.pop_back();
+        /*for(size_t i = 0; i < food.size(); i++)
             if(food[i].get_coordinates() == coordinates)
             {
                 food[i] = food[food.size() - 1];
                 food.pop_back();
-            }
+            }*/
     }
 
     void Matrix::change_movement(size_t id, pair<int, int> movement)
@@ -268,9 +333,15 @@ namespace GameModel
         snakes.push_back(tmp);
     }
 
-    void Matrix::remove_snake(size_t index)
+    void Matrix::remove_snake(size_t id)
     {
-        snakes[index] = snakes[snakes.size() - 1];
+        for(size_t i = 0; i < ids_to_destroy.size(); i++)
+            if(ids_to_destroy[i] == id)
+            {
+                ids_to_destroy[i] = ids_to_destroy.back();
+                ids_to_destroy.pop_back();
+            }
+        snakes[return_snakes_index_by_id(id)] = snakes.back();
         snakes.pop_back();
     }
 
@@ -335,5 +406,15 @@ namespace GameModel
     size_t Matrix::get_blocks_count()
     {
         return blocks.size();
+    }
+
+    vector<size_t> Matrix::get_ids_to_destroy()
+    {
+        return ids_to_destroy;
+    }
+
+    bool Matrix::get_player_death_flag()
+    {
+        return player_death_flag;
     }
 }

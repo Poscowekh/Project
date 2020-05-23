@@ -14,7 +14,12 @@ namespace GameGraphics
         rect_size = Point(scale_factor_x * size.x, scale_factor_y * size.y);
         static_flag = false;
         start_flag = true;
-        //int delay = 500;
+        last_color = 1;
+        colors.push_back(Color(0x0D6E91FF));
+        colors.push_back(Color(0xD46F3DFF));
+        colors.push_back(Color(0xB9BF0BFF));
+        colors.push_back(Color(0xA336D6FF));
+        colors.push_back(Color(0x5C361FFF));
     }
 
     void Game_view::draw_field()
@@ -105,53 +110,54 @@ namespace GameGraphics
         food_sprites.push_back(food);
     }
 
-    void Game_view::draw_snakes()//12 //47/15
+    void Game_view::draw_snakes()
     {
         snakes = matrix->get_snakes();
         vector< vector<spSprite> > tmp_snakes;
         tmp_snakes.resize(snakes.size());
         for(size_t i = 0; i < snakes.size(); i++)
-        {
-            vector<spSprite> tmp;
-            tmp.resize(snakes[i].get_size());
-            for(size_t j = 0; j < snakes[i].get_size(); j++)
+            if(snakes[i].get_size() > 0)
             {
-                /*for(size_t k = 0; k < matrix->get_ids_to_destroy().size(); k++)
-                    if(matrix->get_ids_to_destroy()[k] == 100)
-                        game_over_flag = true;*/
-                spSprite sprite = new Sprite();
-                float pos_x = rect_size.x * snakes[i].part_of_body(j).second + rect_size.x;
-                float pos_y = rect_size.y * snakes[i].part_of_body(j).first + rect_size.y;
-                sprite->setAnchor(Vector2(0.5, 0.5));
-                sprite->setPosition(pos_x, pos_y);
-                sprite->setColor(Color(0x0D6E91FF));
-                if(j == 0 && matrix->get_value(snakes[i].get_head()) == 8)
+                vector<spSprite> tmp;
+                tmp.resize(snakes[i].get_size());
+                for(size_t j = 0; j < snakes[i].get_size(); j++)
                 {
-                    sprite->setResAnim(ViewHelper::res.getResAnim("head"));
-                    sprite->setSize(rect_size.x * 4 / 3, rect_size.y * 4 / 3);
-                    spSprite sprite_eyes = new Sprite();
-                    sprite_eyes->setResAnim(ViewHelper::res.getResAnim("eyes"));
-                    sprite_eyes->attachTo(sprite);
-                    sprite_eyes->setPosition(sprite->getSize().x / 4, sprite->getSize().y / 4);
-                    sprite->setRotationDegrees(get_head_rotation(i));
-                }
-                else
-                    if(j < snakes[i].get_size() - 1)
+                    spSprite sprite = new Sprite();
+                    float pos_x = rect_size.x * snakes[i].part_of_body(j).second + rect_size.x;
+                    float pos_y = rect_size.y * snakes[i].part_of_body(j).first + rect_size.y;
+                    sprite->setAnchor(Vector2(0.5, 0.5));
+                    sprite->setPosition(pos_x, pos_y);
+                    if(i == 0)
+                        sprite->setColor(colors[0]);
+                    else
+                        sprite->setColor(colors[last_color]);
+                    if(j == 0 && matrix->get_value(snakes[i].get_head()) == 8)
                     {
-                        sprite->setResAnim(ViewHelper::res.getResAnim("body"));
-                        sprite->setSize(rect_size.x, rect_size.y);
-                        sprite->setRotationDegrees(get_body_rotation(i,j));
+                        sprite->setResAnim(ViewHelper::res.getResAnim("head"));
+                        sprite->setSize(rect_size.x * 4 / 3, rect_size.y * 4 / 3);
+                        spSprite sprite_eyes = new Sprite();
+                        sprite_eyes->setResAnim(ViewHelper::res.getResAnim("eyes"));
+                        sprite_eyes->attachTo(sprite);
+                        sprite_eyes->setPosition(sprite->getSize().x / 4, sprite->getSize().y / 4);
+                        sprite->setRotationDegrees(get_head_rotation(i));
                     }
                     else
-                    {
-                        sprite->setResAnim(ViewHelper::res.getResAnim("tail"));
-                        sprite->setSize(rect_size.x, rect_size.y);
-                        sprite->setRotationDegrees(get_body_rotation(i,j));
-                    }
-                tmp[j] = sprite;
-                addChild(sprite);
+                        if(j < snakes[i].get_size() - 1)
+                        {
+                            sprite->setResAnim(ViewHelper::res.getResAnim("body"));
+                            sprite->setSize(rect_size.x, rect_size.y);
+                            sprite->setRotationDegrees(get_body_rotation(i,j));
+                        }
+                        else
+                        {
+                            sprite->setResAnim(ViewHelper::res.getResAnim("tail"));
+                            sprite->setSize(rect_size.x, rect_size.y);
+                            sprite->setRotationDegrees(get_body_rotation(i,j));
+                        }
+                    tmp[j] = sprite;
+                    addChild(sprite);
+                }
             }
-        }
         snake_sprites = tmp_snakes;
     }
 
@@ -179,25 +185,28 @@ namespace GameGraphics
     int Game_view::get_body_rotation(int i, int j)
     {
         float rotation;
-        int tmp_x = snakes[i].part_of_body(j - 1).second - snakes[i].part_of_body(j).second;
-        int tmp_y = snakes[i].part_of_body(j - 1).first - snakes[i].part_of_body(j).first;
-        pair<int, int> tmp_vector = make_pair(tmp_x, tmp_y);
-        if(tmp_vector.first != 0)
+        if(j > 0)
         {
-          if(tmp_vector.first > 0)
-              rotation = 90;
-          else
-              rotation = -90;
+            int tmp_x = snakes[i].part_of_body(j - 1).second - snakes[i].part_of_body(j).second;
+            int tmp_y = snakes[i].part_of_body(j - 1).first - snakes[i].part_of_body(j).first;
+            pair<int, int> tmp_vector = make_pair(tmp_x, tmp_y);
+            if(tmp_vector.first != 0)
+            {
+              if(tmp_vector.first > 0)
+                  rotation = 90;
+              else
+                  rotation = -90;
+            }
+            else
+            {
+              if(tmp_vector.second > 0)
+                  rotation = 180;
+              else
+                  rotation = 0;
+            }
         }
         else
-        {
-          if(tmp_vector.second > 0)
-              rotation = 180;
-          else
-              rotation = 0;
-        }
-        if(snake_sprites[i].size() == 1)
-            rotation = rotation - 90;
+            rotation = get_head_rotation(i);
         return rotation;
     }
 
@@ -215,5 +224,11 @@ namespace GameGraphics
     bool Game_view::get_game_over_flag()
     {
         return game_over_flag;
+    }
+
+    void Game_view::hide_all()
+    {
+        reset();
+        removeChild(field);
     }
 }

@@ -31,7 +31,8 @@ namespace GameGraphics
             Resources res;
             float scale_factor_x;
             float scale_factor_y;
-            int delay;
+            size_t last_color;
+            vector<Color> colors;
         public:
             Game_view(Vector2 new_size, pair<int, int> new_position, GameModel::spMatrix mtrx);
             int get_body_rotation(int i, int j);
@@ -44,6 +45,7 @@ namespace GameGraphics
             void draw_snakes();
             void reset();
             void update();
+            void hide_all();
     };
 }
 #endif // GAME_VIEW_H

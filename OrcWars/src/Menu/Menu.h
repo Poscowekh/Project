@@ -24,7 +24,11 @@ namespace GameGraphics
             bool start_flag;
             bool pause_flag;
             bool stop_flag;
+            bool timer_flag;
             int counter;
+            int start_point;
+            int end_point;
+            int interval;
         public:
             Menu(oxygine::Point display_size);
             void show_start_button(oxygine::spActor actor);
@@ -35,7 +39,7 @@ namespace GameGraphics
             void create_background(Point display_size);
             void create_start_button();
             void create_pause_button();
-            void create_timer();
+            bool create_timer();
             void update_time();
             // void end_menu();
             bool get_start_flag();

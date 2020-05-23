@@ -13,29 +13,28 @@ namespace GameGraphics
         game_over_flag = false;
         init_flag = true;
 
-        int m = 8;
+        int m = 8;                           //Size of game field
         int n = 12;
         field = new GameModel::Matrix(m, n); //Matrix m rows by n columns
 
         create_background();
 
         field->spawn_borderline();
-        field->add_snake(1, make_pair(m / 2 + 1, n / 2 + 1), 102);            //Snake of size 2 at (1,1)
+        field->add_snake(1, make_pair(m - 2, n - 2), 100);
+        field->add_snake(1, make_pair(1,1), 102);            //Snake of size 2 at (1,1)
         field->change_movement(102, make_pair(0, 1));         //Moves right 1 time
+        field->change_movement(100, make_pair(0, -1));         //Moves right 1 time
         field->spawn_block("wall", make_pair(4,4), 1);
         field->spawn_block("wall", make_pair(4,5), 1);
         field->spawn_block("wall", make_pair(4,6), 1);
         init_view();
-        points = 0;
-
-
     }
 
     void Game_presenter::init_view()
     {
         pair<int, int> view_pos = make_pair(size_shift, size_shift);
         view = new Game_view(Vector2(size.x - size_shift * 2, size.y - size_shift * 2), view_pos, field);
-        /*getStage()->addEventListener(KeyEvent::KEY_DOWN, [this](Event* ev){
+        getStage()->addEventListener(KeyEvent::KEY_DOWN, [this](Event* ev){
             if(!game_over_flag)
             {
                 KeyEvent* event = (KeyEvent*) ev;
@@ -71,36 +70,30 @@ namespace GameGraphics
                 }
             }
         }
-        );*/
+        );
     }
 
     void Game_presenter::update()
     {
+        //bool flag = false;
         view->removeChildren();
         field->update_matrix();
-        /*if(!game_over_flag)
+        field->print();
+        game_over_flag = field->get_player_death_flag();
+        //if(field->get_snakes().size() > 1 && !game_over_flag)
+        if(!game_over_flag)
         {
-            pair<int, int> snakes_head_coordinates = field->get_snakes()[field->return_snakes_index_by_id(100)].get_head();
-            GameModel::Graph graph = GameModel::Graph(snakes_head_coordinates, field); ///KEY = X*SHIFT + Y; x = right; y = down
-            graph.Dijkstra();
-            cout << endl;
-            graph.print_distance();
-            cout << endl;
-        }*/
-        //field->print();
-        if(init_flag)
-            init_flag = false;
-        else
-        {
-            GameModel::AI* ai = new GameModel::AI(field);
-            ai->count_ways();
-            ai->choose_way();
+            if(!field->get_snakes()[1].get_death_flag())
+            {
+                GameModel::AI* ai = new GameModel::AI(field);
+                ai->count_ways();
+                ai->choose_way();
+            };
+            view->update();
         }
-        //graph->print_graph();
-        view->update();
-        game_over_flag = view->get_game_over_flag();
-        if(game_over_flag)
-            points++;
+        else
+            view->hide_all();
+
     }
 
     void Game_presenter::show(oxygine::spActor actor)
@@ -116,5 +109,13 @@ namespace GameGraphics
         background->setColor(Color(0x3B2505FF));
     }
 
-    void Game_presenter::hide() {}
+    void Game_presenter::hide()
+    {
+        view->hide_all();
+    }
+
+    bool Game_presenter::get_game_over_flag()
+    {
+        return game_over_flag;
+    }
 }

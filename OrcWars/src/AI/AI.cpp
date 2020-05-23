@@ -14,7 +14,7 @@ namespace GameModel
                 ai_id = ids[i];
         }
         ai_graph = new Graph(ai_id, matrix);
-        //human_graph = new Graph(100, matrix);
+        human_graph = new Graph(100, matrix);
         //compete_flag = false;
     };
 
@@ -22,41 +22,32 @@ namespace GameModel
     {
         ai_graph->Dijkstra();
         ai_way = ai_graph->get_way();
-        cout << endl << endl;
-        for(size_t i = 0; i < ai_way.size(); i++)
-            cout <<  ai_way[i] <<  endl;
-        cout << endl << endl;
-        //human_graph->Dijkstra();
-        //human_way = human_graph->get_way();
+        ai_graph->print_distance();
+        human_graph->Dijkstra();
+        human_way = human_graph->get_way();
     };
 
     void AI::choose_way()
     {
-        //if(human_way.size() <= ai_way.size())
-        //{
-            //compete_flag = true;
+        if(human_way.size() >= ai_way.size() && ai_way.size() > 0)
+        {
             pair<int, int> next = ai_graph->get_coords(ai_way.back());
             pair<int, int> head = matrix->get_snake_head(ai_id);
             pair<int, int> move = make_pair(next.first - head.first, next.second - head.second);
             matrix->change_movement(ai_id, move);
-            delete ai_graph;
-        /*}
+        }
         else
-        {
-            compete_flag = false;
-            choose_safe();
-        }*/
+            matrix->change_movement(ai_id, choose_safe());
     };
 
     pair<int,int> AI::choose_safe()
     {
         pair<size_t,size_t> next;
         pair<int,int> move;
-        vector<size_t> keys = ai_graph->safe_coords(human_graph->get_distance());
-        if(keys[0] != 0)
+        vector<size_t> new_way = ai_graph->safe_way(human_graph->get_distance());
+        if(new_way.size() != 0)
         {
-            int rand_choise = rand() % keys.size();
-            next = ai_graph->get_coords(keys[rand_choise]);
+            next = ai_graph->get_coords(new_way.back());
             int move_x = next.first - ai_graph->get_snake_head().first;
             int move_y = next.second - ai_graph->get_snake_head().second;
             move = make_pair(move_x, move_y);
@@ -69,19 +60,19 @@ namespace GameModel
     pair<int, int> AI::rand_move()
     {
         pair<int,int> move;
-        int rand_num = rand() % 4 + 1;
+        int rand_num = rand() % 4;
         switch(rand_num)
         {
-        case 1:
+        case 0:
             move = make_pair(0,1);
             break;
-        case 2:
+        case 1:
             move = make_pair(0,-1);
             break;
-        case 3:
+        case 2:
             move = make_pair(1,0);
             break;
-        case 4:
+        case 3:
             move = make_pair(-1,0);
             break;
         }

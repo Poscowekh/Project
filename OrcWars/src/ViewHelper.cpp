@@ -48,10 +48,9 @@ std::string ViewHelper::getTimeStringFromTimestamp(long long timestampMillisecon
     struct tm* timeinfo;
     timeinfo = localtime(&t);
 
-    string hours, minutes, seconds;
+    string minutes, seconds;
     seconds = std::to_string(timeinfo->tm_sec);
     minutes = std::to_string(timeinfo->tm_min);
-    hours = std::to_string(timeinfo->tm_hour);
 
-    return hours + ":" + minutes + ":" + seconds;
+    return minutes + ":" + seconds;
 }

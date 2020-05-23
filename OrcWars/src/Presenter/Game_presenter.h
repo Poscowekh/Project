@@ -25,7 +25,6 @@ namespace GameGraphics
             int size_shift;
             bool game_over_flag;
             bool init_flag;
-            int points;
         public:
             Game_presenter(oxygine::Point new_size, size_t players_cnt, pair<int, int> new_position);
             void create_background();
@@ -34,6 +33,7 @@ namespace GameGraphics
             void count_update();
             void show(oxygine::spActor actor);
             void hide();
+            bool get_game_over_flag();
     };
 }
 #endif // GAME_PRESENTER_H

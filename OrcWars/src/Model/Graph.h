@@ -19,6 +19,7 @@ namespace GameModel
             size_t height;
             size_t width;
             size_t shift;
+            size_t count;
             size_t infinity;
             size_t head_key;
             map<size_t, Node> nodes;
@@ -36,7 +37,8 @@ namespace GameModel
             pair<size_t, size_t> get_initial_values(pair<size_t, size_t>);
             pair<size_t, size_t> get_coords(size_t key);
             pair<size_t, size_t> get_snake_head();
-            vector<size_t> safe_coords(size_t opponent_distance);
+            pair<size_t, size_t> any_move();
+            vector<size_t> safe_way(size_t diff_dist);
             void Dijkstra();
             void count_from_node(Node* init_node);
             void recount_distance_to_node(Node* init_node);

@@ -13,6 +13,7 @@ namespace GameGraphics
         menu->setPosition(shift,shift);
         menu->setColor(Color(0x869CB5FF));
         start_flag = false;
+        timer_flag = false;
         create_start_button();
         create_pause_button();
         create_background(display_size);
@@ -26,11 +27,6 @@ namespace GameGraphics
         tmp->setPosition(shift - 4, shift - 4);
         tmp->setColor(Color(0x3B2505FF));
         tmp->attachTo(background);
-        /*
-        ResAnim* res_background = ViewHelper::res.getResAnim(("background"));
-        background = new Sprite();
-        background->setResAnim(res_background);
-        */
         background->setColor(Color(0x855000FF));
         background->setSize(display_size);
     }
@@ -44,16 +40,9 @@ namespace GameGraphics
         start_button->setAnchor(0.5,0.5);
         start_button->setResAnim(res_button);
         start_button->setPosition(size.x / 2 + shift / 2, size.y / 2);
-        oxygine::spTextField text = new oxygine::TextField();
-        /*text->setText("START");
-        text->setColor(Color(0xFFFFFFFF));
-        text->setSize(Vector2(size.x / 4, size.y / 4));
-        text->setAnchor(0.5,0.5);
-        text->setPosition(size.x / 2, size.y / 2);
-        menu->addChild(text);*/
-        start_button->addEventListener(TouchEvent::CLICK, [this](Event*){
+        start_button->addEventListener(TouchEvent::CLICK, [this](Event*)
+        {
             start_flag = true;
-            counter = 0;
         }
         );
     }
@@ -64,7 +53,8 @@ namespace GameGraphics
         pause_button = new Sprite();
         pause_button->setResAnim(res_pause_button);
         pause_button->setPosition(size.x / 2 - shift / 2,0);
-        pause_button->addEventListener(TouchEvent::CLICK, [this](Event*){
+        pause_button->addEventListener(TouchEvent::CLICK, [this](Event*)
+        {
             pause_flag = true;
             start_flag = false;
         }
@@ -101,6 +91,7 @@ namespace GameGraphics
     void Menu::hide_start_button(oxygine::spActor actor)
     {
         //actor->removeChild(background);
+        actor->removeChild(start_button);
         actor->removeChild(menu);
         //actor->addChild(pause_button);
     }
@@ -111,14 +102,18 @@ namespace GameGraphics
         show_start_button(actor);
     }
 
-    void Menu::create_timer()
+    bool Menu::create_timer()
     {
-        timer = new TextField();
+        start_point = time(NULL);
+        interval = 5 * 60;
+        end_point = start_point + interval;
     }
 
     void Menu::update_time()
     {
-        counter++;
+        start_point = time(NULL);
+        interval = 5 * 60;
+        end_point = start_point + interval;
         int seconds = counter % 60;
         int minutes = counter / 60;
     }
