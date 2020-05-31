@@ -28,5 +28,5 @@
 	</atlas>
 	<set path = "fonts" />
 		<font file= "font.fnt"/>
-	
+		<font file= "main.fnt"/>
 </resources>

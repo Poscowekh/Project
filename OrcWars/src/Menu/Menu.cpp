@@ -72,7 +72,7 @@ namespace GameGraphics
 
     void Menu::create_text_style()
     {
-        text_style.font = ViewHelper::res.getResFont("font");
+        text_style.font = ViewHelper::res.getResFont("main");
         text_style.fontSize = 18;
         text_style.color = Color(0xFFFFFFFF);
         text_style.vAlign = TextStyle::VALIGN_MIDDLE;

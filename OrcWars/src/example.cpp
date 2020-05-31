@@ -33,7 +33,6 @@ void example_init()
 {
     Point display_size = core::getDisplaySize();
     ViewHelper::res.loadXML("res.xml");
-    ViewHelper::res.loadXML("fonts.xml");
     /*st = new GameState();
 
     //GameModel::test_circle();             //Test circle movement
