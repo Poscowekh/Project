@@ -37,7 +37,7 @@ public:
                                      TextStyle::HorizontalAlign hAlign = TextStyle::HALIGN_LEFT,
                                      Vector2 pos = Vector2(0, 0));
 
-    static string getTimeStringFromTimestamp(long long timestampMilliseconds);
+    static string getTimeStringFromTimestamp(time_t timestamp, time_t start_point);
 };
 
 #endif

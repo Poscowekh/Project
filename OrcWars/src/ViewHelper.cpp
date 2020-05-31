@@ -42,15 +42,12 @@ spTextField ViewHelper::initTextField(spActor parent, Resources *res, std::strin
     return initTextField(parent.get(), res, fontName, fontSize, fontColor, vAlign, hAlign, pos);
 }
 
-std::string ViewHelper::getTimeStringFromTimestamp(long long timestampMilliseconds)
+std::string ViewHelper::getTimeStringFromTimestamp(time_t timestamp, time_t start_point)
 {
-    time_t t = timestampMilliseconds / 1000;
-    struct tm* timeinfo;
-    timeinfo = localtime(&t);
-
+    time_t t = timestamp - start_point;
     string minutes, seconds;
-    seconds = std::to_string(timeinfo->tm_sec);
-    minutes = std::to_string(timeinfo->tm_min);
+    seconds = std::to_string(t % 60);
+    minutes = std::to_string(t / 60 % 60);
 
     return minutes + ":" + seconds;
 }

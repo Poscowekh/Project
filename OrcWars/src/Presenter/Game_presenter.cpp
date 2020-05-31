@@ -78,12 +78,12 @@ namespace GameGraphics
         //bool flag = false;
         view->removeChildren();
         field->update_matrix();
-        field->print();
+        //field->print();
         game_over_flag = field->get_player_death_flag();
         //if(field->get_snakes().size() > 1 && !game_over_flag)
         if(!game_over_flag)
         {
-            if(!field->get_snakes()[1].get_death_flag())
+            if(field->get_snakes()[1].get_death_flag() != true)
             {
                 GameModel::AI* ai = new GameModel::AI(field);
                 ai->count_ways();

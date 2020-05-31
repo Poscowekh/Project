@@ -23,7 +23,6 @@ Resources ViewHelper::res;
 GameGraphics::spGame_presenter presenter;
 GameGraphics::spMenu menu;
 bool start_flag = false;        //if true game started game should start or not
-bool pause_flag = false;        //if true game is paused
 bool stop_flag = false;         //if true game is exited
 int cnt = 0;
 
@@ -34,6 +33,7 @@ void example_init()
 {
     Point display_size = core::getDisplaySize();
     ViewHelper::res.loadXML("res.xml");
+    ViewHelper::res.loadXML("fonts.xml");
     /*st = new GameState();
 
     //GameModel::test_circle();             //Test circle movement
@@ -66,11 +66,11 @@ void example_update()
     start_flag = menu->get_start_flag();
     if(start_flag)
     {
-        //menu->
+        menu->update_timer(getStage());
+        menu->show_timer(getStage());
         menu->hide_start_button(getStage());
         if(cnt % 40 == 0 && presenter)              //frames per tick
         {
-
             presenter->update();
             cnt = 0;
         }

@@ -32,6 +32,25 @@ namespace GameModel
         last_seed = rand() % 10 + 1;
     }
 
+    Matrix::Matrix(size_t map_choise)
+    {
+        ifstream fin;
+        fin.open("maps/map" + to_string(map_choise) + "txt");
+        /*rows = m;
+        columns = n;
+        matrix.clear();
+        matrix.resize(rows);
+        for (size_t i = 0; i < rows; i++)
+            matrix[i].resize(columns, 0);
+        food.clear();
+        snakes.clear();
+        blocks.clear();
+        start_movement_flag = false;
+        player_death_flag = false;
+        srand(time(NULL));
+        last_seed = rand() % 10 + 1;*/
+    }
+
     size_t Matrix::get_rows()
     {
         return this->rows;
@@ -275,7 +294,7 @@ namespace GameModel
                 for(size_t j = 0; j < snakes[i].get_size(); j++)
                     if(snake.get_head() == snakes[i].part_of_body(j))
                     {
-                        index2 = i;
+                        //index2 = i;
                         tmp = true;
                     };
             }
@@ -283,14 +302,13 @@ namespace GameModel
                 if(snake.get_size() > 1)
                     for(size_t j = 1; j < snakes[i].get_size(); j++)
                         if(snake.get_head() == snakes[i].part_of_body(j))
-                            if(!(i == return_snakes_index_by_id(snake.get_id()) && j > 2))
-                                tmp = true;
+                            tmp = true;
         if(tmp)
         {
             snake.set_death_flag();
             if(snake.get_id() == 100)
                 player_death_flag = true;
-            snakes[index2].set_death_flag();
+            //snakes[index2].set_death_flag();
             ids_to_destroy.push_back(snake.get_id());
             return true;
         }

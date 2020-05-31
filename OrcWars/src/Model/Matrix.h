@@ -4,14 +4,13 @@
 #define SNAKE_GAME_MATRIX_H
 
 #include <iostream>
+#include <fstream>
 #include <stdlib.h>
 #include <vector>
 #include "oxygine-framework.h"
 #include "Snake.h"
 #include "Food.h"
 #include "Block.h"
-//#include <random>
-//#include <time.h>
 
 using namespace std;
 namespace GameModel
@@ -36,6 +35,7 @@ namespace GameModel
         public:
             Matrix();
             Matrix(size_t m, size_t n);
+            Matrix(size_t map_choise);
             size_t get_rows();
             size_t get_columns();
             size_t get_value(pair<int, int> coordinates);

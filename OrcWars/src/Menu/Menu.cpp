@@ -7,6 +7,7 @@ namespace GameGraphics
     Menu::Menu(oxygine::Point display_size)
     {
         shift = 40;
+        display = display_size;
         size = Vector2(display_size.x - shift * 2, display_size.y - shift * 2);
         menu = new ColorRectSprite();
         menu->setSize(size);
@@ -15,7 +16,6 @@ namespace GameGraphics
         start_flag = false;
         timer_flag = false;
         create_start_button();
-        create_pause_button();
         create_background(display_size);
     }
 
@@ -47,28 +47,9 @@ namespace GameGraphics
         );
     }
 
-    void Menu::create_pause_button()
-    {
-        ResAnim* res_pause_button = ViewHelper::res.getResAnim("pause_button");
-        pause_button = new Sprite();
-        pause_button->setResAnim(res_pause_button);
-        pause_button->setPosition(size.x / 2 - shift / 2,0);
-        pause_button->addEventListener(TouchEvent::CLICK, [this](Event*)
-        {
-            pause_flag = true;
-            start_flag = false;
-        }
-        );
-    }
-
     bool Menu::get_start_flag()
     {
         return start_flag;
-    }
-
-    bool Menu::get_pause_flag()
-    {
-        return pause_flag;
     }
 
     bool Menu::get_stop_flag()
@@ -83,38 +64,50 @@ namespace GameGraphics
         actor->addChild(start_button);
     }
 
-    void Menu::show_pause_button(oxygine::spActor actor)
-    {
-        actor->addChild(pause_button);
-    }
-
     void Menu::hide_start_button(oxygine::spActor actor)
     {
-        //actor->removeChild(background);
         actor->removeChild(start_button);
         actor->removeChild(menu);
-        //actor->addChild(pause_button);
     }
 
-    void Menu::hide_pause_button(oxygine::spActor actor)
+    void Menu::create_text_style()
     {
-        actor->removeChild(pause_button);
-        show_start_button(actor);
+        text_style.font = ViewHelper::res.getResFont("font");
+        text_style.fontSize = 18;
+        text_style.color = Color(0xFFFFFFFF);
+        text_style.vAlign = TextStyle::VALIGN_MIDDLE;
+        text_style.hAlign = TextStyle::HALIGN_MIDDLE;
+    };
+
+    void Menu::create_timer()
+    {
+        timer_flag = true;
+        timer_sprite = new TextField();
+        timer_sprite->setStyle(text_style);
+        timer_sprite->setAnchor(0.5,0.5);
+        timer_sprite->setPosition(display.x / 2, shift / 2);
+        timer_sprite->setText(timer->now);
+    };
+
+    void Menu::create_end_menu()
+    {
+
     }
 
-    bool Menu::create_timer()
+    void Menu::show_timer(oxygine::spActor actor)
     {
-        start_point = time(NULL);
-        interval = 5 * 60;
-        end_point = start_point + interval;
-    }
+        actor->removeChild(timer_sprite);
+        create_timer();
+        actor->addChild(timer_sprite);
+    };
 
-    void Menu::update_time()
+    void Menu::update_timer(oxygine::spActor actor)
     {
-        start_point = time(NULL);
-        interval = 5 * 60;
-        end_point = start_point + interval;
-        int seconds = counter % 60;
-        int minutes = counter / 60;
+        if(!timer_flag)
+            timer = new Timer(1);
+        if(time(NULL) <= timer->end_point)
+        {
+            timer->update();
+        }
     }
 }

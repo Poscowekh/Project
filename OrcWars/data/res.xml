@@ -20,10 +20,9 @@
 		<image file="Mountains/mountains_right_lake.png" />
 		<image file="Mountains/mountains_down.png" />
 
-		<image file="Menu/button.png" />
+		<image file="Menu/right_button.png" />
 		<image file="Menu/start_button.png" />
 		<image file="Menu/exit_button.png" />
-		<image file="Menu/pause_button.png" />
 
 		<image file="Snake/grass.png" />
 	</atlas>
