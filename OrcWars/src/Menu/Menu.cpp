@@ -96,7 +96,7 @@ namespace GameGraphics
 
     void Menu::show_timer(oxygine::spActor actor)
     {
-        actor->removeChild(timer_sprite);
+        //actor->removeChild(timer_sprite);
         create_timer();
         actor->addChild(timer_sprite);
     };
