@@ -26,5 +26,7 @@
 
 		<image file="Snake/grass.png" />
 	</atlas>
+	<set path = "fonts" />
+		<font file= "font.fnt"/>
 	
 </resources>
