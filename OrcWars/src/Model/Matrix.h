@@ -30,6 +30,7 @@ namespace GameModel
             size_t new_id_snake;            //Provide a new id for each object
             size_t new_id_food;
             size_t new_id_block;
+            size_t non_block_cells;
             bool start_movement_flag;
             bool player_death_flag;
         public:
@@ -68,6 +69,8 @@ namespace GameModel
             void remove_food(pair<int, int> coordinates);
             void remove_block(size_t remove_id);
             void check_add_food();
+            int check_around(int x, int y);
+            void random_borders();
             size_t get_food_id(pair<int, int> coordinates);
             size_t get_block_id(pair<int, int> coordinates);
             vector<Food> get_food();

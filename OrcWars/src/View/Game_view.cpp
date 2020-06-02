@@ -9,9 +9,9 @@ namespace GameGraphics
         size = new_size;
         position = new_position;
         matrix = mtrx;
-        scale_factor_x = size.x / (matrix->get_columns() * size.x);
-        scale_factor_y = size.y / (matrix->get_rows() * size.y);
-        rect_size = Point(scale_factor_x * size.x, scale_factor_y * size.y);
+        //scale_factor_x = matrix->get_columns() / size.x;
+        //scale_factor_y = matrix->get_rows() / size.y;
+        rect_size = Vector2(size.x / matrix->get_columns(), size.y / matrix->get_rows());
         static_flag = false;
         start_flag = true;
         last_color = 1;
@@ -27,7 +27,7 @@ namespace GameGraphics
         field = new Sprite();
         field->setSize(size.x, size.y);
         field->setPosition(position.first, position.second);
-        addChild(field);
+        //actor->addChild(field);
     }
 
     void Game_view::draw_grass(int x, int y)
@@ -43,7 +43,7 @@ namespace GameGraphics
     void Game_view::draw_block(int x, int y)        //add type later
     {
         spSprite block = new Sprite();
-        spSprite block_1 = new Sprite();
+        //spSprite block_1 = new Sprite();
         ResAnim* res_block;
         /*if(x == 0)
             res_block = ViewHelper::res.getResAnim("mountains_left");
@@ -56,29 +56,29 @@ namespace GameGraphics
         if(x == 0 && y == matrix->get_rows() - 1)
 
         if(0 < y && y < matrix->get_rows() - 1 && 0 < x && x < matrix->get_columns() - 1)*/
-            res_block = ViewHelper::res.getResAnim("mountains");
+        res_block = ViewHelper::res.getResAnim("mountains");
         block->setPosition(rect_size.x * x, rect_size.y * y);
         block->setResAnim(res_block);
         block->setSize(rect_size.x, rect_size.y);
         block->attachTo(field);
     }
 
-    void Game_view::update()
+    void Game_view::update(oxygine::spActor actor)
     {
         if(static_flag)
             reset();
         else
         {
             draw_field();
-            for(size_t i = 0; i < matrix->get_rows(); i++)
-                for(size_t j = 0; j < matrix->get_columns(); j++)
-                {
-                    draw_grass(j, i);;
-                    if(matrix->get_value(make_pair(i,j)) == 3)
-                        draw_block(j,i);
-                }
             static_flag = true;
-        }
+        };
+        for(size_t i = 0; i < matrix->get_rows(); i++)
+            for(size_t j = 0; j < matrix->get_columns(); j++)
+            {
+                draw_grass(j, i);;
+                if(matrix->get_value(make_pair(i,j)) == 3)
+                    draw_block(j,i);
+            }
         draw_snakes();
         for(size_t i = 0; i < matrix->get_rows(); i++)
             for(size_t j = 0; j < matrix->get_columns(); j++)
@@ -88,6 +88,12 @@ namespace GameGraphics
             for(size_t i = 0; i < food_sprites.size(); i++)
                 addChild(food_sprites[i]);
         start_flag = true;
+        show(actor);
+    }
+
+    void Game_view::show(oxygine::spActor actor)
+    {
+        actor->addChild(field);
     }
 
     void Game_view::draw_food(int x, int y)
@@ -106,8 +112,8 @@ namespace GameGraphics
         food->setPosition(tmp_x, tmp_y);
         food->setResAnim(res_food);
         food->setSize(rect_size.x / 2, rect_size.y / 2);
-        food->attachTo(field);
-        food_sprites.push_back(food);
+        field->addChild(food);
+        //food_sprites.push_back(food);
     }
 
     void Game_view::draw_snakes()
@@ -123,8 +129,8 @@ namespace GameGraphics
                 for(size_t j = 0; j < snakes[i].get_size(); j++)
                 {
                     spSprite sprite = new Sprite();
-                    float pos_x = rect_size.x * snakes[i].part_of_body(j).second + rect_size.x;
-                    float pos_y = rect_size.y * snakes[i].part_of_body(j).first + rect_size.y;
+                    float pos_x = rect_size.x * snakes[i].part_of_body(j).second + rect_size.x / 2;
+                    float pos_y = rect_size.y * snakes[i].part_of_body(j).first + rect_size.y / 2;
                     sprite->setAnchor(Vector2(0.5, 0.5));
                     sprite->setPosition(pos_x, pos_y);
                     if(i == 0)
@@ -138,7 +144,8 @@ namespace GameGraphics
                         spSprite sprite_eyes = new Sprite();
                         sprite_eyes->setResAnim(ViewHelper::res.getResAnim("eyes"));
                         sprite_eyes->attachTo(sprite);
-                        sprite_eyes->setPosition(sprite->getSize().x / 4, sprite->getSize().y / 4);
+                        sprite_eyes->setSize(sprite->getSize().x, sprite->getSize().y);
+                        sprite_eyes->setPosition(0, -rect_size.y / 17 * 3);
                         sprite->setRotationDegrees(get_head_rotation(i));
                     }
                     else
@@ -155,7 +162,7 @@ namespace GameGraphics
                             sprite->setRotationDegrees(get_body_rotation(i,j));
                         }
                     tmp[j] = sprite;
-                    addChild(sprite);
+                    field->addChild(sprite);
                 }
             }
         snake_sprites = tmp_snakes;
@@ -212,12 +219,14 @@ namespace GameGraphics
 
     void Game_view::reset()
     {
+        field->removeChildren();
+        /*
         for(size_t i = 0; i < snake_sprites.size(); i++)
             for(size_t j = 0; j < snake_sprites[i].size(); j++)
-                field->removeChild(snake_sprites[i][j]);
+                actor->removeChild(snake_sprites[i][j]);
         for(size_t j = 0; j < food_sprites.size(); j++)
-            field->removeChild(food_sprites[j]);
-        addChild(field);
+            actor->removeChild(food_sprites[j]);*/
+        //addChild(field);
         //food_sprites.clear();
     }
 

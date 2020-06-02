@@ -5,6 +5,7 @@
 
 #include "oxygine-framework.h"
 #include "../ViewHelper.h"
+#include "../Presenter/Game_presenter.h"
 
 using namespace std;
 namespace GameGraphics
@@ -22,6 +23,7 @@ namespace GameGraphics
             spSprite pause_button;
             spSprite start_button;
             spTextField timer_sprite;
+            spSprite settings_buttons;
             TextStyle text_style;
             class Timer
             {
@@ -51,6 +53,8 @@ namespace GameGraphics
             int start_point;
             int end_point;
             int interval;
+            size_t map_choise_x;
+            size_t map_choise_y;
         public:
             Menu(oxygine::Point display_size);
             void show_start_button(oxygine::spActor actor);
@@ -61,8 +65,10 @@ namespace GameGraphics
             void create_start_button();
             void create_timer();
             void create_text_style();
-            void create_end_menu();
-            void update_timer(oxygine::spActor actor);
+            void create_settings_buttons();
+            void update_timer(oxygine::spActor actor); 
+            size_t return_field_x();
+            size_t return_field_y();
             // void end_menu();
             bool get_start_flag();
             bool get_pause_flag();

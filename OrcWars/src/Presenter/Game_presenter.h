@@ -20,6 +20,8 @@ namespace GameGraphics
             spColorRectSprite background;
             GameModel::spMatrix field;
             oxygine::Point size;
+            size_t x;
+            size_t y;
             pair<int, int> position;
             GameModel::Graph* graph;
             int size_shift;
@@ -28,8 +30,10 @@ namespace GameGraphics
         public:
             Game_presenter(oxygine::Point new_size, size_t players_cnt, pair<int, int> new_position);
             void create_background();
+            void set_field(size_t x1, size_t y1);
+            void create_field();
             void init_view();
-            void update();
+            void update(oxygine::spActor actor);
             void count_update();
             void show(oxygine::spActor actor);
             void hide();

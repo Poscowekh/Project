@@ -11,23 +11,24 @@ namespace GameGraphics
         size = display_size;
         position = new_position;
         game_over_flag = false;
-        init_flag = true;
+        init_flag = false;
+        x = 16;
+        y = 9;
 
-        int m = 8;                           //Size of game field
-        int n = 12;
-        field = new GameModel::Matrix(m, n); //Matrix m rows by n columns
+        //int m = 8;                           //Size of game field
+        //int n = 12;
+        //field = new GameModel::Matrix(m, n); //Matrix m rows by n columns
 
-        create_background();
+        //create_background();
 
-        field->spawn_borderline();
+        /*field->spawn_borderline();
         field->add_snake(1, make_pair(m - 2, n - 2), 100);
         field->add_snake(1, make_pair(1,1), 102);            //Snake of size 2 at (1,1)
         field->change_movement(102, make_pair(0, 1));         //Moves right 1 time
         field->change_movement(100, make_pair(0, -1));         //Moves right 1 time
         field->spawn_block("wall", make_pair(4,4), 1);
         field->spawn_block("wall", make_pair(4,5), 1);
-        field->spawn_block("wall", make_pair(4,6), 1);
-        init_view();
+        field->spawn_block("wall", make_pair(4,6), 1);*/
     }
 
     void Game_presenter::init_view()
@@ -73,9 +74,14 @@ namespace GameGraphics
         );
     }
 
-    void Game_presenter::update()
+    void Game_presenter::update(oxygine::spActor actor)
     {
-        //bool flag = false;
+        if(!init_flag)
+        {
+            create_field();
+            init_view();
+            init_flag = true;
+        }
         view->removeChildren();
         field->update_matrix();
         //field->print();
@@ -89,11 +95,22 @@ namespace GameGraphics
                 ai->count_ways();
                 ai->choose_way();
             };
-            view->update();
+            view->update(actor);
         }
         else
             view->hide_all();
 
+    }
+
+    void Game_presenter::set_field(size_t y1, size_t x1)
+    {
+        x = x1;
+        y = y1;
+    }
+
+    void Game_presenter::create_field()
+    {
+        field = new GameModel::Matrix(x, y);
     }
 
     void Game_presenter::show(oxygine::spActor actor)

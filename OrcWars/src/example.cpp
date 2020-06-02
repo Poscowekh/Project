@@ -47,16 +47,15 @@ void example_init()
 
     //getStage()->addChild(st);
 
+    /*getStage()->addTween(TweenDummy(), 1000)->setDoneCallback([&presenter](Event * )
+    {*/
+    display_size = core::getDisplaySize();
+    presenter = new Game_presenter(display_size, 0, make_pair(0,0));
+    presenter->show(getStage());
+    //}
+    //);
     menu = new Menu(display_size);
     menu->show_start_button(getStage());
-
-    getStage()->addTween(TweenDummy(), 1000)->setDoneCallback([&presenter](Event * )
-    {
-        Point display_size = core::getDisplaySize();
-        presenter = new Game_presenter(display_size, 0, make_pair(0,0));
-        presenter->show(getStage());
-    }
-    );
 }
 
 //called each frame from main.cpp
@@ -65,12 +64,13 @@ void example_update()
     start_flag = menu->get_start_flag();
     if(start_flag)
     {
+        presenter->set_field(menu->return_field_x(), menu->return_field_y());
         menu->update_timer(getStage());
         menu->show_timer(getStage());
         menu->hide_start_button(getStage());
-        if(cnt % 40 == 0 && presenter)              //frames per tick
+        if(cnt % 40 == 0)              //frames per tick
         {
-            presenter->update();
+            presenter->update(getStage());
             cnt = 0;
         }
         cnt++;

@@ -15,7 +15,7 @@ namespace GameModel
         }
     }
 
-    Matrix::Matrix(size_t m, size_t n)
+    /*Matrix::Matrix(size_t m, size_t n)
     { //Creates matrix m by n
         srand(time(NULL));
         rows = m;
@@ -30,7 +30,77 @@ namespace GameModel
         start_movement_flag = false;
         player_death_flag = false;
         last_seed = rand() % 10 + 1;
+    }*/
+
+    Matrix::Matrix(size_t m, size_t n)
+    { //Creates matrix m by n
+        srand(time(NULL));
+        rows = m;
+        columns = n;
+        matrix.clear();
+        matrix.resize(rows);
+        for (size_t i = 0; i < rows; i++)
+            matrix[i].resize(columns, 0);
+        food.clear();
+        snakes.clear();
+        blocks.clear();
+        reset_matrix();
+        spawn_borderline();
+        add_snake(1, make_pair(m - 2, n - 2), 100);
+        change_movement(100, make_pair(-1, 0));
+        add_snake(1, make_pair(1,1), 101);
+        change_movement(101, make_pair(1, 0));
+        start_movement_flag = false;
+        player_death_flag = false;
+        last_seed = rand() % 10 + 1;
+        random_borders();
+        non_block_cells = columns * rows - blocks.size();
     }
+
+    void Matrix::random_borders()
+    {
+        size_t tmp_seed = time(NULL);
+        size_t smaller = min(rows, columns);
+        if(smaller > 16)
+            smaller += 5;
+        else
+            if(smaller > 11)
+                smaller += 2;
+        for(size_t j = 0; j < smaller - 6; j++)
+        {
+            srand(tmp_seed);
+            size_t x = rand() % (rows - 6) + 3;
+            tmp_seed++;
+            srand(tmp_seed);
+            size_t y = rand() % (columns - 6) + 3;
+            tmp_seed++;
+            while(check_around(x,y) > 2)
+            {
+                srand(tmp_seed);
+                size_t x = rand() % (rows - 6) + 3;
+                tmp_seed++;
+                srand(tmp_seed);
+                size_t y = rand() % (columns - 6) + 3;
+                tmp_seed++;
+            };
+            blocks.push_back(Block(3, make_pair(x, y), "mountain"));
+        };
+    };
+
+    int Matrix::check_around(int x, int y)
+    {
+        int count = 0;
+        if(matrix[x + 1][y] == 3)
+            count++;
+        if(matrix[x - 1][y] == 3)
+            count++;
+        if(matrix[x][y + 1] == 3)
+            count++;
+        if(matrix[x][y - 1] == 3)
+            count++;
+        return count;
+    }
+
 
     Matrix::Matrix(size_t map_choise)
     {

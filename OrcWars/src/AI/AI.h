@@ -1,7 +1,7 @@
 #ifndef AI_H
 #define AI_H
 
-#include "../Model/Graph.h";
+#include "../Model/Graph.h"
 
 using namespace std;
 namespace GameModel

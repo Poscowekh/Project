@@ -39,12 +39,13 @@ namespace GameGraphics
             int get_head_rotation(int i);
             bool get_game_over_flag();
             void draw_field();
+            void show(oxygine::spActor actor);
             void draw_grass(int x, int y);
             void draw_block(int x, int y);
             void draw_food(int x, int y);
             void draw_snakes();
             void reset();
-            void update();
+            void update(oxygine::spActor actor);
             void hide_all();
     };
 }
